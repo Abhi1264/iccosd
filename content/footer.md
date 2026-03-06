@@ -8,140 +8,83 @@ phone: "+91-6203905197"
 address: "Department of Electronics and Communication Engineering, BIT Mesra, Ranchi - 835215, Jharkhand, INDIA"
 copyright: "© 2026 ICCoSD-26. All rights reserved."
 departmentName: "Department of Electronics and Communication Engineering, BIT Mesra"
+quickLinks:
+  - title: "Call for Papers"
+    href: "/call-for-papers"
+    icon: "FileText"
+  - title: "Registration"
+    href: "/registration"
+    icon: "ClipboardList"
+  - title: "Keynote Speakers"
+    href: "/keynote-speakers"
+    icon: "Users"
+  - title: "Directions"
+    href: "/directions"
+    icon: "MapPin"
+  - title: "Committee"
+    href: "/committee/organizing"
+    icon: "Building2"
+  - title: "Abstract Proceedings"
+    href: "/abstract-proceedings"
+    icon: "Book"
+importantDates:
+  - label: "Conference Dates"
+    value: "February 18-19, 2026"
+  - label: "Paper Submission"
+    value: "Open"
+  - label: "Notification"
+    value: "To be announced"
+  - label: "Registration"
+    value: "Open"
+acknowledgments:
+  - title: "IEEE Kolkata Section"
+    description: "Technical Co-sponsorship"
+    imageUrl: "/logos/ieee.png"
+    website: "https://ieee.org"
+  - title: "Birla Institute of Technology Mesra"
+    description: "Hosting Institution"
+    imageUrl: "/logos/bit-mesra.png"
+    website: "https://bitmesra.ac.in"
+  - title: "ICGD"
+    description: "International Collaboration"
+    imageUrl: "/logos/icgd.png"
+    website: "#"
+footerSections:
+  - title: "Conference"
+    links:
+      - label: "About"
+        href: "/about"
+      - label: "Call for Papers"
+        href: "/call-for-papers"
+      - label: "Registration"
+        href: "/registration"
+      - label: "Abstract Proceedings"
+        href: "/abstract-proceedings"
+  - title: "Committee"
+    links:
+      - label: "Organizing Committee"
+        href: "/committee/organizing"
+      - label: "Technical Program"
+        href: "/committee/technical"
+      - label: "Advisory Committee"
+        href: "/committee/advisory"
+      - label: "Keynote Speakers"
+        href: "/keynote-speakers"
+  - title: "Information"
+    links:
+      - label: "Student Volunteers"
+        href: "/student-volunteers"
+      - label: "Directions"
+        href: "/directions"
+      - label: "Contact Us"
+        href: "/contact"
+      - label: "Privacy Policy"
+        href: "/privacy"
+socialLinks:
+  - platform: "Email"
+    url: "mailto:iccsd_26@bitmesra.ac.in"
+    icon: "Mail"
+  - platform: "Phone"
+    url: "tel:+916203905197"
+    icon: "Phone"
 ---
-
----QUICK_LINKS---
-
-```json:quicklinks
-[
-  {
-    "title": "Call for Papers",
-    "href": "/call-for-papers",
-    "icon": "FileText"
-  },
-  {
-    "title": "Registration",
-    "href": "/registration",
-    "icon": "ClipboardList"
-  },
-  {
-    "title": "Keynote Speakers",
-    "href": "/keynote-speakers",
-    "icon": "Users"
-  },
-  {
-    "title": "Directions",
-    "href": "/directions",
-    "icon": "MapPin"
-  },
-  {
-    "title": "Committee",
-    "href": "/committee/organizing",
-    "icon": "Building2"
-  },
-  {
-    "title": "Abstract Proceedings",
-    "href": "/abstract-proceedings",
-    "icon": "Book"
-  }
-]
-```
-
----IMPORTANT_DATES---
-
-```json:importantdates
-[
-  {
-    "label": "Conference Dates",
-    "value": "February 18-19, 2026"
-  },
-  {
-    "label": "Paper Submission",
-    "value": "Open"
-  },
-  {
-    "label": "Notification",
-    "value": "To be announced"
-  },
-  {
-    "label": "Registration",
-    "value": "Open"
-  }
-]
-```
-
----ACKNOWLEDGMENTS---
-
-```json:acknowledgments
-[
-  {
-    "title": "IEEE Kolkata Section",
-    "description": "Technical Co-sponsorship",
-    "imageUrl": "/logos/ieee.png",
-    "website": "https://ieee.org"
-  },
-  {
-    "title": "Birla Institute of Technology Mesra",
-    "description": "Hosting Institution",
-    "imageUrl": "/logos/bit-mesra.png",
-    "website": "https://bitmesra.ac.in"
-  },
-  {
-    "title": "ICGD",
-    "description": "International Collaboration",
-    "imageUrl": "/logos/icgd.png",
-    "website": "#"
-  }
-]
-```
-
----FOOTER_SECTIONS---
-
-```json:footersections
-[
-  {
-    "title": "Conference",
-    "links": [
-      {"label": "About", "href": "/about"},
-      {"label": "Call for Papers", "href": "/call-for-papers"},
-      {"label": "Registration", "href": "/registration"},
-      {"label": "Abstract Proceedings", "href": "/abstract-proceedings"}
-    ]
-  },
-  {
-    "title": "Committee",
-    "links": [
-      {"label": "Organizing Committee", "href": "/committee/organizing"},
-      {"label": "Technical Program", "href": "/committee/technical"},
-      {"label": "Advisory Committee", "href": "/committee/advisory"},
-      {"label": "Keynote Speakers", "href": "/keynote-speakers"}
-    ]
-  },
-  {
-    "title": "Information",
-    "links": [
-      {"label": "Student Volunteers", "href": "/student-volunteers"},
-      {"label": "Directions", "href": "/directions"},
-      {"label": "Contact Us", "href": "/contact"},
-      {"label": "Privacy Policy", "href": "/privacy"}
-    ]
-  }
-]
-```
-
----SOCIAL_LINKS---
-
-```json:sociallinks
-[
-  {
-    "platform": "Email",
-    "url": "mailto:iccsd_26@bitmesra.ac.in",
-    "icon": "Mail"
-  },
-  {
-    "platform": "Phone",
-    "url": "tel:+916203905197",
-    "icon": "Phone"
-  }
-]
-```

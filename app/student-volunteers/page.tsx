@@ -29,9 +29,7 @@ export default function StudentVolunteers() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="mb-12 text-center">
-            <p className="text-lg text-foreground/80">
-              {intro}
-            </p>
+            <p className="text-lg text-foreground/80">{intro}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">

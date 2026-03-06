@@ -3,51 +3,38 @@ title: "Technical Program Committee | ICCoSD-26"
 description: "Meet the technical program committee members of ICCoSD-26."
 heroTitle: "Technical Program Committee"
 heroSubtitle: "Expert reviewers and program organizers"
+heroImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop"
+intro: "The Technical Program Committee comprises distinguished researchers and professionals from leading academic institutions and industry."
+members:
+  - "Dr. Atanu Kundu, Heritage Institute of Technology"
+  - "Dr. Koushik Dutta, Netaji Subhash Engineering College"
+  - "Dr. Vimal Kumar Singh Yadav, MNIT Allahabad"
+  - "Dr. Soumen Das, Indian Institute of Technology Kharagpur"
+  - "Dr. Sudip Kundu, NIT Rourkela"
+  - "Dr. Anup Bhattacharjee, NIT Durgapur"
+  - "Dr. Somak Bhattacharyya, Indian Institute of Technology (BHU), Varanasi"
+  - "Dr. Manoj Kumar Mukul, Delhi University"
+  - "Dr. Avireni Srinivasulu, Mohan Babu University, Tirupati"
+  - "Dr. Adinarayan Reddy, KSRM College of Engineering, Kadapa"
+  - "Dr. Anil Dwivedi, College of London"
+  - "Dr. Janardan Sahay, Govt. Womens Polytechnic, Ranchi"
+  - "Dr. Irfanul Husan, Graphic Era University, Dehradun"
+  - "Mr. Atul Kumar, Director, Wireless Software Solution, NXP"
+  - "Dr. Jitendra Kumar Mishra, IIT Ranchi"
+  - "Dr. Jayanta Ghosh, NIT Patna"
+  - "Dr. Aminul Islam, BIT Mesra"
+  - "Dr. Vijay Nath, BIT Mesra"
+  - "Dr. Kartik Mahto, BIT Mesra"
+  - "Dr. Prajna Parimita Dash, BIT Mesra"
+  - "Dr. Santashraya Prasad, BIT Mesra"
+  - "Dr. Soumya Sidhishwari, BIT Mesra"
+  - "Dr. Richa Mishra, BIT Mesra"
+  - "Dr. Deepti Gola, BIT Mesra"
+  - "Dr. Kalyan Koley, BIT Mesra"
+  - "Dr. Rajeev Sharma, VIT, AP"
+  - "Dr. Jitendra Kumar Mishra, IIIT Ranchi"
+  - "Dr. Santosh Mahto, IIIT Ranchi"
+  - "Dr. Ashwini Kumar, AJU, Mohanpur(Jh.)"
+  - "Dr. Prem Nath Suman, AJU, Mohanpur (Jh.)"
+note: "**Note:** The Technical Program Committee is responsible for reviewing submitted papers, ensuring the quality and relevance of the conference content. All members are experts in their respective fields and contribute to maintaining the conference's academic excellence."
 ---
-
----HERO_IMAGE---
-https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop
-
----INTRO---
-The Technical Program Committee comprises distinguished researchers and professionals from leading academic institutions and industry.
-
----MEMBERS---
-
-```json:members
-[
-  "Dr. Atanu Kundu, Heritage Institute of Technology",
-  "Dr. Koushik Dutta, Netaji Subhash Engineering College",
-  "Dr. Vimal Kumar Singh Yadav, MNIT Allahabad",
-  "Dr. Soumen Das, Indian Institute of Technology Kharagpur",
-  "Dr. Sudip Kundu, NIT Rourkela",
-  "Dr. Anup Bhattacharjee, NIT Durgapur",
-  "Dr. Somak Bhattacharyya, Indian Institute of Technology (BHU), Varanasi",
-  "Dr. Manoj Kumar Mukul, Delhi University",
-  "Dr. Avireni Srinivasulu, Mohan Babu University, Tirupati",
-  "Dr. Adinarayan Reddy, KSRM College of Engineering, Kadapa",
-  "Dr. Anil Dwivedi, College of London",
-  "Dr. Janardan Sahay, Govt. Womens Polytechnic, Ranchi",
-  "Dr. Irfanul Husan, Graphic Era University, Dehradun",
-  "Mr. Atul Kumar, Director, Wireless Software Solution, NXP",
-  "Dr. Jitendra Kumar Mishra, IIT Ranchi",
-  "Dr. Jayanta Ghosh, NIT Patna",
-  "Dr. Aminul Islam, BIT Mesra",
-  "Dr. Vijay Nath, BIT Mesra",
-  "Dr. Kartik Mahto, BIT Mesra",
-  "Dr. Prajna Parimita Dash, BIT Mesra",
-  "Dr. Santashraya Prasad, BIT Mesra",
-  "Dr. Soumya Sidhishwari, BIT Mesra",
-  "Dr. Richa Mishra, BIT Mesra",
-  "Dr. Deepti Gola, BIT Mesra",
-  "Dr. Kalyan Koley, BIT Mesra",
-  "Dr. Rajeev Sharma, VIT, AP",
-  "Dr. Jitendra Kumar Mishra, IIIT Ranchi",
-  "Dr. Santosh Mahto, IIIT Ranchi",
-  "Dr. Ashwini Kumar, AJU, Mohanpur(Jh.)",
-  "Dr. Prem Nath Suman, AJU, Mohanpur (Jh.)"
-]
-```
-
----NOTE---
-**Note:** The Technical Program Committee is responsible for reviewing submitted papers, ensuring the quality and relevance of the conference content. All members are experts in their respective fields and contribute to maintaining the conference's academic excellence.
-

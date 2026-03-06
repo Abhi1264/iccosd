@@ -23,9 +23,7 @@ export default function TechnicalCommittee() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="mb-8 text-center">
-            <p className="text-lg text-foreground/80">
-              {intro}
-            </p>
+            <p className="text-lg text-foreground/80">{intro}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -40,9 +38,7 @@ export default function TechnicalCommittee() {
           </div>
 
           <div className="mt-12 p-6 bg-blue-50 rounded-lg border-l-4 border-gold-accent">
-            <p className="text-foreground/80">
-              {note}
-            </p>
+            <p className="text-foreground/80">{note}</p>
           </div>
         </div>
       </section>

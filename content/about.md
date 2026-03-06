@@ -3,13 +3,21 @@ title: "About ICCoSD-26 & BIT Mesra"
 description: "Learn about the International Conference on Communication and Smart Devices and Birla Institute of Technology Mesra"
 heroTitle: "About Us"
 heroSubtitle: "ICCoSD-26 & Birla Institute of Technology Mesra"
-institution: "Birla Institute of Technology Mesra"
+heroImage: "/hero-conference.jpg"
+highlights:
+  - title: "Hybrid Mode"
+    description: "Participate online or in-person"
+  - title: "Double-Blind Review"
+    description: "Rigorous peer review process"
+  - title: "IEEE Publication"
+    description: "Papers published in IEEE Xplore"
+  - title: "International Panel"
+    description: "Expert speakers from around the world"
+  - title: "Research Tracks"
+    description: "6 specialized research areas"
+  - title: "Networking Events"
+    description: "Connect with industry and academia"
 ---
-
----HERO_IMAGE---
-/hero-conference.jpg
-
----ABOUT_BIT_MESRA---
 
 ## About Birla Institute of Technology Mesra
 
@@ -17,20 +25,20 @@ BIT Mesra, established in 1955, is a "Deemed to be University" that has been at 
 
 The institute was founded with a clear vision to offer young minds a space where their imagination could take wings and their ideas could bear fruition. Over six decades, BIT Mesra has developed a reputation as a leader in technology and entrepreneurship education.
 
-### Key Achievements:
+![BIT Mesra Campus](/images/bit-mesra-campus.jpg)
+
+### Key Achievements
 
 - First institute in India to establish a department dedicated to Space Engineering & Rocketry
 - Pioneer in developing Science & Technology Entrepreneurs' Park (BIT-STEP)
 - Recipient of 5G Use Cases Lab award from PM Narendra Modi
 - Home to vibrant student life and innovative teaching methods
 
----ABOUT_ICCOSD---
-
 ## About International Conference on Communication and Smart Devices (ICCoSD)
 
 The ICCoSD is a biennial premier international conference that serves as a catalyst for innovation, collaboration, and knowledge exchange. The conference aims to provide an interactive forum to discuss research and development related to current and next-generation devices and communication systems.
 
-### Conference Objectives:
+### Conference Objectives
 
 - **Knowledge Exchange:** Foster collaboration between academia, industry, and research institutions
 - **Innovation Platform:** Provide a platform for presenting original research articles and innovations
@@ -42,39 +50,6 @@ The ICCoSD is a biennial premier international conference that serves as a catal
 
 The theme emphasizes the convergence of intelligent communication systems and smart devices in creating a better-connected world. ICCoSD-26 will explore how these technologies can solve real-world challenges and drive innovation across industries.
 
----CONFERENCE_HIGHLIGHTS---
-
-```json:highlights
-[
-  {
-    "title": "Hybrid Mode",
-    "description": "Participate online or in-person"
-  },
-  {
-    "title": "Double-Blind Review",
-    "description": "Rigorous peer review process"
-  },
-  {
-    "title": "IEEE Publication",
-    "description": "Papers published in IEEE Xplore"
-  },
-  {
-    "title": "International Panel",
-    "description": "Expert speakers from around the world"
-  },
-  {
-    "title": "Research Tracks",
-    "description": "6 specialized research areas"
-  },
-  {
-    "title": "Networking Events",
-    "description": "Connect with industry and academia"
-  }
-]
-```
-
----RESEARCH_TRACKS---
-
 ## Research Tracks
 
 ICCoSD-26 covers multiple areas of research:
@@ -85,8 +60,6 @@ ICCoSD-26 covers multiple areas of research:
 4. **Machine Learning & AI Applications** - AI in communications, predictive systems
 5. **Optical & Photonic Communication** - Fiber optics, free-space communication
 6. **Network Security & Privacy** - Cybersecurity, encryption, secure communications
-
----CTA_SECTION---
 
 ## Ready to Participate?
 

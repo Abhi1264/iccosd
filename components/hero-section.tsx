@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { CTAButton } from "@/components/cta-button";
 
 interface HeroSectionProps {
   title: string;
@@ -26,24 +26,14 @@ export function HeroSection({
         backgroundPosition: "center",
       }}
     >
-      {/* Diagonal Overlay Shapes */}
       <div className="absolute inset-0 pointer-events-none">
-        <div
-          className="absolute top-0 left-0 w-full h-full opacity-20"
-          style={{
-            background: "linear-gradient(45deg, #0D5B6F 0%, transparent 50%)",
-          }}
-        />
         <div
           className="absolute inset-0"
           style={{
-            background: `rgba(13, 91, 111, ${overlayOpacity})`,
+            background: `linear-gradient(to bottom, rgba(0,0,0,${overlayOpacity}), rgba(0,0,0,0.6))`,
           }}
         />
       </div>
-
-      {/* Gold Accent Line */}
-      <div className="absolute left-0 top-0 bottom-1/2 w-1 bg-gold-accent" />
 
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-3xl mx-auto">
@@ -55,14 +45,7 @@ export function HeroSection({
             {subtitle}
           </p>
         )}
-        {ctaText && (
-          <Link
-            href={ctaLink}
-            className="inline-block px-8 py-3 bg-gold-accent text-primary font-bold rounded-lg hover:bg-gold-dark transition-colors duration-300 shadow-lg hover:shadow-xl"
-          >
-            {ctaText}
-          </Link>
-        )}
+        {ctaText && <CTAButton href={ctaLink}>{ctaText}</CTAButton>}
       </div>
     </section>
   );

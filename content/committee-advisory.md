@@ -3,58 +3,39 @@ title: "Advisory Committee | ICCoSD-26"
 description: "Meet the advisory committee members of ICCoSD-26."
 heroTitle: "Advisory Committee"
 heroSubtitle: "Global experts guiding ICCoSD-26"
+heroImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop"
+intro: "The Advisory Committee comprises distinguished international and national academics and researchers who provide strategic guidance and credibility to the conference."
+international:
+  - "Prof. Ramjee Prasad, Aarhus University, Denmark"
+  - "Prof. Nichola Marchetti, Trinity College, Dublin"
+  - "Prof. Sheila Prasad, Northeaster University College of Engineering"
+  - "Prof. Vijayan K. Asari, University of Dayton, Ohio"
+  - "Prof. Bal Virdee, London Metropolitan University"
+  - "Prof. Sumit Chakravarty, Kennesaw State University, USA"
+  - "Prof. John Soraghan, University of Strathclyde, Glasgow, USA"
+  - "Prof. Kshirasagar Naik, University of Waterloo, Canada"
+  - "Prof. Veda Sandeep Nagaraja, TNI, University College Cork, Ireland"
+  - "Prof. Saraju Mohanty, University of North Texas, USA"
+national:
+  - "Prof. P.K. Upadhaya, IIT Indore"
+  - "Prof. Preetam Kumar, IIT Patna"
+  - "Prof. Sushrul Das, IIT (ISM) Dhanbad"
+  - "Prof. Bratn Ghosh, IIT Kharagpur"
+  - "Prof. Bharat Gupta, NIT Patna"
+  - "Prof. Suparna Kar Chowdhury, Jadavpur University"
+  - "Dr. Puneet Mishra, ISRO, Bangalore"
+  - "Prof. Manish Goswami, IIIT Allahabad"
+  - "Prof. N.P. Singh, NIT Kurukshetra"
+  - "Prof. Nisha Gupta, BIT Mesra"
+  - "Prof. S. K. Ghorai, BIT Mesra"
+  - "Prof. Srikanta Pal, BIT Mesra"
+  - "Prof. Sandeep Singh Solanki, BIT Mesra"
+  - "Prof. Vibha Rani Gupta, BIT Mesra"
+  - "Prof. S.S. Pathak, BIT Mesra"
+  - "Prof. C. Jaganathan, BIT Mesra"
+  - "Prof. Ashok Sharon, BIT Mesra"
+  - "Prof. Jibendu Sekhar Roy, KIIT Bhubaneswar"
+  - "Prof. D. Pal, BITS Pilani, Goa"
+  - "Prof. Shweta Srivastava, Jaypee Institute of Information Technology, Noida"
+note: "**Note:** The Advisory Committee members are internationally and nationally recognized experts in their fields. They provide valuable insights and guidance to ensure the conference maintains the highest standards of academic excellence."
 ---
-
----HERO_IMAGE---
-https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop
-
----INTRO---
-The Advisory Committee comprises distinguished international and national academics and researchers who provide strategic guidance and credibility to the conference.
-
----INTERNATIONAL_ADVISORY---
-
-```json:international
-[
-  "Prof. Ramjee Prasad, Aarhus University, Denmark",
-  "Prof. Nichola Marchetti, Trinity College, Dublin",
-  "Prof. Sheila Prasad, Northeaster University College of Engineering",
-  "Prof. Vijayan K. Asari, University of Dayton, Ohio",
-  "Prof. Bal Virdee, London Metropolitan University",
-  "Prof. Sumit Chakravarty, Kennesaw State University, USA",
-  "Prof. John Soraghan, University of Strathclyde, Glasgow, USA",
-  "Prof. Kshirasagar Naik, University of Waterloo, Canada",
-  "Prof. Veda Sandeep Nagaraja, TNI, University College Cork, Ireland",
-  "Prof. Saraju Mohanty, University of North Texas, USA"
-]
-```
-
----NATIONAL_ADVISORY---
-
-```json:national
-[
-  "Prof. P.K. Upadhaya, IIT Indore",
-  "Prof. Preetam Kumar, IIT Patna",
-  "Prof. Sushrul Das, IIT (ISM) Dhanbad",
-  "Prof. Bratn Ghosh, IIT Kharagpur",
-  "Prof. Bharat Gupta, NIT Patna",
-  "Prof. Suparna Kar Chowdhury, Jadavpur University",
-  "Dr. Puneet Mishra, ISRO, Bangalore",
-  "Prof. Manish Goswami, IIIT Allahabad",
-  "Prof. N.P. Singh, NIT Kurukshetra",
-  "Prof. Nisha Gupta, BIT Mesra",
-  "Prof. S. K. Ghorai, BIT Mesra",
-  "Prof. Srikanta Pal, BIT Mesra",
-  "Prof. Sandeep Singh Solanki, BIT Mesra",
-  "Prof. Vibha Rani Gupta, BIT Mesra",
-  "Prof. S.S. Pathak, BIT Mesra",
-  "Prof. C. Jaganathan, BIT Mesra",
-  "Prof. Ashok Sharon, BIT Mesra",
-  "Prof. Jibendu Sekhar Roy, KIIT Bhubaneswar",
-  "Prof. D. Pal, BITS Pilani, Goa",
-  "Prof. Shweta Srivastava, Jaypee Institute of Information Technology, Noida"
-]
-```
-
----NOTE---
-**Note:** The Advisory Committee members are internationally and nationally recognized experts in their fields. They provide valuable insights and guidance to ensure the conference maintains the highest standards of academic excellence.
-

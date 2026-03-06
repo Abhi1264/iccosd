@@ -1,4 +1,4 @@
-import { loadContentWithCache, parseJsonBlock } from "./markdown";
+import { loadContentWithCache } from "./markdown";
 
 export interface QuickLink {
   title: string;
@@ -20,10 +20,7 @@ export interface Acknowledgment {
 
 export interface FooterSection {
   title: string;
-  links: Array<{
-    label: string;
-    href: string;
-  }>;
+  links: Array<{ label: string; href: string }>;
 }
 
 export interface SocialLink {
@@ -45,34 +42,31 @@ export interface FooterConfig {
   acknowledgments: Acknowledgment[];
   footerSections: FooterSection[];
   socialLinks: SocialLink[];
-  bottomText: string;
+}
+
+function asString(v: unknown, fallback = ""): string {
+  return typeof v === "string" ? v : fallback;
+}
+
+function asArray<T>(v: unknown, fallback: T[] = []): T[] {
+  return Array.isArray(v) ? v : fallback;
 }
 
 export function getFooterContent(): FooterConfig {
-  const footerData = loadContentWithCache("footer.md");
+  const { frontmatter } = loadContentWithCache("footer.md");
 
   return {
-    siteName: (footerData.frontmatter.siteName as string) || "ICCoSD-26",
-    siteTagline: (footerData.frontmatter.siteTagline as string) || "",
-    email: (footerData.frontmatter.email as string) || "",
-    phone: (footerData.frontmatter.phone as string) || "",
-    address: (footerData.frontmatter.address as string) || "",
-    copyright: (footerData.frontmatter.copyright as string) || "",
-    departmentName:
-      (footerData.frontmatter.departmentName as string) || "",
-    quickLinks:
-      ((parseJsonBlock(footerData.raw, "quicklinks") as QuickLink[]) || []),
-    importantDates:
-      ((parseJsonBlock(footerData.raw, "importantdates") as ImportantDate[]) ||
-        []),
-    acknowledgments:
-      ((parseJsonBlock(footerData.raw, "acknowledgments") as Acknowledgment[]) ||
-        []),
-    footerSections:
-      ((parseJsonBlock(footerData.raw, "footersections") as FooterSection[]) ||
-        []),
-    socialLinks:
-      ((parseJsonBlock(footerData.raw, "sociallinks") as SocialLink[]) || []),
-    bottomText: (footerData.sections?.bottom_text as string) || "",
+    siteName: asString(frontmatter.siteName, "ICCoSD-26"),
+    siteTagline: asString(frontmatter.siteTagline),
+    email: asString(frontmatter.email),
+    phone: asString(frontmatter.phone),
+    address: asString(frontmatter.address),
+    copyright: asString(frontmatter.copyright),
+    departmentName: asString(frontmatter.departmentName),
+    quickLinks: asArray<QuickLink>(frontmatter.quickLinks),
+    importantDates: asArray<ImportantDate>(frontmatter.importantDates),
+    acknowledgments: asArray<Acknowledgment>(frontmatter.acknowledgments),
+    footerSections: asArray<FooterSection>(frontmatter.footerSections),
+    socialLinks: asArray<SocialLink>(frontmatter.socialLinks),
   };
 }

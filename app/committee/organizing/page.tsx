@@ -65,13 +65,7 @@ export default function OrganizingCommittee() {
                 Publicity and Media Committee Chair
               </h2>
               <div className="space-y-4">
-                {[
-                  { name: "Dr. Vijay Nath", position: "BIT Mesra" },
-                  { name: "Dr. Richa Mishra", position: "BIT Mesra" },
-                  { name: "Dr. Sourav", position: "BIT Mesra" },
-                  { name: "Dr. Anusha V.", position: "BIT Mesra" },
-                  { name: "Mr. Mrinal Pathak", position: "BIT Mesra" },
-                ].map((member, idx) => (
+                {publicity.map((member, idx) => (
                   <div
                     key={idx}
                     className="p-4 bg-light-gray rounded-lg border-l-4 border-teal-accent"
@@ -90,13 +84,7 @@ export default function OrganizingCommittee() {
                 Accommodation and Transport Committee Chair
               </h2>
               <div className="space-y-4">
-                {[
-                  { name: "Mr. Vishal H. Shah", position: "BIT Mesra" },
-                  { name: "Dr. Kalyan Koley", position: "BIT Mesra" },
-                  { name: "Dr. Sandeep Mukherjee", position: "BIT Mesra" },
-                  { name: "Dr. Afaque Azam", position: "BIT Mesra" },
-                  { name: "Dr. Yogendra Agarwal", position: "BIT Mesra" },
-                ].map((member, idx) => (
+                {accommodation.map((member, idx) => (
                   <div
                     key={idx}
                     className="p-4 bg-light-gray rounded-lg border-l-4 border-teal-accent"
@@ -115,13 +103,7 @@ export default function OrganizingCommittee() {
                 Registration and Hospitality Committee Chair
               </h2>
               <div className="space-y-4">
-                {[
-                  { name: "Dr. Kartik Mahto", position: "BIT Mesra" },
-                  { name: "Dr. Parjna Parimita Dash", position: "BIT Mesra" },
-                  { name: "Dr. S. Sidhishwari", position: "BIT Mesra" },
-                  { name: "Dr. Deepti Gola", position: "BIT Mesra" },
-                  { name: "Mr. Siddhi Kant Mishra", position: "BIT Mesra" },
-                ].map((member, idx) => (
+                {registration.map((member, idx) => (
                   <div
                     key={idx}
                     className="p-4 bg-light-gray rounded-lg border-l-4 border-teal-accent"

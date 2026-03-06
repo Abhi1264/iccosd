@@ -1,4 +1,4 @@
-import { loadContentWithCache, parseJsonBlock } from "./markdown";
+import { loadContentWithCache } from "./markdown";
 
 export interface AboutHighlight {
   title: string;
@@ -11,35 +11,34 @@ export interface AboutContent {
   heroTitle: string;
   heroSubtitle: string;
   heroImage: string;
-  aboutBitMesra: string;
-  aboutIccosd: string;
   highlights: AboutHighlight[];
-  researchTracks: string;
-  ctaSection: string;
+  content: string;
+}
+
+function asString(v: unknown, fallback = ""): string {
+  return typeof v === "string" ? v : fallback;
+}
+
+function asArray<T>(v: unknown, fallback: T[] = []): T[] {
+  return Array.isArray(v) ? v : fallback;
 }
 
 export function getAboutContent(): AboutContent {
-  const data = loadContentWithCache("about.md");
+  const { frontmatter, content } = loadContentWithCache("about.md");
 
   return {
-    title:
-      (data.frontmatter.title as string) ||
-      "About ICCoSD-26 & BIT Mesra",
-    description:
-      (data.frontmatter.description as string) ||
+    title: asString(frontmatter.title, "About ICCoSD-26 & BIT Mesra"),
+    description: asString(
+      frontmatter.description,
       "Learn about the International Conference on Communication and Smart Devices and Birla Institute of Technology Mesra",
-    heroTitle: (data.frontmatter.heroTitle as string) || "About Us",
-    heroSubtitle:
-      (data.frontmatter.heroSubtitle as string) ||
+    ),
+    heroTitle: asString(frontmatter.heroTitle, "About Us"),
+    heroSubtitle: asString(
+      frontmatter.heroSubtitle,
       "ICCoSD-26 & Birla Institute of Technology Mesra",
-    heroImage:
-      (data.sections?.hero_image as string) || "/hero-conference.jpg",
-    aboutBitMesra: (data.sections?.about_bit_mesra as string) || "",
-    aboutIccosd: (data.sections?.about_iccosd as string) || "",
-    highlights:
-      (parseJsonBlock(data.raw, "highlights") as AboutHighlight[]) || [],
-    researchTracks: (data.sections?.research_tracks as string) || "",
-    ctaSection: (data.sections?.cta_section as string) || "",
+    ),
+    heroImage: asString(frontmatter.heroImage, "/hero-conference.jpg"),
+    highlights: asArray<AboutHighlight>(frontmatter.highlights),
+    content,
   };
 }
-

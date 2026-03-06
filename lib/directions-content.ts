@@ -1,4 +1,4 @@
-import { loadContentWithCache, parseJsonBlock } from "./markdown";
+import { loadContentWithCache } from "./markdown";
 
 export interface DistanceInfo {
   city: string;
@@ -21,34 +21,39 @@ export interface DirectionsContent {
   accommodation: string;
 }
 
-export function getDirectionsContent(): DirectionsContent {
-  const data = loadContentWithCache("directions.md");
-
-  return {
-    title:
-      (data.frontmatter.title as string) ||
-      "Directions | ICCoSD-26",
-    description:
-      (data.frontmatter.description as string) ||
-      "How to reach BIT Mesra, Ranchi for ICCoSD-26.",
-    heroTitle:
-      (data.frontmatter.heroTitle as string) ||
-      "How to Reach BIT Mesra",
-    heroSubtitle:
-      (data.frontmatter.heroSubtitle as string) ||
-      "Easy directions to the conference venue",
-    heroImage:
-      (data.sections?.hero_image as string) ||
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop",
-    intro: (data.sections?.intro as string) || "",
-    byAir: (data.sections?.by_air as string) || "",
-    byTrain: (data.sections?.by_train as string) || "",
-    byRoad: (data.sections?.by_road as string) || "",
-    localTransport: (data.sections?.local_transport as string) || "",
-    location: (data.sections?.location as string) || "",
-    distances:
-      ((parseJsonBlock(data.raw, "distances") as DistanceInfo[]) || []),
-    accommodation: (data.sections?.accommodation as string) || "",
-  };
+function asString(v: unknown, fallback = ""): string {
+  return typeof v === "string" ? v : fallback;
 }
 
+function asArray<T>(v: unknown, fallback: T[] = []): T[] {
+  return Array.isArray(v) ? v : fallback;
+}
+
+export function getDirectionsContent(): DirectionsContent {
+  const { frontmatter } = loadContentWithCache("directions.md");
+
+  return {
+    title: asString(frontmatter.title, "Directions | ICCoSD-26"),
+    description: asString(
+      frontmatter.description,
+      "How to reach BIT Mesra, Ranchi for ICCoSD-26.",
+    ),
+    heroTitle: asString(frontmatter.heroTitle, "How to Reach BIT Mesra"),
+    heroSubtitle: asString(
+      frontmatter.heroSubtitle,
+      "Easy directions to the conference venue",
+    ),
+    heroImage: asString(
+      frontmatter.heroImage,
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop",
+    ),
+    intro: asString(frontmatter.intro),
+    byAir: asString(frontmatter.byAir),
+    byTrain: asString(frontmatter.byTrain),
+    byRoad: asString(frontmatter.byRoad),
+    localTransport: asString(frontmatter.localTransport),
+    location: asString(frontmatter.location),
+    distances: asArray<DistanceInfo>(frontmatter.distances),
+    accommodation: asString(frontmatter.accommodation),
+  };
+}

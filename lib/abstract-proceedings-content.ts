@@ -1,4 +1,4 @@
-import { loadContentWithCache, parseJsonBlock } from "./markdown";
+import { loadContentWithCache } from "./markdown";
 
 export interface PublicationDetail {
   label: string;
@@ -19,30 +19,37 @@ export interface AbstractProceedingsContent {
   citation: string;
 }
 
-export function getAbstractProceedingsContent(): AbstractProceedingsContent {
-  const data = loadContentWithCache("abstract-proceedings.md");
-
-  return {
-    title:
-      (data.frontmatter.title as string) ||
-      "Abstract Proceedings | ICCoSD-26",
-    description:
-      (data.frontmatter.description as string) ||
-      "Download the abstract proceedings from ICCoSD-26.",
-    heroTitle: (data.frontmatter.heroTitle as string) || "Proceedings",
-    heroSubtitle:
-      (data.frontmatter.heroSubtitle as string) ||
-      "IEEE International Conference on Communication and Smart Devices",
-    heroImage:
-      (data.sections?.hero_image as string) ||
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop",
-    intro: (data.sections?.intro as string) || "",
-    aboutProceedings: (data.sections?.about_proceedings as string) || "",
-    downloadSection: (data.sections?.download_section as string) || "",
-    publication:
-      (parseJsonBlock(data.raw, "publication") as PublicationDetail[]) || [],
-    note: (data.sections?.note as string) || "",
-    citation: (data.sections?.citation as string) || "",
-  };
+function asString(v: unknown, fallback = ""): string {
+  return typeof v === "string" ? v : fallback;
 }
 
+function asArray<T>(v: unknown, fallback: T[] = []): T[] {
+  return Array.isArray(v) ? v : fallback;
+}
+
+export function getAbstractProceedingsContent(): AbstractProceedingsContent {
+  const { frontmatter } = loadContentWithCache("abstract-proceedings.md");
+
+  return {
+    title: asString(frontmatter.title, "Abstract Proceedings | ICCoSD-26"),
+    description: asString(
+      frontmatter.description,
+      "Download the abstract proceedings from ICCoSD-26.",
+    ),
+    heroTitle: asString(frontmatter.heroTitle, "Proceedings"),
+    heroSubtitle: asString(
+      frontmatter.heroSubtitle,
+      "IEEE International Conference on Communication and Smart Devices",
+    ),
+    heroImage: asString(
+      frontmatter.heroImage,
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop",
+    ),
+    intro: asString(frontmatter.intro),
+    aboutProceedings: asString(frontmatter.aboutProceedings),
+    downloadSection: asString(frontmatter.downloadSection),
+    publication: asArray<PublicationDetail>(frontmatter.publication),
+    note: asString(frontmatter.note),
+    citation: asString(frontmatter.citation),
+  };
+}

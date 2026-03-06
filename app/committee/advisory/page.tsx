@@ -41,8 +41,8 @@ export default function AdvisoryCommittee() {
               <h2 className="text-3xl font-bold text-primary mb-8">
                 International Advisory Committee
               </h2>
-                <div className="space-y-3">
-                  {international.map((member, idx) => (
+              <div className="space-y-3">
+                {international.map((member, idx) => (
                   <div
                     key={idx}
                     className="p-4 bg-light-gray rounded-lg border-l-4 border-gold-accent hover:shadow-md transition-shadow"
@@ -58,8 +58,8 @@ export default function AdvisoryCommittee() {
               <h2 className="text-3xl font-bold text-primary mb-8">
                 National Advisory Committee
               </h2>
-                <div className="space-y-3">
-                  {national.map((member, idx) => (
+              <div className="space-y-3">
+                {national.map((member, idx) => (
                   <div
                     key={idx}
                     className="p-4 bg-light-gray rounded-lg border-l-4 border-teal-accent hover:shadow-md transition-shadow"
@@ -72,9 +72,7 @@ export default function AdvisoryCommittee() {
           </div>
 
           <div className="mt-12 p-6 bg-blue-50 rounded-lg border-l-4 border-gold-accent">
-            <p className="text-foreground/80">
-              {note}
-            </p>
+            <p className="text-foreground/80">{note}</p>
           </div>
         </div>
       </section>

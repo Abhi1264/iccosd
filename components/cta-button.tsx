@@ -15,13 +15,13 @@ export function CTAButton({
   className = "",
 }: CTAButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center gap-2 px-8 py-3 text-base md:text-lg font-semibold rounded-full transition-all duration-300 text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gold-accent focus-visible:ring-offset-primary";
+    "inline-flex items-center justify-center gap-2 px-8 py-3 text-base md:text-lg font-semibold rounded-full transition-all duration-300 text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#d4a574] focus-visible:ring-offset-white";
 
   const variantStyles = {
     primary:
-      "bg-gold-accent text-primary hover:bg-gold-dark shadow-md hover:shadow-lg hover:-translate-y-0.5",
+      "bg-[#D4A574] text-[#0D5B6F] hover:bg-[#B89A60] shadow-md hover:shadow-lg hover:-translate-y-0.5",
     secondary:
-      "bg-gold-accent/10 text-gold-accent border border-gold-accent hover:bg-gold-accent/20",
+      "bg-[#D4A574] text-[#0D5B6F] border-2 border-[#B89A60] hover:bg-[#B89A60]",
   };
 
   return (

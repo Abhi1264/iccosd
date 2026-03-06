@@ -1,4 +1,4 @@
-import { loadContentWithCache, parseJsonBlock } from "./markdown";
+import { loadContentWithCache } from "./markdown";
 
 export interface StudentVolunteersContent {
   title: string;
@@ -11,28 +11,34 @@ export interface StudentVolunteersContent {
   contributions: string;
 }
 
-export function getStudentVolunteersContent(): StudentVolunteersContent {
-  const data = loadContentWithCache("student-volunteers.md");
-
-  return {
-    title:
-      (data.frontmatter.title as string) ||
-      "Student Volunteers | ICCoSD-26",
-    description:
-      (data.frontmatter.description as string) ||
-      "Meet the student volunteers of ICCoSD-26.",
-    heroTitle:
-      (data.frontmatter.heroTitle as string) || "Student Volunteers",
-    heroSubtitle:
-      (data.frontmatter.heroSubtitle as string) ||
-      "Supporting ICCoSD-26 with enthusiasm and dedication",
-    heroImage:
-      (data.sections?.hero_image as string) ||
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop",
-    intro: (data.sections?.intro as string) || "",
-    volunteers:
-      ((parseJsonBlock(data.raw, "volunteers") as string[]) || []),
-    contributions: (data.sections?.contributions as string) || "",
-  };
+function asString(v: unknown, fallback = ""): string {
+  return typeof v === "string" ? v : fallback;
 }
 
+function asArray<T>(v: unknown, fallback: T[] = []): T[] {
+  return Array.isArray(v) ? v : fallback;
+}
+
+export function getStudentVolunteersContent(): StudentVolunteersContent {
+  const { frontmatter } = loadContentWithCache("student-volunteers.md");
+
+  return {
+    title: asString(frontmatter.title, "Student Volunteers | ICCoSD-26"),
+    description: asString(
+      frontmatter.description,
+      "Meet the student volunteers of ICCoSD-26.",
+    ),
+    heroTitle: asString(frontmatter.heroTitle, "Student Volunteers"),
+    heroSubtitle: asString(
+      frontmatter.heroSubtitle,
+      "Supporting ICCoSD-26 with enthusiasm and dedication",
+    ),
+    heroImage: asString(
+      frontmatter.heroImage,
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop",
+    ),
+    intro: asString(frontmatter.intro),
+    volunteers: asArray<string>(frontmatter.volunteers),
+    contributions: asString(frontmatter.contributions),
+  };
+}

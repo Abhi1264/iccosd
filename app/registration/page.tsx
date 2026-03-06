@@ -51,7 +51,7 @@ export default function Registration() {
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse">
                   <thead>
-                    <tr className="bg-primary text-white">
+                    <tr className="bg-primary">
                       <th className="border border-gray-300 px-4 py-3 text-left">
                         Category
                       </th>

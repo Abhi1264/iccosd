@@ -1,4 +1,4 @@
-import { loadContentWithCache, parseJsonBlock } from "./markdown";
+import { loadContentWithCache } from "./markdown";
 
 export interface OrganizingContact {
   role: string;
@@ -41,47 +41,51 @@ export interface ContactContent {
   heroImage: string;
   mainEmail: string;
   mainPhone: string;
-  contactIntro: string;
   organizingContacts: OrganizingContact[];
   secretaries: Secretary[];
   department: DepartmentContact | null;
-  inquiryTypes: string;
   quickContacts: QuickContact[];
-  officeHours: string;
-  ctaSection: string;
+  content: string;
+}
+
+function asString(v: unknown, fallback = ""): string {
+  return typeof v === "string" ? v : fallback;
+}
+
+function asArray<T>(v: unknown, fallback: T[] = []): T[] {
+  return Array.isArray(v) ? v : fallback;
+}
+
+function asObject<T extends Record<string, unknown>>(
+  v: unknown,
+  fallback: T | null = null,
+): T | null {
+  return v && typeof v === "object" && !Array.isArray(v) ? (v as T) : fallback;
 }
 
 export function getContactContent(): ContactContent {
-  const data = loadContentWithCache("contact.md");
+  const { frontmatter, content } = loadContentWithCache("contact.md");
 
   return {
-    title:
-      (data.frontmatter.title as string) || "Contact Us - ICCoSD-26",
-    description:
-      (data.frontmatter.description as string) ||
+    title: asString(frontmatter.title, "Contact Us - ICCoSD-26"),
+    description: asString(
+      frontmatter.description,
       "Get in touch with the ICCoSD-26 organizing committee",
-    heroTitle: (data.frontmatter.heroTitle as string) || "Reach Us",
-    heroSubtitle:
-      (data.frontmatter.heroSubtitle as string) ||
+    ),
+    heroTitle: asString(frontmatter.heroTitle, "Reach Us"),
+    heroSubtitle: asString(
+      frontmatter.heroSubtitle,
       "Contact Information for ICCoSD-26",
-    heroImage:
-      (data.sections?.hero_image as string) || "/hero-conference.jpg",
-    mainEmail: (data.frontmatter.mainEmail as string) || "",
-    mainPhone: (data.frontmatter.mainPhone as string) || "",
-    contactIntro: (data.sections?.contact_intro as string) || "",
-    organizingContacts:
-      (parseJsonBlock(data.raw, "organizingcontacts") as OrganizingContact[]) ||
-      [],
-    secretaries:
-      (parseJsonBlock(data.raw, "secretaries") as Secretary[]) || [],
-    department:
-      (parseJsonBlock(data.raw, "departmentcontact") as DepartmentContact) ||
-      null,
-    inquiryTypes: (data.sections?.inquiry_types as string) || "",
-    quickContacts:
-      (parseJsonBlock(data.raw, "quickcontacts") as QuickContact[]) || [],
-    officeHours: (data.sections?.office_hours as string) || "",
-    ctaSection: (data.sections?.cta_section as string) || "",
+    ),
+    heroImage: asString(frontmatter.heroImage, "/hero-conference.jpg"),
+    mainEmail: asString(frontmatter.mainEmail),
+    mainPhone: asString(frontmatter.mainPhone),
+    organizingContacts: asArray<OrganizingContact>(
+      frontmatter.organizingContacts,
+    ),
+    secretaries: asArray<Secretary>(frontmatter.secretaries),
+    department: asObject<DepartmentContact>(frontmatter.department),
+    quickContacts: asArray<QuickContact>(frontmatter.quickContacts),
+    content,
   };
 }
-

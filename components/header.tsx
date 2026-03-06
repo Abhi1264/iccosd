@@ -181,7 +181,7 @@ export function Header() {
             <button
               onClick={() =>
                 setOpenDropdown(
-                  openDropdown === "committees" ? null : "committees"
+                  openDropdown === "committees" ? null : "committees",
                 )
               }
               className="w-full text-left px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-light-gray rounded-md transition-colors flex items-center justify-between"

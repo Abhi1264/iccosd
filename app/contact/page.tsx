@@ -1,6 +1,7 @@
 import { HeroSection } from "@/components/hero-section";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { getContactContent } from "@/lib/contact-content";
+import { MarkdownContent } from "@/components/markdown-content";
 
 const contactContent = getContactContent();
 
@@ -16,14 +17,11 @@ export default function Contact() {
     heroImage,
     mainEmail,
     mainPhone,
-    contactIntro,
     organizingContacts,
     secretaries,
     department,
-    inquiryTypes,
     quickContacts,
-    officeHours,
-    ctaSection,
+    content,
   } = contactContent;
 
   return (
@@ -180,7 +178,7 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full px-8 py-3 bg-gold-accent text-primary font-bold rounded-lg hover:bg-gold-dark transition-colors duration-300 shadow-md hover:shadow-lg"
+                  className="w-full px-8 py-3 bg-[#D4A574] text-[#0D5B6F] font-bold rounded-lg hover:bg-[#B89A60] transition-colors duration-300 shadow-md hover:shadow-lg"
                 >
                   Send Message
                 </button>
@@ -197,15 +195,7 @@ export default function Contact() {
             <h3 className="text-2xl font-bold text-primary mb-4">
               {department?.name}
             </h3>
-            <p className="text-foreground/80 mb-4 whitespace-pre-line">
-              {inquiryTypes}
-            </p>
-            <p className="text-foreground/80 whitespace-pre-line">
-              {officeHours}
-            </p>
-            <p className="text-foreground/80 mt-4 whitespace-pre-line">
-              {ctaSection}
-            </p>
+            <MarkdownContent content={content} />
           </div>
         </div>
       </section>

@@ -3,120 +3,79 @@ title: "Organizing Committee | ICCoSD-26"
 description: "Meet the organizing committee members of ICCoSD-26."
 heroTitle: "Organizing Committee"
 heroSubtitle: "Meet the leaders behind ICCoSD-26"
+heroImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop"
+committee:
+  patron:
+    - title: "Patron"
+      name: "Prof. Indranil Manna"
+      position: "Vice Chancellor, BIT Mesra"
+  chairman:
+    - title: "Chairman"
+      name: "Dr. Sanjay Kumar"
+      position: "HoD, ECE, BIT Mesra"
+  convenor:
+    - title: "Convenor"
+      name: "Dr. Gajendra Kant Mishra"
+      position: "Associate Professor, ECE"
+  coConvenor:
+    - title: "Co-Convenor"
+      name: "Dr. Sanjeet Kumar"
+      position: "Associate Professor, ECE"
+    - title: "Co-Convenor"
+      name: "Dr. Priyank Saxena"
+      position: "Associate Professor, ECE"
+  secretary:
+    - title: "Secretary"
+      name: "Dr. Sanjay Shankar Tripathy"
+      position: "Associate Professor, ECE"
+    - title: "Secretary"
+      name: "Dr. Dileep Kumar Upadhayay"
+      position: "Assistant Professor, ECE"
+  publicationChair:
+    - title: "Publication Chair"
+      name: "Dr. Sitanshu Sekhar Sahu"
+      position: "Associate Professor, ECE"
+    - title: "Publication Chair"
+      name: "Dr. Santashraya Prasad"
+      position: "Associate Professor, ECE"
+  financeChair:
+    - title: "Finance Chair (Treasurer)"
+      name: "Dr. Rupesh Kumar Sinha"
+      position: "Associate Professor, ECE"
+    - title: "Finance Chair (Joint Treasurer)"
+      name: "Dr. Somnath Sengupta"
+      position: "Associate Professor, ECE"
+publicity:
+  - name: "Dr. Vijay Nath"
+    position: "BIT Mesra"
+  - name: "Dr. Richa Mishra"
+    position: "BIT Mesra"
+  - name: "Dr. Sourav"
+    position: "BIT Mesra"
+  - name: "Dr. Anusha V."
+    position: "BIT Mesra"
+  - name: "Mr. Mrinal Pathak"
+    position: "BIT Mesra"
+accommodation:
+  - name: "Mr. Vishal H. Shah"
+    position: "BIT Mesra"
+  - name: "Dr. Kalyan Koley"
+    position: "BIT Mesra"
+  - name: "Dr. Sandeep Mukherjee"
+    position: "BIT Mesra"
+  - name: "Dr. Afaque Azam"
+    position: "BIT Mesra"
+  - name: "Dr. Yogendra Agarwal"
+    position: "BIT Mesra"
+registration:
+  - name: "Dr. Kartik Mahto"
+    position: "BIT Mesra"
+  - name: "Dr. Parjna Parimita Dash"
+    position: "BIT Mesra"
+  - name: "Dr. S. Sidhishwari"
+    position: "BIT Mesra"
+  - name: "Dr. Deepti Gola"
+    position: "BIT Mesra"
+  - name: "Mr. Siddhi Kant Mishra"
+    position: "BIT Mesra"
 ---
-
----HERO_IMAGE---
-https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop
-
----COMMITTEE---
-
-```json:committee
-{
-  "patron": [
-    {
-      "title": "Patron",
-      "name": "Prof. Indranil Manna",
-      "position": "Vice Chancellor, BIT Mesra"
-    }
-  ],
-  "chairman": [
-    {
-      "title": "Chairman",
-      "name": "Dr. Sanjay Kumar",
-      "position": "HoD, ECE, BIT Mesra"
-    }
-  ],
-  "convenor": [
-    {
-      "title": "Convenor",
-      "name": "Dr. Gajendra Kant Mishra",
-      "position": "Associate Professor, ECE"
-    }
-  ],
-  "coConvenor": [
-    {
-      "title": "Co-Convenor",
-      "name": "Dr. Sanjeet Kumar",
-      "position": "Associate Professor, ECE"
-    },
-    {
-      "title": "Co-Convenor",
-      "name": "Dr. Priyank Saxena",
-      "position": "Associate Professor, ECE"
-    }
-  ],
-  "secretary": [
-    {
-      "title": "Secretary",
-      "name": "Dr. Sanjay Shankar Tripathy",
-      "position": "Associate Professor, ECE"
-    },
-    {
-      "title": "Secretary",
-      "name": "Dr. Dileep Kumar Upadhayay",
-      "position": "Assistant Professor, ECE"
-    }
-  ],
-  "publicationChair": [
-    {
-      "title": "Publication Chair",
-      "name": "Dr. Sitanshu Sekhar Sahu",
-      "position": "Associate Professor, ECE"
-    },
-    {
-      "title": "Publication Chair",
-      "name": "Dr. Santashraya Prasad",
-      "position": "Associate Professor, ECE"
-    }
-  ],
-  "financeChair": [
-    {
-      "title": "Finance Chair (Treasurer)",
-      "name": "Dr. Rupesh Kumar Sinha",
-      "position": "Associate Professor, ECE"
-    },
-    {
-      "title": "Finance Chair (Joint Treasurer)",
-      "name": "Dr. Somnath Sengupta",
-      "position": "Associate Professor, ECE"
-    }
-  ]
-}
-```
-
----PUBLICITY_COMMITTEE---
-
-```json:publicity
-[
-  { "name": "Dr. Vijay Nath", "position": "BIT Mesra" },
-  { "name": "Dr. Richa Mishra", "position": "BIT Mesra" },
-  { "name": "Dr. Sourav", "position": "BIT Mesra" },
-  { "name": "Dr. Anusha V.", "position": "BIT Mesra" },
-  { "name": "Mr. Mrinal Pathak", "position": "BIT Mesra" }
-]
-```
-
----ACCOMMODATION_COMMITTEE---
-
-```json:accommodation
-[
-  { "name": "Mr. Vishal H. Shah", "position": "BIT Mesra" },
-  { "name": "Dr. Kalyan Koley", "position": "BIT Mesra" },
-  { "name": "Dr. Sandeep Mukherjee", "position": "BIT Mesra" },
-  { "name": "Dr. Afaque Azam", "position": "BIT Mesra" },
-  { "name": "Dr. Yogendra Agarwal", "position": "BIT Mesra" }
-]
-```
-
----REGISTRATION_COMMITTEE---
-
-```json:registration
-[
-  { "name": "Dr. Kartik Mahto", "position": "BIT Mesra" },
-  { "name": "Dr. Parjna Parimita Dash", "position": "BIT Mesra" },
-  { "name": "Dr. S. Sidhishwari", "position": "BIT Mesra" },
-  { "name": "Dr. Deepti Gola", "position": "BIT Mesra" },
-  { "name": "Mr. Siddhi Kant Mishra", "position": "BIT Mesra" }
-]
-```
-

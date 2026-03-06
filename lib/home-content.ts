@@ -1,4 +1,4 @@
-import { loadContentWithCache, parseJsonBlock } from "./markdown";
+import { loadContentWithCache } from "./markdown";
 
 export interface Highlight {
   stat: string;
@@ -47,43 +47,40 @@ export interface HomeConfig {
   homeDates: HomeDate[];
   homeCtas: HomeCTA[];
   homeOrganizers: HomeOrganizer[];
-  sections: Record<string, string>;
+}
+
+function asString(v: unknown, fallback = ""): string {
+  return typeof v === "string" ? v : fallback;
+}
+
+function asArray<T>(v: unknown, fallback: T[] = []): T[] {
+  return Array.isArray(v) ? v : fallback;
 }
 
 export function getHomeContent(): HomeConfig {
-  const homeData = loadContentWithCache("home.md");
+  const { frontmatter } = loadContentWithCache("home.md");
 
   return {
-    title: (homeData.frontmatter.title as string) || "",
-    description: (homeData.frontmatter.description as string) || "",
-    heroTitle: (homeData.frontmatter.heroTitle as string) || "",
-    heroSubtitle: (homeData.frontmatter.heroSubtitle as string) || "",
-    heroTagline: (homeData.frontmatter.heroTagline as string) || "",
-    heroDate: (homeData.frontmatter.heroDate as string) || "",
-    heroCTA: (homeData.frontmatter.heroCTA as string) || "Register Now",
-    heroCTALink:
-      (homeData.frontmatter.heroCTALink as string) || "/registration",
-    institution: (homeData.frontmatter.institution as string) || "",
-    theme: (homeData.frontmatter.theme as string) || "",
-    heroImageUrl:
-      (homeData.sections?.hero_image as string) || "/hero-conference.jpg",
-    highlights:
-      ((parseJsonBlock(homeData.raw, "highlights") as Highlight[]) || []),
-    aboutTitle: (homeData.frontmatter.aboutTitle as string) || "",
-    aboutLead: (homeData.frontmatter.aboutLead as string) || "",
-    aboutBody: (homeData.frontmatter.aboutBody as string) || "",
-    themeSectionTitle:
-      (homeData.frontmatter.themeSectionTitle as string) || "",
-    themeHeadline: (homeData.frontmatter.themeHeadline as string) || "",
-    themeDescription:
-      (homeData.frontmatter.themeDescription as string) || "",
-    homeDates:
-      ((parseJsonBlock(homeData.raw, "home_dates") as HomeDate[]) || []),
-    homeCtas:
-      ((parseJsonBlock(homeData.raw, "home_ctas") as HomeCTA[]) || []),
-    homeOrganizers:
-      ((parseJsonBlock(homeData.raw, "home_organizers") as HomeOrganizer[]) ||
-        []),
-    sections: homeData.sections || {},
+    title: asString(frontmatter.title),
+    description: asString(frontmatter.description),
+    heroTitle: asString(frontmatter.heroTitle),
+    heroSubtitle: asString(frontmatter.heroSubtitle),
+    heroTagline: asString(frontmatter.heroTagline),
+    heroDate: asString(frontmatter.heroDate),
+    heroCTA: asString(frontmatter.heroCTA, "Register Now"),
+    heroCTALink: asString(frontmatter.heroCTALink, "/registration"),
+    institution: asString(frontmatter.institution),
+    theme: asString(frontmatter.theme),
+    heroImageUrl: asString(frontmatter.heroImageUrl, "/hero-conference.jpg"),
+    highlights: asArray<Highlight>(frontmatter.highlights),
+    aboutTitle: asString(frontmatter.aboutTitle),
+    aboutLead: asString(frontmatter.aboutLead),
+    aboutBody: asString(frontmatter.aboutBody),
+    themeSectionTitle: asString(frontmatter.themeSectionTitle),
+    themeHeadline: asString(frontmatter.themeHeadline),
+    themeDescription: asString(frontmatter.themeDescription),
+    homeDates: asArray<HomeDate>(frontmatter.homeDates),
+    homeCtas: asArray<HomeCTA>(frontmatter.homeCtas),
+    homeOrganizers: asArray<HomeOrganizer>(frontmatter.homeOrganizers),
   };
 }

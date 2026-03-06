@@ -69,7 +69,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <TwoColumnSection
             left={
@@ -111,7 +111,7 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-block px-6 py-2 bg-gold-accent text-primary font-bold rounded-full mb-6">
+            <div className="inline-block px-6 py-2 bg-[#D4A574] text-[#0D5B6F] font-bold rounded-full mb-6">
               {themeSectionTitle}
             </div>
             <InfoBlock title={themeSectionTitle}>
@@ -184,9 +184,7 @@ export default function Home() {
                 </div>
                 <p className="text-lg font-bold text-primary">{org.name}</p>
                 <p className="text-sm text-foreground/70">{org.tagline}</p>
-                {idx === 0 && (
-                  <span className="sr-only">Organizer</span>
-                )}
+                {idx === 0 && <span className="sr-only">Organizer</span>}
               </div>
             ))}
           </div>
