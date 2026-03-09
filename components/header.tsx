@@ -168,25 +168,29 @@ export function Header() {
               className="icon-hover text-foreground"
               aria-label="Search"
             >
-              <Search className="w-5 h-5" />
+              <Search className="w-5 h-5 cursor-pointer" />
             </button>
             <div className="flex items-center gap-3 pl-3 border-l border-gray-200">
-              <Image
-                src="/ieee.avif"
-                alt="IEEE"
-                width={56}
-                height={24}
-                className="h-6 w-auto object-contain"
-                draggable={false}
-              />
-              <Image
-                src="/bit-mesra.png"
-                alt="BIT Mesra"
-                width={72}
-                height={28}
-                className="h-7 w-auto object-contain"
-                draggable={false}
-              />
+              <Link href="https://www.ieee.org/" target="_blank">
+                <Image
+                  src="/ieee.avif"
+                  alt="IEEE"
+                  width={56}
+                  height={24}
+                  className="h-6 w-auto object-contain"
+                  draggable={false}
+                />
+              </Link>
+              <Link href="https://www.bitmesra.ac.in/" target="_blank">
+                <Image
+                  src="/bit-mesra.png"
+                  alt="BIT Mesra"
+                  width={72}
+                  height={28}
+                  className="h-7 w-auto object-contain"
+                  draggable={false}
+                />
+              </Link>
             </div>
           </div>
 

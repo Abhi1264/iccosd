@@ -21,7 +21,7 @@ export function HeroSection({
 }: HeroSectionProps) {
   return (
     <section
-      className="relative h-96 md:h-190 flex items-center justify-center overflow-hidden"
+      className="relative h-198 md:h-190 flex items-center justify-center overflow-hidden"
       style={{
         backgroundImage: `url('${backgroundImage}')`,
         backgroundSize: "cover",
