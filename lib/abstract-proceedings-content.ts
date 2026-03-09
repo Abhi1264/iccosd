@@ -12,6 +12,13 @@ export interface AbstractProceedingsContent {
   heroSubtitle: string;
   heroImage: string;
   intro: string;
+  proceedingsTitle: string;
+  aboutTitle: string;
+  downloadTitle: string;
+  downloadButtonText: string;
+  downloadHelpText: string;
+  publicationTitle: string;
+  citationTitle: string;
   aboutProceedings: string;
   downloadSection: string;
   publication: PublicationDetail[];

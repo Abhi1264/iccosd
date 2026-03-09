@@ -18,6 +18,13 @@ export interface CallForPapersContent {
   heroImage: string;
   noticeTitle: string;
   noticeBody: string;
+  submissionGuidelinesTitle: string;
+  generalGuidelinesTitle: string;
+  acceptedPapersTitle: string;
+  researchTopicsTitle: string;
+  importantDatesTitle: string;
+  authorGuidelinesTitle: string;
+  contactButtonText: string;
   generalGuidelines: string;
   acceptedPapers: string;
   topics: CFPTopic[];

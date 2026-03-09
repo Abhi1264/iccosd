@@ -12,6 +12,15 @@ export interface DirectionsContent {
   heroSubtitle: string;
   heroImage: string;
   intro: string;
+  transportTitles: {
+    byAir: string;
+    byTrain: string;
+    byRoad: string;
+    localTransport: string;
+  };
+  locationTitle: string;
+  distanceTitle: string;
+  accommodationTitle: string;
   byAir: string;
   byTrain: string;
   byRoad: string;

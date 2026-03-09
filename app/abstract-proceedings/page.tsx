@@ -16,6 +16,13 @@ export default function AbstractProceedings() {
     heroSubtitle,
     heroImage,
     intro,
+    proceedingsTitle,
+    aboutTitle,
+    downloadTitle,
+    downloadButtonText,
+    downloadHelpText,
+    publicationTitle,
+    citationTitle,
     aboutProceedings,
     downloadSection,
     publication,
@@ -36,38 +43,35 @@ export default function AbstractProceedings() {
           <div className="text-center mb-12">
             <div className="prose prose-invert max-w-none text-foreground/80">
               <div className="text-3xl font-bold text-primary mb-6">
-                Conference Proceedings
+                {proceedingsTitle}
               </div>
               <p className="text-lg">{intro}</p>
             </div>
           </div>
 
           <div className="space-y-8">
-            <InfoBlock title="About the Proceedings" type="highlight">
+            <InfoBlock title={aboutTitle} type="highlight">
               <p className="whitespace-pre-line">{aboutProceedings}</p>
             </InfoBlock>
 
             <div className="bg-gold-accent/10 border-l-4 border-gold-accent p-8 rounded-lg">
               <h3 className="text-2xl font-bold text-primary mb-4">
-                Download Proceedings
+                {downloadTitle}
               </h3>
               <p className="text-foreground/80 mb-6 whitespace-pre-line">
                 {downloadSection}
               </p>
               <div className="space-y-4">
                 <CTAButton href="#" variant="primary">
-                  Download Abstract Proceedings
+                  {downloadButtonText}
                 </CTAButton>
-                <p className="text-sm text-foreground/70">
-                  Click above to download the PDF containing all conference
-                  abstracts (Format: PDF, Size: ~15-20 MB)
-                </p>
+                <p className="text-sm text-foreground/70">{downloadHelpText}</p>
               </div>
             </div>
 
             <div>
               <h3 className="text-2xl font-bold text-primary mb-4">
-                Publication Details
+                {publicationTitle}
               </h3>
               <ul className="space-y-3 text-foreground/80">
                 {publication.map((item) => (
@@ -89,7 +93,7 @@ export default function AbstractProceedings() {
 
             <div>
               <h3 className="text-2xl font-bold text-primary mb-4">
-                Citation Information
+                {citationTitle}
               </h3>
               <div className="bg-light-gray p-4 rounded-lg font-mono text-sm text-foreground/70 overflow-x-auto">
                 <pre className="whitespace-pre-wrap">{citation}</pre>

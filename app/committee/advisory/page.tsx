@@ -14,6 +14,8 @@ export default function AdvisoryCommittee() {
     heroSubtitle,
     heroImage,
     intro,
+    internationalTitle,
+    nationalTitle,
     international,
     national,
     note,
@@ -39,7 +41,7 @@ export default function AdvisoryCommittee() {
             {/* International Advisory */}
             <div>
               <h2 className="text-3xl font-bold text-primary mb-8">
-                International Advisory Committee
+                {internationalTitle}
               </h2>
               <div className="space-y-3">
                 {international.map((member, idx) => (
@@ -56,7 +58,7 @@ export default function AdvisoryCommittee() {
             {/* National Advisory */}
             <div>
               <h2 className="text-3xl font-bold text-primary mb-8">
-                National Advisory Committee
+                {nationalTitle}
               </h2>
               <div className="space-y-3">
                 {national.map((member, idx) => (

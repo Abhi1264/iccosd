@@ -7,6 +7,8 @@ export interface AdvisoryCommitteeContent {
   heroSubtitle: string;
   heroImage: string;
   intro: string;
+  internationalTitle: string;
+  nationalTitle: string;
   international: string[];
   national: string[];
   note: string;

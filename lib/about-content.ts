@@ -11,6 +11,8 @@ export interface AboutContent {
   heroTitle: string;
   heroSubtitle: string;
   heroImage: string;
+  badgeLabel: string;
+  highlightsTitle: string;
   highlights: AboutHighlight[];
   content: string;
 }

@@ -4,7 +4,7 @@ interface HeroSectionProps {
   title: string;
   subtitle?: string;
   backgroundImage: string;
-  heroTagline: string;
+  heroTagline?: string;
   ctaText?: string;
   ctaLink?: string;
   overlayOpacity?: number;
@@ -14,7 +14,7 @@ export function HeroSection({
   title,
   subtitle,
   backgroundImage,
-  heroTagline,
+  heroTagline = "",
   ctaText,
   ctaLink = "#",
   overlayOpacity = 0.4,

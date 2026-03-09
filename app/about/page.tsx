@@ -13,8 +13,15 @@ export const metadata = {
 };
 
 export default function About() {
-  const { heroTitle, heroSubtitle, heroImage, highlights, content } =
-    aboutContent;
+  const {
+    heroTitle,
+    heroSubtitle,
+    heroImage,
+    badgeLabel,
+    highlightsTitle,
+    highlights,
+    content,
+  } = aboutContent;
 
   return (
     <main>
@@ -31,7 +38,7 @@ export default function About() {
             left={
               <div>
                 <div className="inline-block px-4 py-2 bg-yellow-500 text-white font-bold rounded-full">
-                  BIT Mesra
+                  {badgeLabel}
                 </div>
                 <MarkdownContent content={content} />
               </div>
@@ -54,7 +61,7 @@ export default function About() {
 
       <section className="pb-16 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <InfoBlock title="Conference Highlights" type="highlight">
+          <InfoBlock title={highlightsTitle} type="highlight">
             <ul className="space-y-2">
               {highlights.map((item) => (
                 <li key={item.title} className="flex gap-2">

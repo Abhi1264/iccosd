@@ -39,6 +39,27 @@ export interface ContactContent {
   heroTitle: string;
   heroSubtitle: string;
   heroImage: string;
+  contactInfoTitle: string;
+  generalInquiriesTitle: string;
+  keyContactsTitle: string;
+  sendMessageTitle: string;
+  addressLabel: string;
+  emailLabel: string;
+  phoneLabel: string;
+  formLabels: {
+    fullName: string;
+    emailAddress: string;
+    subject: string;
+    message: string;
+  };
+  formPlaceholders: {
+    fullName: string;
+    emailAddress: string;
+    subject: string;
+    message: string;
+  };
+  submitButtonText: string;
+  responseTimeText: string;
   mainEmail: string;
   mainPhone: string;
   organizingContacts: OrganizingContact[];

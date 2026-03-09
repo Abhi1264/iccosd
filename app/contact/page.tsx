@@ -15,6 +15,17 @@ export default function Contact() {
     heroTitle,
     heroSubtitle,
     heroImage,
+    contactInfoTitle,
+    generalInquiriesTitle,
+    keyContactsTitle,
+    sendMessageTitle,
+    addressLabel,
+    emailLabel,
+    phoneLabel,
+    formLabels,
+    formPlaceholders,
+    submitButtonText,
+    responseTimeText,
     mainEmail,
     mainPhone,
     organizingContacts,
@@ -38,20 +49,22 @@ export default function Contact() {
             {/* Contact Information */}
             <div>
               <h2 className="text-3xl font-bold text-primary mb-8">
-                Contact Information
+                {contactInfoTitle}
               </h2>
 
               <div className="space-y-8">
                 {/* General */}
                 <div>
                   <h3 className="text-xl font-bold text-primary mb-4">
-                    General Inquiries
+                    {generalInquiriesTitle}
                   </h3>
                   <div className="space-y-4">
                     <div className="flex gap-4">
                       <MapPin className="w-6 h-6 text-gold-accent shrink-0 mt-1" />
                       <div>
-                        <p className="font-bold text-foreground">Address</p>
+                        <p className="font-bold text-foreground">
+                          {addressLabel}
+                        </p>
                         <p className="text-foreground/70">
                           {department?.name}
                           <br />
@@ -66,7 +79,9 @@ export default function Contact() {
                     <div className="flex gap-4">
                       <Mail className="w-6 h-6 text-gold-accent shrink-0 mt-1" />
                       <div>
-                        <p className="font-bold text-foreground">Email</p>
+                        <p className="font-bold text-foreground">
+                          {emailLabel}
+                        </p>
                         <a
                           href={`mailto:${mainEmail}`}
                           className="text-primary hover:text-gold-accent transition-colors"
@@ -79,7 +94,9 @@ export default function Contact() {
                     <div className="flex gap-4">
                       <Phone className="w-6 h-6 text-gold-accent shrink-0 mt-1" />
                       <div>
-                        <p className="font-bold text-foreground">Phone</p>
+                        <p className="font-bold text-foreground">
+                          {phoneLabel}
+                        </p>
                         <p className="text-foreground/70">{mainPhone}</p>
                       </div>
                     </div>
@@ -89,7 +106,7 @@ export default function Contact() {
                 {/* Key Contacts */}
                 <div>
                   <h3 className="text-xl font-bold text-primary mb-4">
-                    Key Contact Numbers
+                    {keyContactsTitle}
                   </h3>
                   <div className="space-y-3 text-foreground/80">
                     {organizingContacts.map((c) => (
@@ -124,54 +141,54 @@ export default function Contact() {
             {/* Contact Form Section */}
             <div>
               <h2 className="text-3xl font-bold text-primary mb-8">
-                Send us a Message
+                {sendMessageTitle}
               </h2>
 
               <form className="space-y-6">
                 <div>
                   <label className="block text-sm font-bold text-primary mb-2">
-                    Full Name
+                    {formLabels.fullName}
                   </label>
                   <input
                     type="text"
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-gold-accent focus:ring-2 focus:ring-gold-accent/20"
-                    placeholder="Your name"
+                    placeholder={formPlaceholders.fullName}
                     required
                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-bold text-primary mb-2">
-                    Email Address
+                    {formLabels.emailAddress}
                   </label>
                   <input
                     type="email"
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-gold-accent focus:ring-2 focus:ring-gold-accent/20"
-                    placeholder="your@email.com"
+                    placeholder={formPlaceholders.emailAddress}
                     required
                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-bold text-primary mb-2">
-                    Subject
+                    {formLabels.subject}
                   </label>
                   <input
                     type="text"
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-gold-accent focus:ring-2 focus:ring-gold-accent/20"
-                    placeholder="Subject of your inquiry"
+                    placeholder={formPlaceholders.subject}
                     required
                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-bold text-primary mb-2">
-                    Message
+                    {formLabels.message}
                   </label>
                   <textarea
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-gold-accent focus:ring-2 focus:ring-gold-accent/20 resize-none"
                     rows={6}
-                    placeholder="Your message..."
+                    placeholder={formPlaceholders.message}
                     required
                   ></textarea>
                 </div>
@@ -180,12 +197,12 @@ export default function Contact() {
                   type="submit"
                   className="w-full px-8 py-3 bg-[#D4A574] text-[#0D5B6F] font-bold rounded-lg hover:bg-[#B89A60] transition-colors duration-300 shadow-md hover:shadow-lg"
                 >
-                  Send Message
+                  {submitButtonText}
                 </button>
               </form>
 
               <p className="text-sm text-foreground/70 mt-4 text-center">
-                We will get back to you within 24-48 hours.
+                {responseTimeText}
               </p>
             </div>
           </div>

@@ -21,6 +21,11 @@ export interface OrganizingCommitteeContent {
   publicity: SimpleMember[];
   accommodation: SimpleMember[];
   registration: SimpleMember[];
+  sectionTitles: {
+    publicity: string;
+    accommodation: string;
+    registration: string;
+  };
 }
 
 export function getOrganizingCommitteeContent(): OrganizingCommitteeContent {

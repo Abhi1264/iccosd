@@ -51,7 +51,9 @@ const SEARCH_PAGES: Array<{ href: string; label: string; text: string }> = [
       siteConfig.callForPapers.topics
         .map((t) => `${t.title} ${t.items.join(" ")}`)
         .join(" "),
-      siteConfig.callForPapers.dates.map((d) => `${d.label} ${d.date}`).join(" "),
+      siteConfig.callForPapers.dates
+        .map((d) => `${d.label} ${d.date}`)
+        .join(" "),
     ].join("\n"),
   },
   {
@@ -131,7 +133,9 @@ const SEARCH_PAGES: Array<{ href: string; label: string; text: string }> = [
       siteConfig.directions.byRoad,
       siteConfig.directions.localTransport,
       siteConfig.directions.location,
-      siteConfig.directions.distances.map((d) => `${d.city} ${d.distance}`).join(" "),
+      siteConfig.directions.distances
+        .map((d) => `${d.city} ${d.distance}`)
+        .join(" "),
       siteConfig.directions.accommodation,
     ].join("\n"),
   },

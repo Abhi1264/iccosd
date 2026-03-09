@@ -17,6 +17,7 @@ export default function OrganizingCommittee() {
     publicity,
     accommodation,
     registration,
+    sectionTitles,
   } = organizingContent;
 
   return (
@@ -62,7 +63,7 @@ export default function OrganizingCommittee() {
 
             <div>
               <h2 className="text-2xl font-bold text-primary mb-6">
-                Publicity and Media Committee Chair
+                {sectionTitles.publicity}
               </h2>
               <div className="space-y-4">
                 {publicity.map((member, idx) => (
@@ -81,7 +82,7 @@ export default function OrganizingCommittee() {
 
             <div>
               <h2 className="text-2xl font-bold text-primary mb-6">
-                Accommodation and Transport Committee Chair
+                {sectionTitles.accommodation}
               </h2>
               <div className="space-y-4">
                 {accommodation.map((member, idx) => (
@@ -100,7 +101,7 @@ export default function OrganizingCommittee() {
 
             <div>
               <h2 className="text-2xl font-bold text-primary mb-6">
-                Registration and Hospitality Committee Chair
+                {sectionTitles.registration}
               </h2>
               <div className="space-y-4">
                 {registration.map((member, idx) => (

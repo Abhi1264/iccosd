@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+build
+coverage
+dist
+.vercel
+.turbo
+
+*.log
+*.tsbuildinfo
+next-env.d.ts
+.agent
+.agents
