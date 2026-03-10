@@ -378,7 +378,7 @@ Submit your research, register for the conference, or volunteer to be part of th
         {
           title: "Secretary",
           name: "Dr. Vishal H Shah",
-          position: "Associate Professor, ECE",
+          position: "Assistant Professor, ECE",
         },
         {
           title: "Secretary",
