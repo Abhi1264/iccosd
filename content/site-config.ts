@@ -351,7 +351,7 @@ Submit your research, register for the conference, or volunteer to be part of th
       chairman: [
         {
           title: "Chairman",
-          name: "Dr. Sanjay Kumar",
+          name: "Prof. Sanjay Kumar",
           position: "HoD, ECE, BIT Mesra",
         },
       ],
