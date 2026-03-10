@@ -32,10 +32,6 @@ const SEARCH_PAGES: Array<{ href: string; label: string; text: string }> = [
     text: [
       siteConfig.about.title,
       siteConfig.about.description,
-      siteConfig.about.content,
-      siteConfig.about.highlights
-        .map((h) => `${h.title} ${h.description}`)
-        .join(" "),
     ].join("\n"),
   },
   {
