@@ -36,7 +36,7 @@ export default function Registration() {
         backgroundImage={heroImage}
       />
 
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <InfoBlock title={noticeTitle} type="highlight">
             <p>{noticeBody}</p>
@@ -81,9 +81,9 @@ export default function Registration() {
                         <td className="border border-gray-300 px-4 py-3 font-bold">
                           {row.category}
                         </td>
-                        {row.fees.map((fee) => (
+                        {row.fees.map((fee, feeIdx) => (
                           <td
-                            key={`${row.category}-${fee}`}
+                            key={`${row.category}-${feeIdx}`}
                             className="border border-gray-300 px-4 py-3 text-center"
                           >
                             {fee}
@@ -113,7 +113,7 @@ export default function Registration() {
               <h2 className="text-3xl font-bold text-primary mb-6">
                 {registrationContactTitle}
               </h2>
-              <div className="bg-light-gray p-6 rounded-lg">
+              <div className="p-6 rounded-lg">
                 <p className="text-foreground/80 mb-4">
                   {registrationContactIntro}
                 </p>

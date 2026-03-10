@@ -2,7 +2,14 @@ import { HeroSection } from "@/components/hero-section";
 import { CTAButton } from "@/components/cta-button";
 import { TwoColumnSection } from "@/components/two-column-section";
 import Image from "next/image";
+import { FileText, ClipboardList, Users } from "lucide-react";
 import { getHomeContent } from "@/lib/home-content";
+
+const CTA_ICONS = {
+  FileText,
+  ClipboardList,
+  Users,
+} as const;
 
 const homeContent = getHomeContent();
 
@@ -17,9 +24,11 @@ export default function Home() {
     heroTagline,
     heroTitle,
     heroDate,
+    organizedBy,
     heroCTA,
     heroCTALink,
     heroImageUrl,
+    heroImageUrlMobile,
     highlights,
     aboutTitle,
     aboutLead,
@@ -39,13 +48,15 @@ export default function Home() {
         heroTagline={heroTagline}
         title={title}
         subtitle={`${heroTitle} | ${heroDate}`}
+        organizedBy={organizedBy}
         backgroundImage={heroImageUrl}
+        backgroundImageMobile={heroImageUrlMobile}
         ctaText={heroCTA}
         ctaLink={heroCTALink}
       />
 
       {/* Highlights Section */}
-      <section className="py-16 md:py-24 bg-light-gray">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-primary mb-12">
             Why Attend {heroTitle}?
@@ -70,7 +81,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="py-16 bg-white">
+      <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <TwoColumnSection
             left={
@@ -92,7 +103,7 @@ export default function Home() {
             right={
               <div className="space-y-4">
                 <Image
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=400&fit=crop"
+                  src="hero-conference.jpg"
                   alt="Conference venue"
                   width={500}
                   height={400}
@@ -101,8 +112,7 @@ export default function Home() {
                   priority
                 />
                 <p className="text-sm text-foreground/60 italic">
-                  Venue: BIT Mesra, Ranchi - A deemed university with
-                  world-class facilities
+                  Venue: Birla Institute of Technology, Mesra, Ranchi
                 </p>
               </div>
             }
@@ -111,7 +121,7 @@ export default function Home() {
       </section>
 
       {/* Conference Theme */}
-      <section className="py-16 md:py-24 bg-primary">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center max-w-3xl mx-auto">
             <div className="inline-block px-6 py-2 bg-yellow-500 text-white font-bold rounded-full mb-6">
@@ -128,7 +138,7 @@ export default function Home() {
       </section>
 
       {/* Important Dates */}
-      <section className="py-16 md:py-24 bg-light-gray">
+      <section>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-4xl font-bold text-center text-primary mb-12">
             Important Dates
@@ -150,29 +160,40 @@ export default function Home() {
       </section>
 
       {/* Call to Action Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {homeCtas.map((item, idx) => (
-              <div
-                key={idx}
-                className="p-8 text-center bg-light-gray rounded-lg hover:shadow-lg transition-shadow"
-              >
-                <h3 className="text-2xl font-bold text-primary mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-foreground/70 mb-6">{item.description}</p>
-                <CTAButton href={item.link} variant="primary">
-                  {item.cta}
-                </CTAButton>
-              </div>
-            ))}
+            {homeCtas.map((item, idx) => {
+              const Icon =
+                item.icon && item.icon in CTA_ICONS
+                  ? CTA_ICONS[item.icon as keyof typeof CTA_ICONS]
+                  : null;
+              return (
+                <div
+                  key={idx}
+                  className="p-8 text-center rounded-lg hover:shadow-lg transition-shadow border border-transparent hover:border-gold-accent/30"
+                >
+                  {Icon && (
+                    <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gold-accent/20 text-gold-accent mb-4">
+                      <Icon className="w-16 h-16" strokeWidth={2} />
+                    </div>
+                  )}
+                  <h3 className="text-2xl font-bold text-primary mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-foreground/70 mb-6">{item.description}</p>
+                  <CTAButton href={item.link} variant="primary">
+                    {item.cta}
+                  </CTAButton>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Organizing Partners */}
-      <section className="py-16 md:py-24 bg-light-gray">
+      <section className="pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-4xl font-bold text-center text-primary mb-12">
             Organized By
@@ -190,7 +211,7 @@ export default function Home() {
                   priority
                 />
                 <p className="text-lg font-bold text-primary">{org.name}</p>
-                <p className="text-sm text-foreground/70">{org.tagline}</p>
+                <p className="text-foreground/70">{org.tagline}</p>
                 {idx === 0 && <span className="sr-only">Organizer</span>}
               </div>
             ))}

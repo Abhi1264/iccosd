@@ -26,17 +26,17 @@ export default function StudentVolunteers() {
         backgroundImage={heroImage}
       />
 
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <section className="py-16 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="mb-12 text-center">
             <p className="text-lg text-foreground/80">{intro}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
             {volunteers.map((volunteer, idx) => (
               <div
                 key={idx}
-                className="p-5 bg-light-gray rounded-lg border-l-4 border-gold-accent hover:shadow-md transition-shadow text-center md:text-left"
+                className="p-5 rounded-lg border-l-4 border-gold-accent hover:shadow-md transition-shadow text-center md:text-left"
               >
                 <p className="text-lg font-semibold text-primary">
                   {volunteer}

@@ -51,7 +51,10 @@ export function getFooterContent(): FooterConfig {
     quickLinks: [...footer.quickLinks],
     importantDates: [...footer.importantDates],
     acknowledgments: [...footer.acknowledgments],
-    footerSections: [...footer.footerSections],
+    footerSections: footer.footerSections.map((s) => ({
+      title: s.title,
+      links: s.links.map((l) => ({ label: l.label, href: l.href })),
+    })),
     socialLinks: [...footer.socialLinks],
   };
 }

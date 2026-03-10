@@ -34,5 +34,17 @@ export function getRegistrationContent(): RegistrationContent {
   const registration = siteConfig.registration;
   return {
     ...registration,
+    tableHeaders: [...registration.tableHeaders] as [
+      string,
+      string,
+      string,
+      string,
+      string,
+    ],
+    feeRows: registration.feeRows.map((r) => ({
+      category: r.category,
+      fees: [...r.fees] as [string, string, string, string],
+    })),
+    registrationInfoPoints: [...registration.registrationInfoPoints],
   };
 }

@@ -47,7 +47,7 @@ export default function AdvisoryCommittee() {
                 {international.map((member, idx) => (
                   <div
                     key={idx}
-                    className="p-4 bg-light-gray rounded-lg border-l-4 border-gold-accent hover:shadow-md transition-shadow"
+                    className="p-4 rounded-lg border-l-4 border-gold-accent hover:shadow-md transition-shadow"
                   >
                     <p className="text-foreground font-medium">{member}</p>
                   </div>
@@ -64,7 +64,7 @@ export default function AdvisoryCommittee() {
                 {national.map((member, idx) => (
                   <div
                     key={idx}
-                    className="p-4 bg-light-gray rounded-lg border-l-4 border-teal-accent hover:shadow-md transition-shadow"
+                    className="p-4 rounded-lg border-l-4 border-teal-accent hover:shadow-md transition-shadow"
                   >
                     <p className="text-foreground font-medium">{member}</p>
                   </div>

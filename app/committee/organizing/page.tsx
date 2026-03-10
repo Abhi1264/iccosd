@@ -40,7 +40,7 @@ export default function OrganizingCommittee() {
                   {members.map((member, idx) => (
                     <div
                       key={idx}
-                      className="p-6 bg-light-gray rounded-lg border-l-4 border-gold-accent hover:shadow-md transition-shadow"
+                      className="p-6 rounded-lg border-l-4 border-gold-accent hover:shadow-md transition-shadow"
                     >
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                         <div>
@@ -61,62 +61,68 @@ export default function OrganizingCommittee() {
               </div>
             ))}
 
-            <div>
-              <h2 className="text-2xl font-bold text-primary mb-6">
-                {sectionTitles.publicity}
-              </h2>
-              <div className="space-y-4">
-                {publicity.map((member, idx) => (
-                  <div
-                    key={idx}
-                    className="p-4 bg-light-gray rounded-lg border-l-4 border-teal-accent"
-                  >
-                    <h3 className="font-bold text-primary">{member.name}</h3>
-                    <p className="text-sm text-foreground/70">
-                      {member.position}
-                    </p>
-                  </div>
-                ))}
+            {publicity.length > 0 && (
+              <div>
+                <h2 className="text-2xl font-bold text-primary mb-6">
+                  {sectionTitles.publicity}
+                </h2>
+                <div className="space-y-4">
+                  {publicity.map((member, idx) => (
+                    <div
+                      key={idx}
+                      className="p-4 rounded-lg border-l-4 border-teal-accent"
+                    >
+                      <h3 className="font-bold text-primary">{member.name}</h3>
+                      <p className="text-sm text-foreground/70">
+                        {member.position}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
 
-            <div>
-              <h2 className="text-2xl font-bold text-primary mb-6">
-                {sectionTitles.accommodation}
-              </h2>
-              <div className="space-y-4">
-                {accommodation.map((member, idx) => (
-                  <div
-                    key={idx}
-                    className="p-4 bg-light-gray rounded-lg border-l-4 border-teal-accent"
-                  >
-                    <h3 className="font-bold text-primary">{member.name}</h3>
-                    <p className="text-sm text-foreground/70">
-                      {member.position}
-                    </p>
-                  </div>
-                ))}
+            {accommodation.length > 0 && (
+              <div>
+                <h2 className="text-2xl font-bold text-primary mb-6">
+                  {sectionTitles.accommodation}
+                </h2>
+                <div className="space-y-4">
+                  {accommodation.map((member, idx) => (
+                    <div
+                      key={idx}
+                      className="p-4 rounded-lg border-l-4 border-teal-accent"
+                    >
+                      <h3 className="font-bold text-primary">{member.name}</h3>
+                      <p className="text-sm text-foreground/70">
+                        {member.position}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
 
-            <div>
-              <h2 className="text-2xl font-bold text-primary mb-6">
-                {sectionTitles.registration}
-              </h2>
-              <div className="space-y-4">
-                {registration.map((member, idx) => (
-                  <div
-                    key={idx}
-                    className="p-4 bg-light-gray rounded-lg border-l-4 border-teal-accent"
-                  >
-                    <h3 className="font-bold text-primary">{member.name}</h3>
-                    <p className="text-sm text-foreground/70">
-                      {member.position}
-                    </p>
-                  </div>
-                ))}
+            {registration.length > 0 && (
+              <div>
+                <h2 className="text-2xl font-bold text-primary mb-6">
+                  {sectionTitles.registration}
+                </h2>
+                <div className="space-y-4">
+                  {registration.map((member, idx) => (
+                    <div
+                      key={idx}
+                      className="p-4 rounded-lg border-l-4 border-teal-accent"
+                    >
+                      <h3 className="font-bold text-primary">{member.name}</h3>
+                      <p className="text-sm text-foreground/70">
+                        {member.position}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </section>

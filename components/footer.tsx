@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import { Mail, Phone, ExternalLink } from "lucide-react";
 import { getFooterContent, type FooterConfig } from "@/lib/footer-content";
 import { IntentLink } from "@/components/intent-link";
@@ -65,7 +65,7 @@ export function Footer() {
         <div className="border-t border-white/10 my-10" />
 
         {/* Middle Section - Important Dates & Contact */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Important Dates */}
           <div>
             <h4 className="text-sm font-bold mb-4 text-white uppercase tracking-wider">
@@ -132,10 +132,10 @@ export function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-white/10 my-10" />
+        {/* <div className="border-t border-white/10 my-10" /> */}
 
         {/* Acknowledgments Section */}
-        {footerData.acknowledgments.length > 0 && (
+        {/* {footerData.acknowledgments.length > 0 && (
           <>
             <h4 className="text-sm font-bold mb-6 text-white uppercase tracking-wider text-center">
               Acknowledgments & Partners
@@ -174,7 +174,7 @@ export function Footer() {
               ))}
             </div>
           </>
-        )}
+        )} */}
       </div>
 
       {/* Bottom Copyright Bar */}

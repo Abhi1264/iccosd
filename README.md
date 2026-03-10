@@ -1,6 +1,6 @@
 # ICCoSD-26 Conference Website
 
-Website for the 2026 IEEE International Conference on Communication and Smart Devices (ICCoSD-26), February 18–19, 2026 at BIT Mesra, Ranchi.
+Website for the 2026 IEEE International Conference on Communication and Smart Intelligence (ICCoSD-26), December 17–18, 2026 at BIT Mesra, Ranchi.
 
 ## Quick Start
 

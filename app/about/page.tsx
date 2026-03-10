@@ -1,6 +1,4 @@
 import { HeroSection } from "@/components/hero-section";
-import { TwoColumnSection } from "@/components/two-column-section";
-import { InfoBlock } from "@/components/info-block";
 import { MarkdownContent } from "@/components/markdown-content";
 import Image from "next/image";
 import { getAboutContent } from "@/lib/about-content";
@@ -17,10 +15,11 @@ export default function About() {
     heroTitle,
     heroSubtitle,
     heroImage,
-    badgeLabel,
-    highlightsTitle,
-    highlights,
-    content,
+    aboutBitMesraTitle,
+    aboutBitMesraImageCaption,
+    aboutBitMesraBody,
+    aboutConferenceTitle,
+    aboutConferenceBody,
   } = aboutContent;
 
   return (
@@ -29,50 +28,51 @@ export default function About() {
         title={heroTitle}
         subtitle={heroSubtitle}
         backgroundImage={heroImage}
-        heroTagline={""}
+        heroTagline=""
       />
 
-      <section className="pt-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <TwoColumnSection
-            left={
-              <div>
-                <div className="inline-block px-4 py-2 bg-yellow-500 text-white font-bold rounded-full">
-                  {badgeLabel}
-                </div>
-                <MarkdownContent content={content} />
+      {/* Main content - dark background with gold headings, matching reference layout */}
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          {/* Section 1: About BIT Mesra */}
+          <div className="mb-16">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8">
+              {aboutBitMesraTitle}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="md:col-span-1">
+                  <Image
+                    src="/hero-conference.jpg"
+                    alt={aboutBitMesraImageCaption}
+                    width={360}
+                    height={430}
+                    className="w-full h-auto object-cover rounded-md"
+                    sizes="(max-width: 768px) 100vw, 360px"
+                    draggable={false}
+                  />
+                <p className="text-white/80 text-sm mt-3 italic">
+                  {aboutBitMesraImageCaption}
+                </p>
               </div>
-            }
-            right={
-              <Image
-                src="/hero-conference.jpg"
-                alt="BIT Mesra Campus"
-                className="w-full h-auto rounded-lg shadow-lg object-cover"
-                width={420}
-                height={280}
-                sizes="(max-width: 768px) 100vw, 420px"
-                draggable={false}
-                priority
-              />
-            }
-          />
-        </div>
-      </section>
+              <div className="md:col-span-2">
+                <MarkdownContent
+                  content={aboutBitMesraBody}
+                  className="prose-invert prose-p:text-white/90 prose-headings:text-white prose-strong:text-white"
+                />
+              </div>
+            </div>
+          </div>
 
-      <section className="pb-16 bg-primary">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <InfoBlock title={highlightsTitle} type="highlight">
-            <ul className="space-y-2">
-              {highlights.map((item) => (
-                <li key={item.title} className="flex gap-2">
-                  <span className="font-bold">•</span>
-                  <span>
-                    <strong>{item.title}:</strong> {item.description}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </InfoBlock>
+          {/* Section 2: About ICCoSD */}
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold text-gold-accent mb-8">
+              {aboutConferenceTitle}
+            </h2>
+              <MarkdownContent
+                content={aboutConferenceBody}
+                className="prose-invert prose-p:text-white/90 prose-headings:text-white prose-strong:text-gold-accent"
+              />
+          </div>
         </div>
       </section>
     </main>

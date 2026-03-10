@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   title: home.title,
   description: home.description,
   icons: {
-    icon: "/icon.jpg",
-    apple: "/icon.jpg",
+    icon: "/icon.jpeg",
+    apple: "/icon.jpeg",
   },
 };
 

@@ -38,11 +38,6 @@ const MORE_LINKS = [
     className: "",
   },
   {
-    href: "/abstract-proceedings",
-    label: "Abstract Proceedings",
-    className: "border-t border-gray-200",
-  },
-  {
     href: "/directions",
     label: "Directions",
     className: "border-t border-gray-200",
@@ -88,15 +83,13 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="icon.jpg"
+              src="icon.jpeg"
               alt="ICCSoD Logo"
               height={48}
               width={48}
               draggable={false}
             />
-            <span className="text-xl font-bold text-primary hidden sm:inline">
-              ICCoSD-26
-            </span>
+            <span className="text-xl font-bold text-primary">ICCoSD-26</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -122,7 +115,7 @@ export function Header() {
                   <IntentLink
                     key={link.href}
                     href={link.href}
-                    className={`block px-4 py-2 text-sm text-foreground hover:bg-light-gray hover:text-primary transition-colors duration-200 ${link.className}`}
+                    className={`block px-4 py-2 text-sm text-foreground hover:hover:text-primary transition-colors duration-200 ${link.className}`}
                   >
                     {link.label}
                   </IntentLink>
@@ -151,7 +144,7 @@ export function Header() {
                   <IntentLink
                     key={link.href}
                     href={link.href}
-                    className={`block px-4 py-2 text-sm text-foreground hover:bg-light-gray hover:text-primary transition-colors duration-200 ${link.className}`}
+                    className={`block px-4 py-2 text-sm text-foreground hover:hover:text-primary transition-colors duration-200 ${link.className}`}
                   >
                     {link.label}
                   </IntentLink>
@@ -161,7 +154,7 @@ export function Header() {
           </nav>
 
           {/* Right Side - Logo Badges & Search (desktop) */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4">
             <button
               type="button"
               onClick={() => setSearchOpen(true)}
@@ -171,7 +164,7 @@ export function Header() {
               <Search className="w-5 h-5 cursor-pointer" />
             </button>
             <div className="flex items-center gap-3 pl-3 border-l border-gray-200">
-              <Link href="https://www.ieee.org/" target="_blank">
+              {/* <Link href="https://www.ieee.org/" target="_blank">
                 <Image
                   src="/ieee.avif"
                   alt="IEEE"
@@ -180,14 +173,14 @@ export function Header() {
                   className="h-6 w-auto object-contain"
                   draggable={false}
                 />
-              </Link>
+              </Link> */}
               <Link href="https://www.bitmesra.ac.in/" target="_blank">
                 <Image
                   src="/bit-mesra.png"
                   alt="BIT Mesra"
                   width={72}
                   height={28}
-                  className="h-7 w-auto object-contain"
+                  className="h-10 w-auto object-contain"
                   draggable={false}
                 />
               </Link>
@@ -196,14 +189,14 @@ export function Header() {
 
           {/* Mobile: logos + hamburger grouped on the right */}
           <div className="flex lg:hidden items-center gap-2 shrink-0">
-            <Image
+            {/* <Image
               src="/ieee.avif"
               alt="IEEE"
               width={64}
               height={28}
               className="h-12 w-auto object-contain"
               draggable={false}
-            />
+            /> */}
             <Image
               src="/bit-mesra.png"
               alt="BIT Mesra"
@@ -236,7 +229,7 @@ export function Header() {
                 setSearchOpen(true);
                 setIsOpen(false);
               }}
-              className="w-full text-left px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-light-gray rounded-md transition-colors flex items-center gap-2"
+              className="w-full text-left px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:rounded-md transition-colors flex items-center gap-2"
             >
               <Search className="w-4 h-4" />
               Search
@@ -245,7 +238,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="block px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-light-gray rounded-md transition-colors"
+                className="block px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:rounded-md transition-colors"
               >
                 {link.label}
               </Link>
@@ -258,7 +251,7 @@ export function Header() {
                   openDropdown === "committees" ? null : "committees",
                 )
               }
-              className="w-full text-left px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-light-gray rounded-md transition-colors flex items-center justify-between"
+              className="w-full text-left px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:rounded-md transition-colors flex items-center justify-between"
             >
               Committees
               <ChevronDown
@@ -271,7 +264,7 @@ export function Header() {
                   <IntentLink
                     key={link.href}
                     href={link.href}
-                    className="block px-3 py-2 text-sm text-foreground hover:text-primary hover:bg-light-gray rounded-md transition-colors"
+                    className="block px-3 py-2 text-sm text-foreground hover:text-primary hover:rounded-md transition-colors"
                   >
                     {link.label}
                   </IntentLink>
@@ -283,7 +276,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="block px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-light-gray rounded-md transition-colors"
+                className="block px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:rounded-md transition-colors"
               >
                 {link.label}
               </Link>
@@ -294,7 +287,7 @@ export function Header() {
               onClick={() =>
                 setOpenDropdown(openDropdown === "more" ? null : "more")
               }
-              className="w-full text-left px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-light-gray rounded-md transition-colors flex items-center justify-between"
+              className="w-full text-left px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:rounded-md transition-colors flex items-center justify-between"
             >
               More
               <ChevronDown
@@ -307,7 +300,7 @@ export function Header() {
                   <IntentLink
                     key={link.href}
                     href={link.href}
-                    className="block px-3 py-2 text-sm text-foreground hover:text-primary hover:bg-light-gray rounded-md transition-colors"
+                    className="block px-3 py-2 text-sm text-foreground hover:text-primary hover:rounded-md transition-colors"
                   >
                     {link.label}
                   </IntentLink>

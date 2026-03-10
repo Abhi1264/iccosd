@@ -37,7 +37,10 @@ export function getCallForPapersContent(): CallForPapersContent {
   const cfp = siteConfig.callForPapers;
   return {
     ...cfp,
-    topics: [...cfp.topics],
+    topics: cfp.topics.map((t) => ({
+      title: t.title,
+      items: [...t.items],
+    })),
     dates: [...cfp.dates],
   };
 }

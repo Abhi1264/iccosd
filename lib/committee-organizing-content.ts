@@ -32,7 +32,16 @@ export function getOrganizingCommitteeContent(): OrganizingCommitteeContent {
   const committee = siteConfig.organizingCommittee;
   return {
     ...committee,
-    committee: { ...committee.committee },
+    committee: Object.fromEntries(
+      Object.entries(committee.committee).map(([key, members]) => [
+        key,
+        members.map((m) => ({
+          title: m.title,
+          name: m.name,
+          position: m.position,
+        })),
+      ])
+    ),
     publicity: [...committee.publicity],
     accommodation: [...committee.accommodation],
     registration: [...committee.registration],

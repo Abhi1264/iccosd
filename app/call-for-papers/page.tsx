@@ -40,7 +40,7 @@ export default function CallForPapers() {
         backgroundImage={heroImage}
       />
 
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <InfoBlock title={noticeTitle} type="highlight">
             <p>{noticeBody}</p>
@@ -90,7 +90,7 @@ export default function CallForPapers() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-light-gray">
+      <section className="pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-3xl font-bold text-primary mb-8 text-center">
             {importantDatesTitle}
@@ -111,7 +111,7 @@ export default function CallForPapers() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-white">
+      <section className="pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-3xl font-bold text-primary mb-8 text-center">
             {authorGuidelinesTitle}

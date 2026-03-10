@@ -98,16 +98,6 @@ const SEARCH_PAGES: Array<{ href: string; label: string; text: string }> = [
     ].join("\n"),
   },
   {
-    href: "/student-volunteers",
-    label: "Student Volunteers",
-    text: [
-      siteConfig.studentVolunteers.description,
-      siteConfig.studentVolunteers.intro,
-      siteConfig.studentVolunteers.volunteers.join(" "),
-      siteConfig.studentVolunteers.contributions,
-    ].join("\n"),
-  },
-  {
     href: "/abstract-proceedings",
     label: "Abstract Proceedings",
     text: [
@@ -120,6 +110,16 @@ const SEARCH_PAGES: Array<{ href: string; label: string; text: string }> = [
         .join(" "),
       siteConfig.abstractProceedings.note,
       siteConfig.abstractProceedings.citation,
+    ].join("\n"),
+  },
+  {
+    href: "/student-volunteers",
+    label: "Student Volunteers",
+    text: [
+      siteConfig.studentVolunteers.description,
+      siteConfig.studentVolunteers.intro,
+      siteConfig.studentVolunteers.volunteers.join(" "),
+      siteConfig.studentVolunteers.contributions,
     ].join("\n"),
   },
   {
@@ -176,7 +176,7 @@ const SEARCH_PAGES: Array<{ href: string; label: string; text: string }> = [
 
 /** Strip markdown to plain text for search. */
 function markdownToPlainText(md: string): string {
-  let text = md
+  const text = md
     .replace(/!\[[^\]]*\]\([^)]*\)/g, " ") // images
     .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1") // links -> link text
     .replace(/^#{1,6}\s+/gm, " ") // headings

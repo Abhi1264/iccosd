@@ -10,58 +10,58 @@ export const siteConfig = {
   // Home page
   home: {
     title:
-      "2026 IEEE International Conference on Communication and Smart Devices",
+      "2026 International Conference on Communication and Smart Intelligence",
     description:
-      "Premier IEEE-sponsored international conference. February 18-19, 2026 at BIT Mesra, India.",
+      "Premier international conference. December 17-18, 2026 at BIT Mesra, India.",
     heroTitle: "ICCoSD-2026",
-    heroSubtitle: "International Conference on Communication and Smart Devices",
-    heroTagline: "Connecting Intelligence",
-    heroDate: "February 18-19, 2026",
+    heroSubtitle:
+      "International Conference on Communication and Smart Intelligence",
+    heroTagline: "From Silicon to Intelligence",
+    heroDate: "17th - 18th December, 2026",
+    organizedBy:
+      "Department of Electronics and Communication Engineering, B.I.T. Mesra, Ranchi",
     heroCTA: "Register Now",
     heroCTALink: "/registration",
-    heroImageUrl: "/hero-conference.jpg",
+    heroImageUrl: "/hero-conference.png",
+    heroImageUrlMobile: "/hero-conference-mobile.png",
     institution:
       "Birla Institute of Technology Mesra (Deemed to be university)",
-    theme: "Connecting Intelligence",
+    theme: "From Silicon to Intelligence",
     aboutTitle: "About the Conference",
     aboutLead:
-      "The International Conference on Communication and Smart Devices (ICCoSD-26) is organized by the Department of Electronics and Communication Engineering at Birla Institute of Technology Mesra under the technical co-sponsorship of IEEE Kolkata Section.",
+      "The International Conference on Communication and Smart Intelligence (ICCoSD-26) is organized by the Department of Electronics and Communication Engineering at Birla Institute of Technology Mesra.",
     aboutBody:
       "This premier conference brings together researchers, academics, and industry professionals to discuss the latest research and development related to communication systems and smart device technologies.",
     themeSectionTitle: "Conference Theme",
     themeHeadline:
-      '"2026 IEEE International Conference on Communication and Smart Devices"',
+      '"2026 International Conference on Communication and Smart Intelligence"',
     themeDescription:
-      "This year's theme focuses on the intersection of communication technologies and intelligent systems, exploring how smart devices are reshaping our world through seamless connectivity and advanced intelligence.",
+      "This year's theme 'From Silicon to Intelligence' explores the journey from semiconductor fundamentals to smart device applications, bridging core technologies with real-world innovations in communication systems.",
     highlights: [
       {
-        stat: "100+",
+        stat: "5+",
         label: "Expert Speakers",
         description: "Renowned researchers and industry leaders",
       },
       {
-        stat: "500+",
+        stat: "200+",
         label: "Expected Attendees",
         description: "From academia and industry worldwide",
       },
       {
-        stat: "6",
+        stat: "4",
         label: "Research Tracks",
         description: "Coverage of cutting-edge technologies",
       },
-      {
-        stat: "4",
-        label: "Days",
-        label_alt: "Conference Days",
-        description: "Two days of hybrid participation",
-      },
     ],
     homeDates: [
-      { label: "Conference Date", date: "18th - 19th February, 2026" },
-      { label: "Paper Submission Deadline", date: "Open" },
-      { label: "Acceptance Notification", date: "To be announced" },
-      { label: "Registration Period", date: "Open" },
-      { label: "Camera Ready Paper Submission", date: "To be announced" },
+      { label: "Conference Date", date: "17th - 18th December, 2026" },
+      { label: "Paper Submission Opens", date: "12 March 2026" },
+      { label: "Paper Submission Closes", date: "30 June 2026" },
+      { label: "Acceptance Notification", date: "30 September 2026" },
+      { label: "Camera-Ready Manuscript", date: "15 October 2026" },
+      { label: "Early Bird Registration", date: "10–20 October 2026" },
+      { label: "Registration Deadline", date: "01 November 2026" },
     ],
     homeCtas: [
       {
@@ -69,18 +69,21 @@ export const siteConfig = {
         description: "Showcase your research to the global community",
         cta: "View Guidelines",
         link: "/call-for-papers",
+        icon: "FileText",
       },
       {
         title: "Register Now",
-        description: "Secure your spot at the conference",
+        description: "Secure your spot at the conference at the earliest",
         cta: "Register",
         link: "/registration",
+        icon: "ClipboardList",
       },
       {
         title: "Meet the Speakers",
         description: "Learn about our distinguished keynote speakers",
         cta: "View Speakers",
         link: "/keynote-speakers",
+        icon: "Users",
       },
     ],
     homeOrganizers: [
@@ -89,91 +92,51 @@ export const siteConfig = {
         tagline: "BIT Mesra, Ranchi, India",
         imageUrl: "/bit-mesra.png",
       },
-      {
-        name: "IEEE Kolkata",
-        tagline: "Technical Co-sponsorship",
-        imageUrl: "/ieee.avif",
-      },
+      // {
+      //   name: "IEEE Kolkata",
+      //   tagline: "Technical Co-sponsorship",
+      //   imageUrl: "/ieee.avif",
+      // },
     ],
   },
   // About page
   about: {
     title: "About ICCoSD-26 & BIT Mesra",
     description:
-      "Learn about the International Conference on Communication and Smart Devices and Birla Institute of Technology Mesra",
+      "Learn about the International Conference on Communication and Smart Intelligence and Birla Institute of Technology Mesra",
     heroTitle: "About Us",
     heroSubtitle: "ICCoSD-26 & Birla Institute of Technology Mesra",
-    heroImage: "/hero-conference.jpg",
-    badgeLabel: "BIT Mesra",
-    highlightsTitle: "Conference Highlights",
-    highlights: [
-      { title: "Hybrid Mode", description: "Participate online or in-person" },
-      {
-        title: "Double-Blind Review",
-        description: "Rigorous peer review process",
-      },
-      {
-        title: "IEEE Publication",
-        description: "Papers published in IEEE Xplore",
-      },
-      {
-        title: "International Panel",
-        description: "Expert speakers from around the world",
-      },
-      { title: "Research Tracks", description: "6 specialized research areas" },
-      {
-        title: "Networking Events",
-        description: "Connect with industry and academia",
-      },
-    ],
-    content: `## About Birla Institute of Technology Mesra
+    heroImage: "/hero-conference.png",
+    heroImageUrlMobile: "/hero-conference-mobile.png",
+    aboutBitMesraTitle: "About BIT Mesra",
+    aboutBitMesraImageCaption:
+      "Legacy Needs for BIT Mesra from Ex-Prime Minister",
+    aboutBitMesraBody: `BIT Mesra is a "Deemed to be University" under Sec. 3 of the U.G.C. Act 1956. Established in 1955 by visionary industrialist Mr. B.M. Birla, the institute has been at the forefront of technical education in India with a rich heritage of academic excellence.
 
-BIT Mesra, established in 1955, is a "Deemed to be University" that has been at the forefront of technical education in India. Located in Ranchi, Jharkhand, the institute has nurtured minds with a rich heritage of academic excellence.
+The institute emphasizes innovation, entrepreneurship, and a culture of excellence. BIT Mesra holds the credit of being the first in the country to establish a department dedicated to Space Engineering & Rocketry in 1964. It pioneered the Science & Technology Entrepreneurs' Park (BIT-STEP) on campus.
 
-The institute was founded with a clear vision to offer young minds a space where their imagination could take wings and their ideas could bear fruition. Over six decades, BIT Mesra has developed a reputation as a leader in technology and entrepreneurship education.
+BIT Mesra is one of the 100 institutes awarded a 5G Use Cases Lab by the Honourable Prime Minister, Mr. Narendra Modi, on October 27, 2023.`,
+    aboutConferenceTitle:
+      "About International Conference on Communication and Smart Devices (ICCoSD)",
+    aboutConferenceBody: `The International Conference on Communication and Smart Devices (ICCoSD) is being organized by the Department of Electronics and Communication Engineering, BIT Mesra, Ranchi, on **17th–18th December 2026**.
 
-### Key Achievements
+The conference aims to provide an interactive forum for discussion, research, and development in current and next-generation devices and communication systems. It serves as a catalyst for innovation, collaboration, and knowledge exchange among academia, industry, and research institutions.
 
-- First institute in India to establish a department dedicated to Space Engineering & Rocketry
-- Pioneer in developing Science & Technology Entrepreneurs' Park (BIT-STEP)
-- Recipient of 5G Use Cases Lab award from PM Narendra Modi
-- Home to vibrant student life and innovative teaching methods
+**Objectives:** Foster collaboration, spark new ideas, promote cross-cultural understanding, and create opportunities for networking, skill enhancement, and professional development.
 
-## About International Conference on Communication and Smart Devices (ICCoSD)
+The conference will feature high-class plenary, keynote, and distinguished speakers, alongside technical presentations of registered papers.
 
-The ICCoSD is a biennial premier international conference that serves as a catalyst for innovation, collaboration, and knowledge exchange. The conference aims to provide an interactive forum to discuss research and development related to current and next-generation devices and communication systems.
+**Conference Theme: "From Silicon to Intelligence"** — The theme emphasizes the journey from semiconductor fundamentals to smart device applications, exploring how core technologies bridge to real-world innovations.
 
-### Conference Objectives
+**Paper Submission:** Original and unpublished research articles, maximum 6 pages, IEEE format. Double-blind review process. Acceptance based on quality, originality, technical content, and relevance to the theme.
 
-- **Knowledge Exchange:** Foster collaboration between academia, industry, and research institutions
-- **Innovation Platform:** Provide a platform for presenting original research articles and innovations
-- **Networking:** Create opportunities for researchers, practitioners, and students to share insights
-- **Cross-Cultural Understanding:** Bring together people from diverse backgrounds and regions
-- **Professional Development:** Help attendees stay ahead of advancements in their fields
-
-### Conference Theme: "Connecting Intelligence"
-
-The theme emphasizes the convergence of intelligent communication systems and smart devices in creating a better-connected world. ICCoSD-26 will explore how these technologies can solve real-world challenges and drive innovation across industries.
-
-## Research Tracks
-
-ICCoSD-26 covers multiple areas of research:
-
-1. **Wireless Communication Technologies** - 5G/6G, IoT networks, spectrum management
-2. **Signal Processing & Coding** - Digital signal processing, error correction, compression
-3. **Smart Devices & Embedded Systems** - IoT devices, firmware, embedded AI
-4. **Machine Learning & AI Applications** - AI in communications, predictive systems
-5. **Optical & Photonic Communication** - Fiber optics, free-space communication
-6. **Network Security & Privacy** - Cybersecurity, encryption, secure communications
-
-## Ready to Participate?
-
-Submit your research, register for the conference, or volunteer to be part of this prestigious event.`,
+At least one author of each accepted paper must register to present. Participation certificates will be awarded only to registered candidates.`,
   },
   // Global footer
   footer: {
     siteName: "ICCoSD-26",
-    siteTagline: "International Conference on Communication and Smart Devices",
+    siteTagline:
+      "International Conference on Communication and Smart Intelligence",
     email: "iccosd@bitmesra.ac.in",
     phone: "+91-6203905197",
     address:
@@ -187,17 +150,15 @@ Submit your research, register for the conference, or volunteer to be part of th
       { title: "Keynote Speakers", href: "/keynote-speakers", icon: "Users" },
       { title: "Directions", href: "/directions", icon: "MapPin" },
       { title: "Committee", href: "/committee/organizing", icon: "Building2" },
-      {
-        title: "Abstract Proceedings",
-        href: "/abstract-proceedings",
-        icon: "Book",
-      },
     ],
     importantDates: [
-      { label: "Conference Dates", value: "February 18-19, 2026" },
-      { label: "Paper Submission", value: "Open" },
-      { label: "Notification", value: "To be announced" },
-      { label: "Registration", value: "Open" },
+      { label: "Conference Date", value: "17th - 18th December, 2026" },
+      { label: "Paper Submission Opens", value: "12 March 2026" },
+      { label: "Paper Submission Closes", value: "30 June 2026" },
+      { label: "Acceptance Notification", value: "30 September 2026" },
+      { label: "Camera-Ready Manuscript", value: "15 October 2026" },
+      { label: "Early Bird Registration", value: "10–20 October 2026" },
+      { label: "Registration Deadline", value: "01 November 2026" },
     ],
     acknowledgments: [
       {
@@ -220,7 +181,6 @@ Submit your research, register for the conference, or volunteer to be part of th
           { label: "About", href: "/about" },
           { label: "Call for Papers", href: "/call-for-papers" },
           { label: "Registration", href: "/registration" },
-          { label: "Abstract Proceedings", href: "/abstract-proceedings" },
         ],
       },
       {
@@ -251,14 +211,14 @@ Submit your research, register for the conference, or volunteer to be part of th
   callForPapers: {
     title: "Call for Papers | ICCoSD-26",
     description:
-      "Submit your research papers to ICCoSD-26. Topics include communication systems, smart devices, IoT, 5G, and more.",
+      "Submit your research papers to ICCoSD-26. Topics include communication systems, smart Intelligence, IoT, 5G, and more.",
     heroTitle: "Call for Papers",
     heroSubtitle: "Share your research with the global community",
-    heroImage:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop",
+    heroImage: "hero-conference.png",
+    heroImageUrlMobile: "/hero-conference-mobile.png",
     noticeTitle: "Call for Papers Open",
     noticeBody:
-      "**Paper submission deadline: To be announced (currently open)** – ICCoSD-26 is currently accepting submissions. Updated timelines will be shared soon.",
+      "**Paper submission opens: 12 March 2026** – Paper submission closes **30 June 2026**. ICCoSD-26 is accepting submissions. Submit your research to be part of this prestigious conference.",
     submissionGuidelinesTitle: "Submission Guidelines",
     generalGuidelinesTitle: "General Guidelines",
     acceptedPapersTitle: "Accepted Papers",
@@ -294,10 +254,10 @@ Submit your research, register for the conference, or volunteer to be part of th
         ],
       },
       {
-        title: "Smart Devices & IoT",
+        title: "Smart Intelligence & IoT",
         items: [
           "Internet of Things (IoT)",
-          "Smart Sensors and Devices",
+          "Smart Sensors and Intelligence",
           "Wearable Technology",
           "Smart Homes and Cities",
           "Embedded Systems",
@@ -325,11 +285,13 @@ Submit your research, register for the conference, or volunteer to be part of th
       },
     ],
     dates: [
-      { label: "Paper Submission Deadline", date: "To be announced (Open)" },
-      { label: "Acceptance Notification", date: "To be announced" },
-      { label: "Registration Opens", date: "Open" },
-      { label: "Camera Ready Paper Submission", date: "To be announced" },
-      { label: "Conference Dates", date: "18th - 19th February, 2026" },
+      { label: "Paper Submission Opens", date: "12 March 2026" },
+      { label: "Paper Submission Closes", date: "30 June 2026" },
+      { label: "Acceptance Notification", date: "30 September 2026" },
+      { label: "Camera-Ready Manuscript", date: "15 October 2026" },
+      { label: "Early Bird Registration", date: "10–20 October 2026" },
+      { label: "Registration Deadline", date: "01 November 2026" },
+      { label: "Conference Dates", date: "17th - 18th December, 2026" },
     ],
   },
   // Organizing Committee page
@@ -338,100 +300,99 @@ Submit your research, register for the conference, or volunteer to be part of th
     description: "Meet the organizing committee members of ICCoSD-26.",
     heroTitle: "Organizing Committee",
     heroSubtitle: "Meet the leaders behind ICCoSD-26",
-    heroImage:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop",
+    heroImage: "hero-conference.png",
+    heroImageUrlMobile: "/hero-conference-mobile.png",
     committee: {
       patron: [
         {
           title: "Patron",
           name: "Prof. Indranil Manna",
-          position: "Vice Chancellor, BIT Mesra",
+          position: "Vice Chancellor, Birla Institute of Technology, Mesra",
         },
       ],
       chairman: [
         {
           title: "Chairman",
-          name: "Prof. Sanjay Kumar",
+          name: "Dr. Sanjay Kumar",
           position: "HoD, ECE, BIT Mesra",
         },
       ],
       convenor: [
         {
           title: "Convenor",
-          name: "Dr. Sitanshu Shekhar Sahu",
-          position: "Associate Professor, ECE",
+          name: "Dr. Sitanshu Sekhar Sahu",
+          position: "BIT Mesra",
         },
       ],
       coConvenor: [
         {
           title: "Co-Convenor",
-          name: "Dr. Sanjeet Kumar",
-          position: "Associate Professor, ECE",
+          name: "Dr. Richa Mishra",
+          position: "BIT Mesra",
         },
         {
           title: "Co-Convenor",
-          name: "Dr. Priyank Saxena",
-          position: "Associate Professor, ECE",
+          name: "Dr. Rupesh Kumar Sinha",
+          position: "BIT Mesra",
         },
       ],
       secretary: [
         {
           title: "Secretary",
-          name: "Dr. Vishal H Shah",
-          position: "Assistant Professor, ECE",
+          name: "Dr. Vishal H. Shah",
+          position: "BIT Mesra",
         },
         {
           title: "Secretary",
           name: "Dr. Dileep Kumar Upadhayay",
-          position: "Assistant Professor, ECE",
+          position: "BIT Mesra",
+        },
+      ],
+      tpcChairs: [
+        {
+          title: "TPC Chair",
+          name: "Dr. Gajendra Kant Mishra",
+          position: "BIT Mesra",
+        },
+        { title: "TPC Chair", name: "Dr. Vijay Nath", position: "BIT Mesra" },
+        { title: "TPC Chair", name: "Dr. Afaque Azam", position: "BIT Mesra" },
+        {
+          title: "TPC Chair",
+          name: "Dr. Sandeep Mukherjee",
+          position: "BIT Mesra",
+        },
+        { title: "TPC Chair", name: "Dr. Subham Anand", position: "BIT Mesra" },
+        {
+          title: "TPC Chair",
+          name: "Dr. Soumya Sidhishwari",
+          position: "BIT Mesra",
         },
       ],
       publicationChair: [
         {
           title: "Publication Chair",
-          name: "Dr. Sitanshu Sekhar Sahu",
-          position: "Associate Professor, ECE",
-        },
-        {
-          title: "Publication Chair",
-          name: "Dr. Santashraya Prasad",
-          position: "Associate Professor, ECE",
+          name: "Dr. Sanjeet Kumar",
+          position: "BIT Mesra",
         },
       ],
-      financeChair: [
+      treasurer: [
         {
-          title: "Finance Chair (Treasurer)",
-          name: "Dr. Rupesh Kumar Sinha",
-          position: "Associate Professor, ECE",
+          title: "Treasurer",
+          name: "Dr. Santashraya Prasad",
+          position: "BIT Mesra",
         },
+      ],
+      jointTreasurer: [
         {
-          title: "Finance Chair (Joint Treasurer)",
-          name: "Dr. Somnath Sengupta",
-          position: "Associate Professor, ECE",
+          title: "Joint Treasurer",
+          name: "Dr. Megha Dadel",
+          position: "BIT Mesra",
         },
       ],
     },
-    publicity: [
-      { name: "Dr. Vijay Nath", position: "BIT Mesra" },
-      { name: "Dr. Richa Mishra", position: "BIT Mesra" },
-      { name: "Dr. Sourav", position: "BIT Mesra" },
-      { name: "Dr. Anusha V.", position: "BIT Mesra" },
-      { name: "Mr. Mrinal Pathak", position: "BIT Mesra" },
-    ],
-    accommodation: [
-      { name: "Mr. Vishal H. Shah", position: "BIT Mesra" },
-      { name: "Dr. Kalyan Koley", position: "BIT Mesra" },
-      { name: "Dr. Sandeep Mukherjee", position: "BIT Mesra" },
-      { name: "Dr. Afaque Azam", position: "BIT Mesra" },
-      { name: "Dr. Yogendra Agarwal", position: "BIT Mesra" },
-    ],
-    registration: [
-      { name: "Dr. Kartik Mahto", position: "BIT Mesra" },
-      { name: "Dr. Parjna Parimita Dash", position: "BIT Mesra" },
-      { name: "Dr. S. Sidhishwari", position: "BIT Mesra" },
-      { name: "Dr. Deepti Gola", position: "BIT Mesra" },
-      { name: "Mr. Siddhi Kant Mishra", position: "BIT Mesra" },
-    ],
+    publicity: [] as { name: string; position: string }[],
+    accommodation: [] as { name: string; position: string }[],
+    registration: [] as { name: string; position: string }[],
     sectionTitles: {
       publicity: "Publicity and Media Committee Chair",
       accommodation: "Accommodation and Transport Committee Chair",
@@ -444,8 +405,8 @@ Submit your research, register for the conference, or volunteer to be part of th
     description: "Meet the technical program committee members of ICCoSD-26.",
     heroTitle: "Technical Program Committee",
     heroSubtitle: "Expert reviewers and program organizers",
-    heroImage:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop",
+    heroImage: "hero-conference.png",
+    heroImageUrlMobile: "/hero-conference-mobile.png",
     intro:
       "The Technical Program Committee comprises distinguished researchers and professionals from leading academic institutions and industry.",
     members: [
@@ -488,45 +449,36 @@ Submit your research, register for the conference, or volunteer to be part of th
     description: "Meet the advisory committee members of ICCoSD-26.",
     heroTitle: "Advisory Committee",
     heroSubtitle: "Global experts guiding ICCoSD-26",
-    heroImage:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop",
+    heroImage: "hero-conference.png",
+    heroImageUrlMobile: "/hero-conference-mobile.png",
     intro:
       "The Advisory Committee comprises distinguished international and national academics and researchers who provide strategic guidance and credibility to the conference.",
     internationalTitle: "International Advisory Committee",
     nationalTitle: "National Advisory Committee",
     international: [
-      "Prof. Ramjee Prasad, Aarhus University, Denmark",
-      "Prof. Nichola Marchetti, Trinity College, Dublin",
-      "Prof. Sheila Prasad, Northeaster University College of Engineering",
-      "Prof. Vijayan K. Asari, University of Dayton, Ohio",
-      "Prof. Bal Virdee, London Metropolitan University",
-      "Prof. Sumit Chakravarty, Kennesaw State University, USA",
-      "Prof. John Soraghan, University of Strathclyde, Glasgow, USA",
-      "Prof. Kshirasagar Naik, University of Waterloo, Canada",
-      "Prof. Veda Sandeep Nagaraja, TNI, University College Cork, Ireland",
-      "Prof. Saraju Mohanty, University of North Texas, USA",
+      "Jacopo Iannacci, PhD — MicroSystems Technology Research Unit, Center for Sensors and Intelligence (SD), Fondazione Bruno Kessler, Italy",
+      "Cosimo Stallo — PhD on Microelectronics and Telecommunications, Moonlight Navigation Principal System Engineer, TEC-E Department, Organisational Unit TEC-SEI, ESA - European Space Agency",
+      "Dr. Haïfa Farès — Associate Professor, Centrale Supélec (IETR Rennes), France",
+      "Dr. Ashish Prajapati — Senior MEMS Engineer, Omnitron Sensors Inc., Los Angeles, California, USA; Marvell Nanofabrication Laboratory (CITRIS), UC Berkeley, California, USA",
     ],
     national: [
-      "Prof. P.K. Upadhaya, IIT Indore",
-      "Prof. Preetam Kumar, IIT Patna",
-      "Prof. Sushrul Das, IIT (ISM) Dhanbad",
-      "Prof. Bratn Ghosh, IIT Kharagpur",
-      "Prof. Bharat Gupta, NIT Patna",
-      "Prof. Suparna Kar Chowdhury, Jadavpur University",
-      "Dr. Puneet Mishra, ISRO, Bangalore",
-      "Prof. Manish Goswami, IIIT Allahabad",
-      "Prof. N.P. Singh, NIT Kurukshetra",
-      "Prof. Nisha Gupta, BIT Mesra",
-      "Prof. S. K. Ghorai, BIT Mesra",
-      "Prof. Srikanta Pal, BIT Mesra",
-      "Prof. Sandeep Singh Solanki, BIT Mesra",
-      "Prof. Vibha Rani Gupta, BIT Mesra",
-      "Prof. S.S. Pathak, BIT Mesra",
-      "Prof. C. Jaganathan, BIT Mesra",
-      "Prof. Ashok Sharon, BIT Mesra",
-      "Prof. Jibendu Sekhar Roy, KIIT Bhubaneswar",
-      "Prof. D. Pal, BITS Pilani, Goa",
-      "Prof. Shweta Srivastava, Jaypee Institute of Information Technology, Noida",
+      "Dr. Raghvendra Kumar Chaudhary — Associate Professor, ACES 325A, Electrical Engineering, Indian Institute of Technology Kanpur, Kanpur 208016, U.P., India. Office: +91-512-679-2306, mmWave Lab: +91-512-259-7058. Web: https://home.iitk.ac.in/~raghvendra",
+      "Dr. Saptarshi Ghosh — Associate Professor, Electrical Engineering, IIT Indore, Simrol, M.P. 453552, India",
+      "Dr. Somak Bhattacharyya — Associate Professor, Department of Electronics Engineering, Indian Institute of Technology (BHU), Varanasi, Uttar Pradesh-221005, India. Website: https://www.iitbhu.ac.in/dept/ece/people/somakbhattacharyyaece",
+      "Dr. Ravi Kumar Gangwar, Ph.D. — Professor & Head, Dept. of Electronics Engineering, Indian Institute of Technology (ISM) Dhanbad, Dhanbad, Jharkhand - 826004. Tel: +91-326-2235903",
+      "Dr. Tarun Kanti Bhattacharyya — Institute Chair Professor, Professor and Head Dept of Electronics & Electrical Communication Engg., Professor and Head Advanced Technology Development Centre, Indian Institute of Technology Kharagpur, Kharagpur - 721302, India. Phone: 03222 283554, Cell: 09339531206",
+      "Dr. Kumar Vaibhav Srivastava — Professor, Department of Electrical Engineering, Dean of Administration, Indian Institute of Technology Kanpur, Kanpur, U.P., INDIA-208016",
+      "Prof. Mahua Bhattacharya, M.Tech, Ph.D.(Tech.) — Professor & Head Dept. of Information Technology, Prof.-In Charge Center For Biomedical Research, ABV Indian Institute of Information Technology & Management (Institute of National Importance, Ministry of Education Govt. Of India), Morena Link Road, Gwalior 474010, Madhya Pradesh, India",
+      "Prof. Preetam Kumar — Professor, Department of Electrical Engineering, IIT Patna",
+      "Professor Saswat Chakrabarti — GS Sanyal School of Telecommunications, IIT Kharagpur, 721302, India. Mob: +919775030765",
+      "Prof. Jayanta Mukhopadhyay — Dean, Strategy and Analytics, Professor, Computer Science and Engineering, IIT Kharagpur",
+      "Dr. Vinod Belwanshi — Scientist, CSIR–National Metallurgical Laboratory, Jamshedpur, India – 831007 (Ministry of Science and Technology, Government of India); Assistant Professor, Academy of Scientific & Innovative Research (AcSIR), Ghaziabad, U.P., India; Honorary Research Fellow, University of Glasgow, UK – G12 8QQ",
+      "Dr. Koushik Guha — Distinguished Faculty, ISSS Young Scientist 2021 Awardee, IETE RS Khandpur Awardee 2022, Fellow IETE, Senior Member IEEE, Corporate member IEI, Life Member ISSS; Associate Professor & Head, Dept. of Electronics and Communication Engineering; Former Associate Dean (Academic) & Assoc. Dean (Students' Welfare), National Institute of Technology Silchar, Assam-788010",
+      "Dr. Bhubon Chandra Mech (Ph.D.) — PG course coordinator (M.Tech VLSI & ES) & Assistant Professor, Electronics Engineering, Defence Institute of Advanced Technology, Girinagar, Pune - 411025, India",
+      "Professor Manoj Saxena — FNASc(IN), FIETE(IN), SMIEEE(USA), Department of Electronics, Deen Dayal Upadhyaya College, University of Delhi, Dwarka Sector-3, New Delhi-110078, India",
+      "Dr. Basudeba Behera, SMIEEE, LMISTE — Assistant Professor, Department of Electronics & Communication Engg., Office: G- 06/09, Diamond Jubilee Lecture Hall Complex, NIT Jamshedpur, Jharkhand-831014, INDIA",
+      "Dr. Bidhan Pramanick — Associate Professor, School of Electrical Sciences, IIT Goa, Farmagudi, Ponda, Goa-403401",
+      "Dr. Ravindra Jha — Assistant Professor, Electronics & Electrical Engineering Department, IIT Guwahati",
     ],
     note: "**Note:** The Advisory Committee members are internationally and nationally recognized experts in their fields. They provide valuable insights and guidance to ensure the conference maintains the highest standards of academic excellence.",
   },
@@ -537,11 +489,12 @@ Submit your research, register for the conference, or volunteer to be part of th
       "Register for ICCoSD-26. View registration fees, process, and important details.",
     heroTitle: "Registration",
     heroSubtitle: "Join us for an exceptional conference experience",
-    heroImage:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop",
+    heroImage: "hero-conference.png",
+    heroImageUrlMobile: "/hero-conference-mobile.png",
     noticeTitle: "Registration Open",
     noticeBody: `Registration for ICCoSD-26 is currently **open**.
-The conference will be held on **February 18-19, 2026** at BIT Mesra, Ranchi.
+The conference will be held on **December 17-18, 2026** at BIT Mesra, Ranchi.
+Early Bird Registration: 10–20 October 2026. Registration deadline: 01 November 2026.
 Secure your spot now to be part of this prestigious event.`,
     introHeading: "Registration Details",
     introBody: `Registration for ICCoSD-26 is open to authors, academicians, industry professionals, and attendees.
@@ -588,10 +541,10 @@ Those with accepted papers are encouraged to register under the **Authors** cate
       "Participation certificate will be awarded to all registered participants.",
     ],
     registrationContactDetails: {
-      officerLabel: "Registration Officer",
-      officerName: "Dr. Rupesh Kumar Sinha",
+      officerLabel: "Registration Contact",
+      officerName: "Dr. Vishal H. Shah / Dr. Dileep Kumar Upadhayay",
       emailLabel: "Email",
-      email: "rupesh@bitmesra.ac.in",
+      email: "iccosd@bitmesra.ac.in",
       phoneLabel: "Phone",
       phone: "+91-6203905197",
     },
@@ -602,20 +555,21 @@ Those with accepted papers are encouraged to register under the **Authors** cate
     description: "Meet the student volunteers of ICCoSD-26.",
     heroTitle: "Student Volunteers",
     heroSubtitle: "Supporting ICCoSD-26 with enthusiasm and dedication",
-    heroImage:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop",
+    heroImage: "hero-conference.png",
+    heroImageUrlMobile: "/hero-conference-mobile.png",
     intro:
       "We are grateful for the dedicated student volunteers who support the organization and execution of ICCoSD-26. Their enthusiasm, energy, and commitment are invaluable to making this conference a success.",
     volunteers: [
+      "Ms. Turio Sinha",
+      "Mrs. Nikhat Anjum",
       "Ms. Arti Kumari",
       "Mr. Himadri Nirjhar Mandal",
       "Mr. Mukesh Kumar",
-      "Mrs. Nikhat Anjum",
       "Ms. Rani Ankita",
       "Dr. Ravi Chandra",
       "Mr. Sachin Kumar Singh",
       "Ms. Sushmita Upadhyay",
-      "Ms. Turio Sinha",
+      "Mr. Abhinav Kumar Choudhary",
     ],
     contributions: `- Registration desk management and participant coordination
 - Technical session support and speaker coordination
@@ -629,8 +583,8 @@ Those with accepted papers are encouraged to register under the **Authors** cate
     description: "How to reach BIT Mesra, Ranchi for ICCoSD-26.",
     heroTitle: "How to Reach BIT Mesra",
     heroSubtitle: "Easy directions to the conference venue",
-    heroImage:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop",
+    heroImage: "hero-conference.png",
+    heroImageUrlMobile: "/hero-conference-mobile.png",
     intro:
       "BIT Mesra is located in Ranchi, the capital of Jharkhand, India. The institute is well-connected by air, rail, and road.",
     transportTitles: {
@@ -674,9 +628,9 @@ There are several hotels available in Ranchi city ranging from budget to luxury 
     description: "Download the abstract proceedings from ICCoSD-26.",
     heroTitle: "Proceedings",
     heroSubtitle:
-      "IEEE International Conference on Communication and Smart Devices - 2026",
-    heroImage:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop",
+      "IEEE International Conference on Communication and Smart Intelligence - 2026",
+    heroImage: "hero-conference.png",
+    heroImageUrlMobile: "/hero-conference-mobile.png",
     intro:
       "Access the proceedings of ICCoSD-26 containing abstracts and research papers presented at the conference.",
     proceedingsTitle: "Conference Proceedings",
@@ -693,13 +647,13 @@ There are several hotels available in Ranchi city ranging from budget to luxury 
       "The complete proceedings document with all accepted paper abstracts will be available for download closer to the conference dates.",
     publication: [
       { label: "Publisher", value: "IEEE (Xplore Digital Library)" },
-      { label: "Conference", value: "ICCoSD-26, February 18-19, 2026" },
+      { label: "Conference", value: "ICCoSD-26, December 17-18, 2026" },
       { label: "Location", value: "BIT Mesra, Ranchi, India" },
       { label: "Technical Co-sponsorship", value: "IEEE Kolkata Section" },
     ],
     note: "All papers presented at ICCoSD-26 will undergo a rigorous review process. Only papers that meet IEEE quality standards and are presented at the conference will be eligible for indexing in the IEEE Xplore Digital Library.",
     citation: `@inproceedings{ICCoSD2026,
-  title={Connecting Intelligence},
+  title={From Silicon to Intelligence},
   booktitle={Proceedings of ICCoSD-26},
   year={2026},
   organization={IEEE},
@@ -712,7 +666,8 @@ There are several hotels available in Ranchi city ranging from budget to luxury 
     description: "Get in touch with the ICCoSD-26 organizing committee",
     heroTitle: "Reach Us",
     heroSubtitle: "Contact Information for ICCoSD-26",
-    heroImage: "/hero-conference.jpg",
+    heroImage: "hero-conference.png",
+    heroImageUrlMobile: "/hero-conference-mobile.png",
     contactInfoTitle: "Contact Information",
     generalInquiriesTitle: "General Inquiries",
     keyContactsTitle: "Key Contact Numbers",
@@ -739,38 +694,38 @@ There are several hotels available in Ranchi city ranging from budget to luxury 
     organizingContacts: [
       {
         role: "Convenor",
-        name: "Dr. Gajendra Kant Mishra",
-        title: "Head, ECE Department",
+        name: "Dr. Sitanshu Sekhar Sahu",
+        title: "BIT Mesra",
         phone: "+91-6203905197",
         email: "iccosd@bitmesra.ac.in",
       },
       {
         role: "Co-Convenor",
-        name: "Dr. Sanjeet Kumar",
-        title: "Associate Professor, ECE",
-        phone: "+91-9386530086",
+        name: "Dr. Richa Mishra",
+        title: "BIT Mesra",
+        phone: "+91-6203905197",
         email: "iccosd@bitmesra.ac.in",
       },
       {
         role: "Co-Convenor",
-        name: "Dr. Priyank Saxena",
-        title: "Assistant Professor, ECE",
-        phone: "+91-7250557586",
+        name: "Dr. Rupesh Kumar Sinha",
+        title: "BIT Mesra",
+        phone: "+91-6203905197",
         email: "iccosd@bitmesra.ac.in",
       },
     ],
     secretaries: [
       {
-        name: "Dr. Sanjay Shankar Tripathy",
+        name: "Dr. Vishal H. Shah",
         title: "Secretary",
-        phone: "+91-9430148809",
-        responsibility: "Paper submissions and academic coordination",
+        phone: "+91-6203905197",
+        responsibility: "Conference coordination",
       },
       {
-        name: "Dr. Dileep Kumar Upadhyay",
-        title: "Joint Secretary",
-        phone: "+91-9470978325",
-        responsibility: "Conference logistics and scheduling",
+        name: "Dr. Dileep Kumar Upadhayay",
+        title: "Secretary",
+        phone: "+91-6203905197",
+        responsibility: "Conference coordination",
       },
     ],
     department: {
@@ -787,17 +742,17 @@ There are several hotels available in Ranchi city ranging from budget to luxury 
     quickContacts: [
       {
         category: "Publication",
-        person: "Dr. Sitanshu Sekhar Sahu",
-        phone: "+91-9472760260",
+        person: "Dr. Sanjeet Kumar",
+        phone: "Available upon request",
       },
       {
-        category: "Finance",
-        person: "Dr. Rupesh Kumar Sinha",
-        phone: "+91-9470369133",
+        category: "Finance (Treasurer)",
+        person: "Dr. Santashraya Prasad",
+        phone: "Available upon request",
       },
       {
-        category: "Publicity & Media",
-        person: "Dr. Vijay Nath",
+        category: "Finance (Joint Treasurer)",
+        person: "Dr. Megha Dadel",
         phone: "Available upon request",
       },
     ],
@@ -842,9 +797,10 @@ For any other queries not covered above, please don't hesitate to contact us at 
     title: "Keynote Speakers | ICCoSD-26",
     description: "Meet the distinguished keynote speakers at ICCoSD-26.",
     heroTitle: "Keynote Speakers",
-    heroSubtitle: "Distinguished voices in communication and smart devices",
-    heroImage:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop",
+    heroSubtitle:
+      "Distinguished voices in communication and smart Intelligence",
+    heroImage: "hero-conference.png",
+    heroImageUrlMobile: "/hero-conference-mobile.png",
     sections: {
       inaugural: {
         heading: "Guest for Inaugural Ceremony",
@@ -877,7 +833,7 @@ For any other queries not covered above, please don't hesitate to contact us at 
         ],
       },
       day1: {
-        heading: "Invited Speakers: 18th February 2026",
+        heading: "Invited Speakers: 17th December 2026",
         accentColor: "blue",
         speakers: [
           {
@@ -901,7 +857,7 @@ For any other queries not covered above, please don't hesitate to contact us at 
         ],
       },
       day2: {
-        heading: "Invited Speakers: 19th February 2026",
+        heading: "Invited Speakers: 18th December 2026",
         accentColor: "green",
         speakers: [
           {

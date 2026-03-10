@@ -95,7 +95,7 @@ export default function AbstractProceedings() {
               <h3 className="text-2xl font-bold text-primary mb-4">
                 {citationTitle}
               </h3>
-              <div className="bg-light-gray p-4 rounded-lg font-mono text-sm text-foreground/70 overflow-x-auto">
+              <div className="p-4 rounded-lg font-mono text-sm text-foreground/70 overflow-x-auto">
                 <pre className="whitespace-pre-wrap">{citation}</pre>
               </div>
             </div>

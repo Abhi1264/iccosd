@@ -17,6 +17,7 @@ export interface HomeCTA {
   description: string;
   cta: string;
   link: string;
+  icon?: string;
 }
 
 export interface HomeOrganizer {
@@ -32,11 +33,13 @@ export interface HomeConfig {
   heroSubtitle: string;
   heroTagline: string;
   heroDate: string;
+  organizedBy?: string;
   heroCTA: string;
   heroCTALink: string;
   institution: string;
   theme: string;
   heroImageUrl: string;
+  heroImageUrlMobile?: string;
   highlights: Highlight[];
   aboutTitle: string;
   aboutLead: string;
