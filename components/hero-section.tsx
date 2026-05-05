@@ -40,7 +40,8 @@ export function HeroSection({
         className="absolute inset-0 hidden md:block"
         style={{
           backgroundImage: `url('${backgroundImage}')`,
-          backgroundSize: "cover",
+          backgroundSize: "1536px auto",
+          backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
         aria-hidden
@@ -57,12 +58,12 @@ export function HeroSection({
           </div>
         )}
         {subtitle && (
-          <p className="text-xl md:text-2xl font-bold drop-shadow-md text-balance my-4">
+          <p className="text-xl md:text-2xl font-bold drop-shadow-md text-balance my-4 whitespace-pre-line">
             {subtitle}
           </p>
         )}
         {organizedBy && (
-          <p className="text-base md:text-lg font-semibold drop-shadow-lg mb-6">
+          <p className="text-lg md:text-xl font-semibold drop-shadow-lg mb-6 whitespace-pre-line">
             Organized by {organizedBy}
           </p>
         )}

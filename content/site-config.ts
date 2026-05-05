@@ -15,9 +15,9 @@ export const siteConfig = {
     heroTitle: "ICCoSD-2026",
     heroSubtitle: "International Conference on Communication and Smart Devices",
     heroTagline: "From Silicon to Intelligence",
-    heroDate: "17th - 18th December, 2026",
+    heroDate: "17th - 18th December, 2026\n(Hybrid Mode)",
     organizedBy:
-      "Department of Electronics and Communication Engineering, B.I.T. Mesra, Ranchi",
+      "Department of Electronics and Communication Engineering\nBirla Institute of Technology, Mesra, Ranchi",
     heroCTA: "Register Now",
     heroCTALink: "/registration",
     heroImageUrl: "/hero-conference.png",
