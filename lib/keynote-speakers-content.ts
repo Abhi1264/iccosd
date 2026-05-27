@@ -8,6 +8,13 @@ export interface KeynoteSpeaker {
   position: string;
 }
 
+export interface FeaturedSpeaker {
+  name: string;
+  position: string;
+  affiliation: string;
+  imageUrl: string;
+}
+
 export interface KeynoteSpeakerSection {
   heading: string;
   accentColor: SpeakerAccent;
@@ -20,6 +27,7 @@ export interface KeynoteSpeakersContent {
   heroTitle: string;
   heroSubtitle: string;
   heroImage: string;
+  featuredSpeakers: FeaturedSpeaker[];
   sections: {
     inaugural: KeynoteSpeakerSection;
     valedictory: KeynoteSpeakerSection;
@@ -32,6 +40,7 @@ export function getKeynoteSpeakersContent(): KeynoteSpeakersContent {
   const keynote = siteConfig.keynoteSpeakers;
   return {
     ...keynote,
+    featuredSpeakers: [...keynote.featuredSpeakers],
     sections: {
       inaugural: {
         ...keynote.sections.inaugural,

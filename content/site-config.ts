@@ -821,6 +821,50 @@ For any other queries not covered above, please don't hesitate to contact us at 
       "Distinguished voices in communication and smart Intelligence",
     heroImage: "hero-conference.png",
     heroImageUrlMobile: "/hero-conference-mobile.png",
+    featuredSpeakers: [
+      {
+        name: "Dr. Haruyuki Hiratani",
+        position: "CEO, Takasago Fluidic Systems",
+        affiliation: "Japan",
+        imageUrl: "/speakers/image1.jpeg",
+      },
+      {
+        name: "Prof. Alexander Kocian",
+        position: "Dept. of Computer Science",
+        affiliation: "University of Pisa, Italy",
+        imageUrl: "/speakers/image2.jpeg",
+      },
+      {
+        name: "Prof. Juan Rafael Orozco-Arroyave",
+        position: "School of Engineering",
+        affiliation: "Universidad de Antioquia, Medellín, Colombia",
+        imageUrl: "/speakers/image3.jpeg",
+      },
+      {
+        name: "Prof. Bidyadhar Subudhi",
+        position: "School of Electrical Sciences",
+        affiliation: "Indian Institute of Technology Goa",
+        imageUrl: "/speakers/image4.jpeg",
+      },
+      {
+        name: "Prof. Tapan K. Gandhi",
+        position: "Dept. of Electrical Engineering",
+        affiliation: "Indian Institute of Technology, Delhi",
+        imageUrl: "/speakers/image5.jpeg",
+      },
+      {
+        name: "Prof. Vikram M. Gadre",
+        position: "Dept. of Electrical Engineering",
+        affiliation: "Indian Institute of Technology Bombay",
+        imageUrl: "/speakers/image6.jpeg",
+      },
+      {
+        name: "Dr. Satyasai Jagannath Nanda",
+        position: "Dept. of Electronics and Communication Engineering",
+        affiliation: "Malaviya National Institute of Technology Jaipur",
+        imageUrl: "/speakers/image7.png",
+      },
+    ],
     sections: {
       inaugural: {
         heading: "Guest for Inaugural Ceremony",
