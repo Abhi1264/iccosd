@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { HeroSection } from "@/components/hero-section";
 import { getKeynoteSpeakersContent } from "@/lib/keynote-speakers-content";
-import type { SpeakerAccent } from "@/lib/keynote-speakers-content";
+// import type { SpeakerAccent } from "@/lib/keynote-speakers-content";
 
 const keynoteContent = getKeynoteSpeakersContent();
 
@@ -10,22 +10,22 @@ export const metadata = {
   description: keynoteContent.description,
 };
 
-const accentClasses: Record<SpeakerAccent, string> = {
-  gold: "border-gold-accent",
-  teal: "border-teal-accent",
-  blue: "border-blue-500",
-  green: "border-green-500",
-};
+// const accentClasses: Record<SpeakerAccent, string> = {
+//   gold: "border-gold-accent",
+//   teal: "border-teal-accent",
+//   blue: "border-blue-500",
+//   green: "border-green-500",
+// };
 
-const accentTextClasses: Record<SpeakerAccent, string> = {
-  gold: "text-gold-accent",
-  teal: "text-teal-accent",
-  blue: "text-blue-500",
-  green: "text-green-500",
-};
+// const accentTextClasses: Record<SpeakerAccent, string> = {
+//   gold: "text-gold-accent",
+//   teal: "text-teal-accent",
+//   blue: "text-blue-500",
+//   green: "text-green-500",
+// };
 
 export default function KeynoteSpeakers() {
-  const { heroTitle, heroSubtitle, heroImage, featuredSpeakers, sections } =
+  const { heroTitle, heroSubtitle, heroImage, featuredSpeakers } =
     keynoteContent;
 
   return (
@@ -76,7 +76,7 @@ export default function KeynoteSpeakers() {
       </section>
 
       {/* Session-wise Speaker Sections */}
-      <section className="py-12 md:py-16 bg-gray-50">
+      {/* <section className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-12">
           {Object.values(sections).map((section) => (
             <div key={section.heading}>
@@ -112,7 +112,7 @@ export default function KeynoteSpeakers() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }
