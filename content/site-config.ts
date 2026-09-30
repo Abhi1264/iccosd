@@ -7,6 +7,8 @@
  * - Long rich text is kept as template strings.
  */
 export const paperSubmissionClosesDate = "~~15 July 2026~~ 22 July 2026";
+export const acceptanceNotificationDate =
+  "~~30 September 2026~~ 9 October 2026";
 
 export const siteConfig = {
   // Home page
@@ -58,7 +60,7 @@ export const siteConfig = {
       { label: "Conference Date", date: "17th - 18th December, 2026" },
       { label: "Paper Submission Opens", date: "12 March 2026" },
       { label: "Paper Submission Closes", date: paperSubmissionClosesDate },
-      { label: "Acceptance Notification", date: "30 September 2026" },
+      { label: "Acceptance Notification", date: acceptanceNotificationDate },
       { label: "Camera-Ready Manuscript", date: "15 October 2026" },
       { label: "Early Bird Registration", date: "10–20 October 2026" },
       { label: "Registration Deadline", date: "01 November 2026" },
@@ -153,7 +155,7 @@ At least one author of each accepted paper must register to present. Participati
       { label: "Conference Date", value: "17th - 18th December, 2026" },
       { label: "Paper Submission Opens", value: "12 March 2026" },
       { label: "Paper Submission Closes", value: paperSubmissionClosesDate },
-      { label: "Acceptance Notification", value: "30 September 2026" },
+      { label: "Acceptance Notification", value: acceptanceNotificationDate },
       { label: "Camera-Ready Manuscript", value: "15 October 2026" },
       { label: "Early Bird Registration", value: "10–20 October 2026" },
       { label: "Registration Deadline", value: "01 November 2026" },
@@ -299,7 +301,7 @@ Important: At least one author of each accepted paper must register under the "A
     dates: [
       { label: "Paper Submission Opens", date: "12 March 2026" },
       { label: "Paper Submission Closes", date: paperSubmissionClosesDate },
-      { label: "Acceptance Notification", date: "30 September 2026" },
+      { label: "Acceptance Notification", date: acceptanceNotificationDate },
       { label: "Camera-Ready Manuscript", date: "15 October 2026" },
       { label: "Early Bird Registration", date: "10–20 October 2026" },
       { label: "Registration Deadline", date: "01 November 2026" },
