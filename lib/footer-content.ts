@@ -9,6 +9,7 @@ export interface QuickLink {
 export interface ImportantDate {
   label: string;
   value: string;
+  href?: string;
 }
 
 export interface Acknowledgment {

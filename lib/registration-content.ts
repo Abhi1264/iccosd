@@ -1,5 +1,10 @@
 import { siteConfig } from "@/content/site-config";
 
+export interface RegistrationTextPart {
+  text: string;
+  href?: string;
+}
+
 export interface RegistrationContent {
   title: string;
   description: string;
@@ -10,6 +15,8 @@ export interface RegistrationContent {
   noticeBody: string;
   introHeading: string;
   introBody: string;
+  processTitle: string;
+  processSteps: RegistrationTextPart[][];
   categoriesTitle: string;
   registrationInfoTitle: string;
   registrationContactTitle: string;
@@ -45,6 +52,9 @@ export function getRegistrationContent(): RegistrationContent {
       category: r.category,
       fees: [...r.fees] as [string, string, string, string],
     })),
+    processSteps: registration.processSteps.map((step) =>
+      step.map((part) => (part.href ? { ...part } : { text: part.text })),
+    ),
     registrationInfoPoints: [...registration.registrationInfoPoints],
   };
 }

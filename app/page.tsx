@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { HeroSection } from "@/components/hero-section";
 import { CTAButton } from "@/components/cta-button";
 import { TwoColumnSection } from "@/components/two-column-section";
@@ -153,7 +154,16 @@ export default function Home() {
                 className="flex flex-col md:flex-row md:items-center md:justify-between p-4 bg-white rounded-lg border-l-4 border-gold-accent"
               >
                 <span className="font-bold text-primary mb-2 md:mb-0">
-                  {item.label}
+                  {item.href ? (
+                    <Link
+                      href={item.href}
+                      className="underline underline-offset-2 hover:text-primary/80"
+                    >
+                      {item.label}
+                    </Link>
+                  ) : (
+                    item.label
+                  )}
                 </span>
                 <FormattedDate
                   text={item.date}

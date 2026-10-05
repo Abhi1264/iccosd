@@ -166,6 +166,11 @@ const SEARCH_PAGES: Array<{ href: string; label: string; text: string }> = [
       siteConfig.registration.description,
       siteConfig.registration.noticeBody,
       siteConfig.registration.introBody,
+      siteConfig.registration.processTitle,
+      siteConfig.registration.processSteps
+        .flat()
+        .map((part) => part.text)
+        .join(" "),
     ].join("\n"),
   },
   {

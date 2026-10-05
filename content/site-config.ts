@@ -10,6 +10,9 @@ export const paperSubmissionClosesDate = "~~15 July 2026~~ 22 July 2026";
 export const acceptanceNotificationDate =
   "~~30 September 2026~~ 9 October 2026";
 
+const registrationPortalUrl =
+  "https://cmt3.research.microsoft.com/ICCoSD2026/Submission/Index";
+
 export const siteConfig = {
   // Home page
   home: {
@@ -62,8 +65,16 @@ export const siteConfig = {
       { label: "Paper Submission Closes", date: paperSubmissionClosesDate },
       { label: "Acceptance Notification", date: acceptanceNotificationDate },
       { label: "Camera-Ready Manuscript", date: "15 October 2026" },
-      { label: "Early Bird Registration", date: "10–20 October 2026" },
-      { label: "Registration Deadline", date: "01 November 2026" },
+      {
+        label: "Early Bird Registration",
+        date: "10–20 October 2026",
+        href: "/registration#registration-process",
+      },
+      {
+        label: "Registration Deadline",
+        date: "01 November 2026",
+        href: "/registration#registration-process",
+      },
     ],
     homeCtas: [
       {
@@ -157,8 +168,16 @@ At least one author of each accepted paper must register to present. Participati
       { label: "Paper Submission Closes", value: paperSubmissionClosesDate },
       { label: "Acceptance Notification", value: acceptanceNotificationDate },
       { label: "Camera-Ready Manuscript", value: "15 October 2026" },
-      { label: "Early Bird Registration", value: "10–20 October 2026" },
-      { label: "Registration Deadline", value: "01 November 2026" },
+      {
+        label: "Early Bird Registration",
+        value: "10–20 October 2026",
+        href: "/registration#registration-process",
+      },
+      {
+        label: "Registration Deadline",
+        value: "01 November 2026",
+        href: "/registration#registration-process",
+      },
     ],
     acknowledgments: [
       {
@@ -225,8 +244,7 @@ At least one author of each accepted paper must register to present. Participati
     importantDatesTitle: "Important Dates",
     authorGuidelinesTitle: "Author Guidelines for Paper Submission",
     contactButtonText: "Get in Touch",
-    registrationLink:
-      "https://cmt3.research.microsoft.com/ICCoSD2026/Submission/Index",
+    registrationLink: registrationPortalUrl,
     registrationQrCode: "/regqr.jpeg",
     generalGuidelines: `- Submit original, unpublished work aligned with the conference themes.
 - Prepare manuscripts in IEEE two-column format with a maximum length of 6 pages.
@@ -303,8 +321,16 @@ Important: At least one author of each accepted paper must register under the "A
       { label: "Paper Submission Closes", date: paperSubmissionClosesDate },
       { label: "Acceptance Notification", date: acceptanceNotificationDate },
       { label: "Camera-Ready Manuscript", date: "15 October 2026" },
-      { label: "Early Bird Registration", date: "10–20 October 2026" },
-      { label: "Registration Deadline", date: "01 November 2026" },
+      {
+        label: "Early Bird Registration",
+        date: "10–20 October 2026",
+        href: "/registration#registration-process",
+      },
+      {
+        label: "Registration Deadline",
+        date: "01 November 2026",
+        href: "/registration#registration-process",
+      },
       { label: "Conference Dates", date: "17th - 18th December, 2026" },
     ],
   },
@@ -517,6 +543,64 @@ Secure your spot now to be part of this prestigious event.`,
     introBody: `Registration for ICCoSD-26 is open to authors, academicians, industry professionals, and attendees.
 Please complete your registration through the official registration portal. One can register with or without a paper.
 Those with accepted papers are encouraged to register under the **Authors** category to present their work and have it included in the conference proceedings.`,
+    processTitle: "Registration Process",
+    processSteps: [
+      [
+        {
+          text: "Registration can be done only after receiving the paper acceptance mail.",
+        },
+      ],
+      [
+        { text: "Follow the " },
+        {
+          text: "table showing registration fee",
+          href: "#registration-categories",
+        },
+        { text: "." },
+      ],
+      [
+        {
+          text: "To start the process, the candidate needs to submit the fee through the link ",
+        },
+        {
+          text: "Link for Registration fee submission",
+          href: "",
+        },
+        { text: "." },
+      ],
+      [
+        {
+          text: "Candidates are advised to keep a soft copy of the submitted registration fee and transaction details for further use.",
+        },
+      ],
+      [
+        {
+          text: "After submission of the registration fee, the candidate has to give the required information over the link ",
+        },
+        {
+          text: "Link for Registration",
+          href: registrationPortalUrl,
+        },
+        { text: "." },
+      ],
+      [
+        {
+          text: "Transaction details, a soft copy of the submitted fee receipt, and the candidate’s personal information (name, designation, name of organization, and ",
+        },
+        {
+          text: "IEEE membership",
+          href: "https://www.ieee.org/",
+        },
+        {
+          text: " details, if any) will be collected by the registration form.",
+        },
+      ],
+      [
+        {
+          text: "The registration link will be available from 10 October to 1 November 2026.",
+        },
+      ],
+    ],
     categoriesTitle: "Registration Categories",
     registrationInfoTitle: "Important Registration Information",
     registrationContactTitle: "Registration Contact",

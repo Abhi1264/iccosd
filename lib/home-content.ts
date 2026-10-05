@@ -10,6 +10,7 @@ export interface Highlight {
 export interface HomeDate {
   label: string;
   date: string;
+  href?: string;
 }
 
 export interface HomeCTA {

@@ -75,7 +75,18 @@ export function Footer() {
             <ul className="space-y-3">
               {footerData.importantDates.map((date) => (
                 <li key={date.label} className="text-xs">
-                  <div className="text-white/60">{date.label}</div>
+                  <div className="text-white/60">
+                    {date.href ? (
+                      <IntentLink
+                        href={date.href}
+                        className="hover:text-accent hover:underline underline-offset-2"
+                      >
+                        {date.label}
+                      </IntentLink>
+                    ) : (
+                      date.label
+                    )}
+                  </div>
                   <FormattedDate
                     text={date.value}
                     className="text-white/90 font-medium text-sm mt-0.5 block"

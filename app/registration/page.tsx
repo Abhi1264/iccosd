@@ -1,6 +1,45 @@
+import Link from "next/link";
 import { HeroSection } from "@/components/hero-section";
 import { InfoBlock } from "@/components/info-block";
-import { getRegistrationContent } from "@/lib/registration-content";
+import {
+  getRegistrationContent,
+  type RegistrationTextPart,
+} from "@/lib/registration-content";
+
+function ProcessText({ parts }: { parts: RegistrationTextPart[] }) {
+  return parts.map((part, index) => {
+    if (!part.href) {
+      return <span key={`${part.text}-${index}`}>{part.text}</span>;
+    }
+
+    const className =
+      "font-semibold text-primary underline underline-offset-2 hover:text-primary/80";
+
+    if (part.href.startsWith("http")) {
+      return (
+        <a
+          key={`${part.text}-${index}`}
+          href={part.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={className}
+        >
+          {part.text}
+        </a>
+      );
+    }
+
+    return (
+      <Link
+        key={`${part.text}-${index}`}
+        href={part.href}
+        className={className}
+      >
+        {part.text}
+      </Link>
+    );
+  });
+}
 
 const registrationContent = getRegistrationContent();
 
@@ -18,6 +57,8 @@ export default function Registration() {
     noticeBody,
     introHeading,
     introBody,
+    processTitle,
+    processSteps,
     categoriesTitle,
     registrationInfoTitle,
     registrationContactTitle,
@@ -52,7 +93,23 @@ export default function Registration() {
               </p>
             </div>
 
-            <div>
+            <div id="registration-process" className="scroll-mt-28">
+              <h2 className="text-3xl font-bold text-primary mb-6">
+                {processTitle}
+              </h2>
+              <ol className="list-decimal ml-6 space-y-3 text-lg text-foreground/80 marker:font-bold marker:text-gold-accent">
+                {processSteps.map((step) => (
+                  <li
+                    key={step.map((part) => part.text).join("")}
+                    className="leading-relaxed pl-1"
+                  >
+                    <ProcessText parts={step} />
+                  </li>
+                ))}
+              </ol>
+            </div>
+
+            <div id="registration-categories" className="scroll-mt-28">
               <h2 className="text-3xl font-bold text-primary mb-6">
                 {categoriesTitle}
               </h2>

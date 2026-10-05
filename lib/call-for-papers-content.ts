@@ -8,6 +8,7 @@ export interface CFPTopic {
 export interface CFPDate {
   label: string;
   date: string;
+  href?: string;
 }
 
 export interface CallForPapersContent {

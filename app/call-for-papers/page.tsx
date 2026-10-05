@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { HeroSection } from "@/components/hero-section";
 import { CTAButton } from "@/components/cta-button";
 import { InfoBlock } from "@/components/info-block";
@@ -151,7 +152,14 @@ export default function CallForPapers() {
                 {acceptedPapersTitle}
               </h3>
               <p className="mb-4 whitespace-pre-line text-justify">
-                {acceptedPapers}
+                {acceptedPapers}{" "}
+                <Link
+                  href="/registration#registration-process"
+                  className="text-primary underline underline-offset-2 hover:text-primary/80"
+                >
+                  Follow the registration process
+                </Link>
+                .
               </p>
             </div>
 
@@ -190,7 +198,16 @@ export default function CallForPapers() {
                 className="flex flex-col md:flex-row md:justify-between p-4 bg-white rounded-lg border-l-4 border-gold-accent"
               >
                 <span className="font-bold text-primary mb-1 md:mb-0">
-                  {item.label}
+                  {item.href ? (
+                    <Link
+                      href={item.href}
+                      className="underline underline-offset-2 hover:text-primary/80"
+                    >
+                      {item.label}
+                    </Link>
+                  ) : (
+                    item.label
+                  )}
                 </span>
                 <FormattedDate
                   text={item.date}
