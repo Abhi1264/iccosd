@@ -4,7 +4,7 @@ import { CTAButton } from "@/components/cta-button";
 import { TwoColumnSection } from "@/components/two-column-section";
 import Image from "next/image";
 import { FileText, ClipboardList, Users } from "lucide-react";
-import { getHomeContent } from "@/lib/home-content";
+import { siteConfig } from "@/content/site-config";
 import { FormattedDate } from "@/lib/formatted-date";
 
 const CTA_ICONS = {
@@ -13,7 +13,7 @@ const CTA_ICONS = {
   Users,
 } as const;
 
-const homeContent = getHomeContent();
+const homeContent = siteConfig.home;
 
 export const metadata = {
   title: homeContent.title,
@@ -45,7 +45,7 @@ export default function Home() {
 
   return (
     <main>
-      {/* Hero Section */}
+
       <HeroSection
         heroTagline={heroTagline}
         title={title}
@@ -57,7 +57,7 @@ export default function Home() {
         ctaLink={heroCTALink}
       />
 
-      {/* Highlights Section */}
+
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-primary mb-12">
@@ -82,7 +82,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
+
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <TwoColumnSection
@@ -97,7 +97,7 @@ export default function Home() {
                 <p className="text-lg text-foreground/80 mb-6 leading-relaxed text-justify">
                   {aboutBody}
                 </p>
-                <CTAButton href="/about" variant="primary">
+                <CTAButton href="/about">
                   Learn More About ICCoSD
                 </CTAButton>
               </div>
@@ -122,7 +122,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Conference Theme */}
+
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center max-w-3xl mx-auto">
@@ -141,7 +141,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Important Dates */}
+
       <section>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-4xl font-bold text-center text-primary mb-12">
@@ -154,7 +154,7 @@ export default function Home() {
                 className="flex flex-col md:flex-row md:items-center md:justify-between p-4 bg-white rounded-lg border-l-4 border-gold-accent"
               >
                 <span className="font-bold text-primary mb-2 md:mb-0">
-                  {item.href ? (
+                  {"href" in item && item.href ? (
                     <Link
                       href={item.href}
                       className="underline underline-offset-2 hover:text-primary/80"
@@ -175,7 +175,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Call to Action Section */}
+
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -198,7 +198,7 @@ export default function Home() {
                     {item.title}
                   </h3>
                   <p className="text-foreground/70 mb-6">{item.description}</p>
-                  <CTAButton href={item.link} variant="primary">
+                  <CTAButton href={item.link}>
                     {item.cta}
                   </CTAButton>
                 </div>
@@ -208,7 +208,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Organizing Partners */}
+
       <section className="pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-4xl font-bold text-center text-primary mb-12">

@@ -85,7 +85,7 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
+
           <Link href="/" className="flex items-center gap-2">
             <Image
               src="icon.jpeg"
@@ -97,7 +97,7 @@ export function Header() {
             <span className="text-xl font-bold text-primary">ICCoSD-26</span>
           </Link>
 
-          {/* Desktop Navigation */}
+
           <nav className="hidden lg:flex items-center gap-1">
             {NAV_LINKS.map((link) => (
               <Link
@@ -109,7 +109,7 @@ export function Header() {
               </Link>
             ))}
 
-            {/* Committees Dropdown */}
+
             <div className="relative group">
               <button className="link-underline px-3 py-2 text-sm font-medium text-foreground flex items-center gap-1 group-hover:text-primary transition-colors duration-300">
                 Committees
@@ -120,7 +120,7 @@ export function Header() {
                   <IntentLink
                     key={link.href}
                     href={link.href}
-                    className={`block px-4 py-2 text-sm text-foreground hover:hover:text-primary transition-colors duration-200 ${link.className}`}
+                    className={`block px-4 py-2 text-sm text-foreground hover:text-primary transition-colors duration-200 ${link.className}`}
                   >
                     {link.label}
                   </IntentLink>
@@ -138,7 +138,7 @@ export function Header() {
               </Link>
             ))}
 
-            {/* More Dropdown */}
+
             <div className="relative group">
               <button className="link-underline px-3 py-2 text-sm font-medium text-foreground flex items-center gap-1 group-hover:text-primary transition-colors duration-300">
                 More
@@ -149,7 +149,7 @@ export function Header() {
                   <IntentLink
                     key={link.href}
                     href={link.href}
-                    className={`block px-4 py-2 text-sm text-foreground hover:hover:text-primary transition-colors duration-200 ${link.className}`}
+                    className={`block px-4 py-2 text-sm text-foreground hover:text-primary transition-colors duration-200 ${link.className}`}
                   >
                     {link.label}
                   </IntentLink>
@@ -158,7 +158,7 @@ export function Header() {
             </div>
           </nav>
 
-          {/* Right Side - Logo Badges & Search (desktop) */}
+
           <div className="hidden lg:flex items-center gap-4">
             <button
               type="button"
@@ -192,7 +192,7 @@ export function Header() {
             </div>
           </div>
 
-          {/* Mobile: logos + hamburger grouped on the right */}
+
           <div className="flex lg:hidden items-center gap-2 shrink-0">
             <Image
               src="/ieee.avif"
@@ -225,7 +225,7 @@ export function Header() {
 
         <SearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
 
-        {/* Mobile Navigation */}
+
         {isOpen && (
           <nav className="lg:hidden pb-4 space-y-1">
             <button
@@ -249,7 +249,7 @@ export function Header() {
               </Link>
             ))}
 
-            {/* Mobile Committees */}
+
             <button
               onClick={() =>
                 setOpenDropdown(
@@ -287,7 +287,7 @@ export function Header() {
               </Link>
             ))}
 
-            {/* Mobile More */}
+
             <button
               onClick={() =>
                 setOpenDropdown(openDropdown === "more" ? null : "more")

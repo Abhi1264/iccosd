@@ -1,7 +1,7 @@
 import { HeroSection } from "@/components/hero-section";
-import { getOrganizingCommitteeContent } from "@/lib/committee-organizing-content";
+import { siteConfig } from "@/content/site-config";
 
-const organizingContent = getOrganizingCommitteeContent();
+const organizingContent = siteConfig.organizingCommittee;
 
 export const metadata = {
   title: organizingContent.title,

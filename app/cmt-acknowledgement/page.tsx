@@ -1,7 +1,7 @@
 import { HeroSection } from "@/components/hero-section";
-import { getCmtAcknowledgementContent } from "@/lib/cmt-acknowledgement-content";
+import { siteConfig } from "@/content/site-config";
 
-const cmtContent = getCmtAcknowledgementContent();
+const cmtContent = siteConfig.cmtAcknowledgement;
 
 export const metadata = {
   title: cmtContent.title,

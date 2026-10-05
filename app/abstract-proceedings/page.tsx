@@ -1,9 +1,9 @@
 import { HeroSection } from "@/components/hero-section";
 import { CTAButton } from "@/components/cta-button";
 import { InfoBlock } from "@/components/info-block";
-import { getAbstractProceedingsContent } from "@/lib/abstract-proceedings-content";
+import { siteConfig } from "@/content/site-config";
 
-const proceedingsContent = getAbstractProceedingsContent();
+const proceedingsContent = siteConfig.abstractProceedings;
 
 export const metadata = {
   title: proceedingsContent.title,
@@ -41,7 +41,7 @@ export default function AbstractProceedings() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <div className="prose prose-invert max-w-none text-foreground/80">
+            <div className="text-foreground/80">
               <div className="text-3xl font-bold text-primary mb-6">
                 {proceedingsTitle}
               </div>
@@ -62,7 +62,7 @@ export default function AbstractProceedings() {
                 {downloadSection}
               </p>
               <div className="space-y-4">
-                <CTAButton href="#" variant="primary">
+                <CTAButton href="#">
                   {downloadButtonText}
                 </CTAButton>
                 <p className="text-sm text-foreground/70">{downloadHelpText}</p>

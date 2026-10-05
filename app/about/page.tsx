@@ -1,9 +1,9 @@
 import { HeroSection } from "@/components/hero-section";
 import { MarkdownContent } from "@/components/markdown-content";
 import Image from "next/image";
-import { getAboutContent } from "@/lib/about-content";
+import { siteConfig } from "@/content/site-config";
 
-const aboutContent = getAboutContent();
+const aboutContent = siteConfig.about;
 
 export const metadata = {
   title: aboutContent.title,
@@ -31,10 +31,10 @@ export default function About() {
         heroTagline=""
       />
 
-      {/* Main content - dark background with gold headings, matching reference layout */}
+
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          {/* Section 1: About BIT Mesra */}
+
           <div className="mb-16">
             <h2 className="text-2xl md:text-3xl font-bold mb-8">
               {aboutBitMesraTitle}
@@ -57,20 +57,20 @@ export default function About() {
               <div className="md:col-span-2">
                 <MarkdownContent
                   content={aboutBitMesraBody}
-                  className="text-justify prose-invert prose-p:text-white/90 prose-headings:text-white prose-strong:text-white"
+                  className="text-justify"
                 />
               </div>
             </div>
           </div>
 
-          {/* Section 2: About ICCoSD */}
+
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-gold-accent mb-8">
               {aboutConferenceTitle}
             </h2>
             <MarkdownContent
               content={aboutConferenceBody}
-              className="text-justify prose-invert prose-p:text-white/90 prose-headings:text-white prose-strong:text-gold-accent"
+              className="text-justify"
             />
           </div>
         </div>

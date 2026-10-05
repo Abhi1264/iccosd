@@ -1,7 +1,7 @@
 import { HeroSection } from "@/components/hero-section";
-import { getAdvisoryCommitteeContent } from "@/lib/committee-advisory-content";
+import { siteConfig } from "@/content/site-config";
 
-const advisoryContent = getAdvisoryCommitteeContent();
+const advisoryContent = siteConfig.advisoryCommittee;
 
 export const metadata = {
   title: advisoryContent.title,
@@ -38,7 +38,7 @@ export default function AdvisoryCommittee() {
           </div>
 
           <div className="space-y-12">
-            {/* International Advisory */}
+
             <div>
               <h2 className="text-3xl font-bold text-primary mb-8">
                 {internationalTitle}
@@ -55,7 +55,7 @@ export default function AdvisoryCommittee() {
               </div>
             </div>
 
-            {/* National Advisory */}
+
             <div>
               <h2 className="text-3xl font-bold text-primary mb-8">
                 {nationalTitle}

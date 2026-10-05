@@ -2,21 +2,18 @@
 
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
-import { cn } from "@/lib/utils";
 
-interface MarkdownContentProps {
+export function MarkdownContent({
+  content,
+  className = "",
+}: {
   content: string;
   className?: string;
-}
-
-const proseClasses =
-  "prose prose-neutral max-w-none prose-headings:text-primary prose-headings:font-bold prose-p:leading-relaxed prose-ul:my-4 prose-ol:my-4 prose-li:my-1";
-
-export function MarkdownContent({ content, className }: MarkdownContentProps) {
+}) {
   if (!content?.trim()) return null;
 
   return (
-    <div className={cn(proseClasses, className)}>
+    <div className={className}>
       <ReactMarkdown
         components={{
           h1: ({ children }) => (
@@ -60,7 +57,7 @@ export function MarkdownContent({ content, className }: MarkdownContentProps) {
             </a>
           ),
           img: ({ src, alt }) =>
-            src ? (
+            typeof src === "string" ? (
               <span className="block my-6">
                 <Image
                   src={src}

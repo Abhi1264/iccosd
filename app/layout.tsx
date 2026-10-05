@@ -3,11 +3,11 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { getHomeContent } from "@/lib/home-content";
+import { siteConfig } from "@/content/site-config";
 import "./globals.css";
 
 const sans = Plus_Jakarta_Sans({ subsets: ["latin"] });
-const home = getHomeContent();
+const home = siteConfig.home;
 
 export const metadata: Metadata = {
   title: home.title,

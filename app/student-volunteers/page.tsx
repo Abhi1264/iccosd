@@ -1,7 +1,7 @@
 import { HeroSection } from "@/components/hero-section";
-import { getStudentVolunteersContent } from "@/lib/student-volunteers-content";
+import { siteConfig } from "@/content/site-config";
 
-const volunteersContent = getStudentVolunteersContent();
+const volunteersContent = siteConfig.studentVolunteers;
 
 export const metadata = {
   title: volunteersContent.title,

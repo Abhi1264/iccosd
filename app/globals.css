@@ -1,39 +1,13 @@
 @import "tailwindcss";
-@import "tw-animate-css";
-
-@custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Core Colors - ICCoSD Design System */
-  --primary-dark-blue: #0d5b6f;
-  --gold-accent: #d4a574;
-  --gold-dark: #b89a60;
-  --white: #ffffff;
-  --charcoal: #2c3e50;
-  --light-gray: #f5f5f5;
-  --teal-accent: #1fa39c;
-
-  /* Tailwind CSS Variables */
   --background: 255 255 255;
   --foreground: 45 62 80;
-  --card: 255 255 255;
-  --card-foreground: 45 62 80;
-  --popover: 255 255 255;
-  --popover-foreground: 45 62 80;
   --primary: 13 91 111;
-  --primary-foreground: 255 255 255;
-  --secondary: 212 165 116;
-  --secondary-foreground: 45 62 80;
   --muted: 245 245 245;
   --muted-foreground: 107 114 128;
   --accent: 212 165 116;
-  --accent-foreground: 45 62 80;
-  --destructive: 239 68 68;
-  --destructive-foreground: 255 255 255;
   --border: 229 231 235;
-  --input: 245 245 245;
-  --ring: 212 165 116;
-  --radius: 0.5rem;
 }
 
 @theme inline {
@@ -41,32 +15,16 @@
   --font-mono: "Geist Mono", "Geist Mono Fallback";
   --color-background: rgb(var(--background) / <alpha-value>);
   --color-foreground: rgb(var(--foreground) / <alpha-value>);
-  --color-card: rgb(var(--card) / <alpha-value>);
-  --color-card-foreground: rgb(var(--card-foreground) / <alpha-value>);
-  --color-popover: rgb(var(--popover) / <alpha-value>);
-  --color-popover-foreground: rgb(var(--popover-foreground) / <alpha-value>);
   --color-primary: rgb(var(--primary) / <alpha-value>);
-  --color-primary-foreground: rgb(var(--primary-foreground) / <alpha-value>);
-  --color-secondary: rgb(var(--secondary) / <alpha-value>);
-  --color-secondary-foreground: rgb(
-    var(--secondary-foreground) / <alpha-value>
-  );
   --color-muted: rgb(var(--muted) / <alpha-value>);
   --color-muted-foreground: rgb(var(--muted-foreground) / <alpha-value>);
   --color-accent: rgb(var(--accent) / <alpha-value>);
-  --color-accent-foreground: rgb(var(--accent-foreground) / <alpha-value>);
-  --color-destructive: rgb(var(--destructive) / <alpha-value>);
-  --color-destructive-foreground: rgb(
-    var(--destructive-foreground) / <alpha-value>
-  );
   --color-border: rgb(var(--border) / <alpha-value>);
-  --color-input: rgb(var(--input) / <alpha-value>);
-  --color-ring: rgb(var(--ring) / <alpha-value>);
 }
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
@@ -87,51 +45,6 @@
 
   p {
     @apply leading-relaxed text-base;
-  }
-}
-
-/* Custom animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
-}
-
-.animate-slide-in-right {
-  animation: slideInRight 0.6s ease-out forwards;
-}
-
-/* Micro-interactions */
-
-/* Animated underline for links */
-@keyframes underlineExpand {
-  from {
-    width: 0;
-    left: 0;
-  }
-  to {
-    width: 100%;
-    left: 0;
   }
 }
 
@@ -160,53 +73,6 @@
   color: #d4a574;
 }
 
-/* Button shadow lift on hover */
-.btn-lift {
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  box-shadow: 0 2px 8px rgba(13, 91, 111, 0.1);
-}
-
-.btn-lift:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(13, 91, 111, 0.15);
-}
-
-/* Smooth gold accent animation */
-@keyframes goldPulse {
-  0%,
-  100% {
-    color: #d4a574;
-  }
-  50% {
-    color: #b89a60;
-  }
-}
-
-.gold-pulse {
-  animation: goldPulse 3s ease-in-out infinite;
-}
-
-/* Scroll fade-in animation */
-@keyframes scrollFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.scroll-fade-in {
-  opacity: 0;
-}
-
-.scroll-fade-in.in-view {
-  animation: scrollFadeIn 0.6s ease-out forwards;
-}
-
-/* Icon hover scale */
 .icon-hover {
   transition:
     transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
@@ -216,17 +82,4 @@
 .icon-hover:hover {
   transform: scale(1.15) rotate(5deg);
   color: #d4a574;
-}
-
-/* Smooth color transitions */
-.color-transition {
-  transition:
-    color 0.3s ease,
-    background-color 0.3s ease;
-}
-
-/* Focus ring customization */
-.focus-ring:focus-visible {
-  outline: 2px solid #d4a574;
-  outline-offset: 2px;
 }

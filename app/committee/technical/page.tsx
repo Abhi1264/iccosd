@@ -1,7 +1,7 @@
 import { HeroSection } from "@/components/hero-section";
-import { getTechnicalCommitteeContent } from "@/lib/committee-technical-content";
+import { siteConfig } from "@/content/site-config";
 
-const technicalContent = getTechnicalCommitteeContent();
+const technicalContent = siteConfig.technicalCommittee;
 
 export const metadata = {
   title: technicalContent.title,

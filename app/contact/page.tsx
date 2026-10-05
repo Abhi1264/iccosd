@@ -1,9 +1,9 @@
 import { HeroSection } from "@/components/hero-section";
 import { Mail, Phone, MapPin } from "lucide-react";
-import { getContactContent } from "@/lib/contact-content";
+import { siteConfig } from "@/content/site-config";
 import { MarkdownContent } from "@/components/markdown-content";
 
-const contactContent = getContactContent();
+const contactContent = siteConfig.contact;
 
 export const metadata = {
   title: contactContent.title,
@@ -46,7 +46,7 @@ export default function Contact() {
             </h2>
 
             <div className="space-y-8">
-              {/* General */}
+
               <div>
                 <h3 className="text-xl font-bold text-primary mb-4">
                   {generalInquiriesTitle}
@@ -92,7 +92,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Key Contacts */}
+
               <div>
                 <h3 className="text-xl font-bold text-primary mb-4">
                   {keyContactsTitle}
@@ -127,7 +127,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Department Information */}
+
           <div className="mt-12 p-8 rounded-lg border-l-4 border-gold-accent">
             <h3 className="text-2xl font-bold text-primary mb-4">
               {department?.name}

@@ -25,7 +25,7 @@ export function HeroSection({
 
   return (
     <section className="relative h-200 md:h-190 flex items-center justify-center overflow-hidden">
-      {/* Mobile background */}
+
       <div
         className="absolute inset-0 md:hidden"
         style={{
@@ -35,7 +35,7 @@ export function HeroSection({
         }}
         aria-hidden
       />
-      {/* Desktop background */}
+
       <div
         className="absolute inset-0 hidden md:block"
         style={{

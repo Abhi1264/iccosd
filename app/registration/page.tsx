@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { HeroSection } from "@/components/hero-section";
 import { InfoBlock } from "@/components/info-block";
-import {
-  getRegistrationContent,
-  type RegistrationTextPart,
-} from "@/lib/registration-content";
+import { siteConfig } from "@/content/site-config";
 
-function ProcessText({ parts }: { parts: RegistrationTextPart[] }) {
+function ProcessText({
+  parts,
+}: {
+  parts: ReadonlyArray<{ text: string; href?: string }>;
+}) {
   return parts.map((part, index) => {
     if (!part.href) {
       return <span key={`${part.text}-${index}`}>{part.text}</span>;
@@ -41,7 +42,7 @@ function ProcessText({ parts }: { parts: RegistrationTextPart[] }) {
   });
 }
 
-const registrationContent = getRegistrationContent();
+const registrationContent = siteConfig.registration;
 
 export const metadata = {
   title: registrationContent.title,

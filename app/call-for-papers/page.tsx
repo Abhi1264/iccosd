@@ -2,14 +2,14 @@ import Link from "next/link";
 import { HeroSection } from "@/components/hero-section";
 import { CTAButton } from "@/components/cta-button";
 import { InfoBlock } from "@/components/info-block";
-import { getCallForPapersContent } from "@/lib/call-for-papers-content";
+import { siteConfig } from "@/content/site-config";
 import {
   FormattedDate,
   renderTextWithStrikethroughSegments,
 } from "@/lib/formatted-date";
 import Image from "next/image";
 
-const cfpContent = getCallForPapersContent();
+const cfpContent = siteConfig.callForPapers;
 
 export const metadata = {
   title: cfpContent.title,
@@ -83,13 +83,11 @@ export default function CallForPapers() {
     acceptedPapersTitle,
     researchTopicsTitle,
     importantDatesTitle,
-    // authorGuidelinesTitle,
     contactButtonText,
     generalGuidelines,
     acceptedPapers,
     topics,
     dates,
-    // authorGuidelines,
     ctaText,
   } = cfpContent;
 
@@ -108,11 +106,7 @@ export default function CallForPapers() {
               {renderTextWithStrikethroughSegments(noticeBody)}
             </p>
           </InfoBlock>
-          <CTAButton
-            href={cfpContent.registrationLink}
-            variant="primary"
-            className="mt-6"
-          >
+          <CTAButton href={cfpContent.registrationLink} className="mt-6">
             Click this link to Submit Camera Ready Paper on CMT (follow the
             instructions given below)
           </CTAButton>
@@ -198,7 +192,7 @@ export default function CallForPapers() {
                 className="flex flex-col md:flex-row md:justify-between p-4 bg-white rounded-lg border-l-4 border-gold-accent"
               >
                 <span className="font-bold text-primary mb-1 md:mb-0">
-                  {item.href ? (
+                  {"href" in item && item.href ? (
                     <Link
                       href={item.href}
                       className="underline underline-offset-2 hover:text-primary/80"
@@ -221,21 +215,11 @@ export default function CallForPapers() {
 
       <section className="pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          {/* <h2 className="text-3xl font-bold text-primary mb-8 text-center">
-            {authorGuidelinesTitle}
-          </h2> */}
-          {/*
-          <InfoBlock type="highlight">
-            {renderBulletList(authorGuidelines, "text-justify")}
-          </InfoBlock>
-          */}
           <div className="text-center">
             <p className="text-foreground/80 mb-6 whitespace-pre-line text-justify">
               {ctaText}
             </p>
-            <CTAButton href="/contact" variant="primary">
-              {contactButtonText}
-            </CTAButton>
+            <CTAButton href="/contact">{contactButtonText}</CTAButton>
           </div>
         </div>
       </section>
