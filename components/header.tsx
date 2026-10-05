@@ -88,7 +88,7 @@ export function Header() {
 
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="icon.jpeg"
+              src="/icon.jpeg"
               alt="ICCSoD Logo"
               height={48}
               width={48}

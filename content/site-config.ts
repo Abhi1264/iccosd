@@ -564,9 +564,9 @@ Those with accepted papers are encouraged to register under the **Authors** cate
         },
         {
           text: "Link for Registration fee submission",
-          href: "",
+          href: "https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=322526",
         },
-        { text: "." },
+        { text: " (Select ICCSD-26 in payment category)." },
       ],
       [
         {
@@ -579,7 +579,7 @@ Those with accepted papers are encouraged to register under the **Authors** cate
         },
         {
           text: "Link for Registration",
-          href: registrationPortalUrl,
+          href: "https://forms.gle/yGJtG9jwhkEzVxN27",
         },
         { text: "." },
       ],

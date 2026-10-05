@@ -105,7 +105,7 @@ export default function Home() {
             right={
               <div className="space-y-4">
                 <Image
-                  src="hero-conference.jpg"
+                  src="/hero-conference.jpg"
                   alt="Conference venue"
                   width={500}
                   height={400}
