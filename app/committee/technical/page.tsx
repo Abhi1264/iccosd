@@ -1,5 +1,6 @@
 import { HeroSection } from "@/components/hero-section";
 import { siteConfig } from "@/content/site-config";
+import { renderTextWithStrikethroughSegments } from "@/lib/formatted-date";
 
 const technicalContent = siteConfig.technicalCommittee;
 
@@ -38,7 +39,9 @@ export default function TechnicalCommittee() {
           </div>
 
           <div className="mt-12 p-6 bg-blue-50 rounded-lg border-l-4 border-gold-accent">
-            <p className="text-foreground/80">{note}</p>
+            <p className="text-foreground/80">
+              {renderTextWithStrikethroughSegments(note)}
+            </p>
           </div>
         </div>
       </section>

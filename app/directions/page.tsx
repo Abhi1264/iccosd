@@ -1,6 +1,7 @@
 import { HeroSection } from "@/components/hero-section";
 import { MapPin, Plane, Train, Car } from "lucide-react";
 import { siteConfig } from "@/content/site-config";
+import { renderTextWithStrikethroughSegments } from "@/lib/formatted-date";
 
 const directionsContent = siteConfig.directions;
 
@@ -67,7 +68,7 @@ export default function Directions() {
                 </h3>
               </div>
               <p className="space-y-3 text-foreground/80 whitespace-pre-line text-justify">
-                {byAir}
+                {renderTextWithStrikethroughSegments(byAir)}
               </p>
             </div>
 
@@ -80,7 +81,7 @@ export default function Directions() {
                 </h3>
               </div>
               <p className="space-y-3 text-foreground/80 whitespace-pre-line text-justify">
-                {byTrain}
+                {renderTextWithStrikethroughSegments(byTrain)}
               </p>
             </div>
 
@@ -117,7 +118,7 @@ export default function Directions() {
               {locationTitle}
             </h3>
             <p className="space-y-3 text-foreground/80 whitespace-pre-line text-justify">
-              {location}
+              {renderTextWithStrikethroughSegments(location)}
             </p>
           </div>
 

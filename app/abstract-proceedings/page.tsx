@@ -2,6 +2,7 @@ import { HeroSection } from "@/components/hero-section";
 import { CTAButton } from "@/components/cta-button";
 import { InfoBlock } from "@/components/info-block";
 import { siteConfig } from "@/content/site-config";
+import { renderTextWithStrikethroughSegments } from "@/lib/formatted-date";
 
 const proceedingsContent = siteConfig.abstractProceedings;
 
@@ -51,7 +52,9 @@ export default function AbstractProceedings() {
 
           <div className="space-y-8">
             <InfoBlock title={aboutTitle} type="highlight">
-              <p className="whitespace-pre-line">{aboutProceedings}</p>
+              <p className="whitespace-pre-line">
+                {renderTextWithStrikethroughSegments(aboutProceedings)}
+              </p>
             </InfoBlock>
 
             <div className="bg-gold-accent/10 border-l-4 border-gold-accent p-8 rounded-lg">

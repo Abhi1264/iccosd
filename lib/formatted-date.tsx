@@ -37,15 +37,24 @@ export function FormattedDate({
 }
 
 export function renderTextWithStrikethroughSegments(text: string) {
-  const parts = text.split(/(~~.+?~~)/g);
+  const parts = text.split(/(\*\*.+?\*\*|~~.+?~~)/g);
 
   return parts.map((part, idx) => {
-    const match = part.match(/^~~(.+?)~~$/);
-    if (match) {
+    const strike = part.match(/^~~(.+?)~~$/);
+    if (strike) {
       return (
         <span key={idx} className="line-through opacity-50">
-          {match[1]}
+          {strike[1]}
         </span>
+      );
+    }
+
+    const bold = part.match(/^\*\*(.+?)\*\*$/);
+    if (bold) {
+      return (
+        <strong key={idx} className="font-bold">
+          {bold[1]}
+        </strong>
       );
     }
 

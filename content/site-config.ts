@@ -9,6 +9,8 @@
 export const paperSubmissionClosesDate = "~~15 July 2026~~ 22 July 2026";
 export const acceptanceNotificationDate =
   "~~30 September 2026~~ 9 October 2026";
+export const cameraReadyManuscriptDate =
+  "~~15 October 2026~~ 15 November 2026";
 
 const registrationPortalUrl =
   "https://cmt3.research.microsoft.com/ICCoSD2026/Submission/Index";
@@ -64,12 +66,7 @@ export const siteConfig = {
       { label: "Paper Submission Opens", date: "12 March 2026" },
       { label: "Paper Submission Closes", date: paperSubmissionClosesDate },
       { label: "Acceptance Notification", date: acceptanceNotificationDate },
-      { label: "Camera-Ready Manuscript", date: "15 October 2026" },
-      {
-        label: "Early Bird Registration",
-        date: "10–20 October 2026",
-        href: "/registration#registration-process",
-      },
+      { label: "Camera-Ready Manuscript", date: cameraReadyManuscriptDate },
       {
         label: "Registration Deadline",
         date: "01 November 2026",
@@ -167,12 +164,7 @@ At least one author of each accepted paper must register to present. Participati
       { label: "Paper Submission Opens", value: "12 March 2026" },
       { label: "Paper Submission Closes", value: paperSubmissionClosesDate },
       { label: "Acceptance Notification", value: acceptanceNotificationDate },
-      { label: "Camera-Ready Manuscript", value: "15 October 2026" },
-      {
-        label: "Early Bird Registration",
-        value: "10–20 October 2026",
-        href: "/registration#registration-process",
-      },
+      { label: "Camera-Ready Manuscript", value: cameraReadyManuscriptDate },
       {
         label: "Registration Deadline",
         value: "01 November 2026",
@@ -258,7 +250,7 @@ At least one author of each accepted paper must register to present. Participati
 
 Important: At least one author of each accepted paper must register under the "Authors" category to present the work and have the manuscript included in the proceedings.`,
     authorGuidelines: `- Upload camera-ready papers only after receiving the official acceptance email.
-- Camera-ready submission opens on 15 October 2026 through Microsoft CMT.
+- Camera-ready submission opens on 15 November 2026 through Microsoft CMT.
 - In CMT, go to "My Submissions", open your accepted paper, and use "Edit Submission" to upload the final file.
 - Do not remove previously submitted files unless explicitly instructed by the conference team.
 - Name the final file as: <paper-code>_camera-ready_<short-title>.pdf.
@@ -320,12 +312,7 @@ Important: At least one author of each accepted paper must register under the "A
       { label: "Paper Submission Opens", date: "12 March 2026" },
       { label: "Paper Submission Closes", date: paperSubmissionClosesDate },
       { label: "Acceptance Notification", date: acceptanceNotificationDate },
-      { label: "Camera-Ready Manuscript", date: "15 October 2026" },
-      {
-        label: "Early Bird Registration",
-        date: "10–20 October 2026",
-        href: "/registration#registration-process",
-      },
+      { label: "Camera-Ready Manuscript", date: cameraReadyManuscriptDate },
       {
         label: "Registration Deadline",
         date: "01 November 2026",
@@ -537,7 +524,7 @@ Important: At least one author of each accepted paper must register under the "A
     noticeTitle: "Registration Open",
     noticeBody: `Registration for ICCoSD-26 is currently **open**.
 The conference will be held on **December 17-18, 2026** at BIT Mesra, Ranchi.
-Early Bird Registration: 10–20 October 2026. Registration deadline: 01 November 2026.
+Registration deadline: 01 November 2026.
 Secure your spot now to be part of this prestigious event.`,
     introHeading: "Registration Details",
     introBody: `Registration for ICCoSD-26 is open to authors, academicians, industry professionals, and attendees.

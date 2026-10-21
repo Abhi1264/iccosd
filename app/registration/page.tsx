@@ -2,6 +2,7 @@ import Link from "next/link";
 import { HeroSection } from "@/components/hero-section";
 import { InfoBlock } from "@/components/info-block";
 import { siteConfig } from "@/content/site-config";
+import { renderTextWithStrikethroughSegments } from "@/lib/formatted-date";
 
 function ProcessText({
   parts,
@@ -81,7 +82,9 @@ export default function Registration() {
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <InfoBlock title={noticeTitle} type="highlight">
-            <p className="text-justify">{noticeBody}</p>
+            <p className="text-justify whitespace-pre-line">
+              {renderTextWithStrikethroughSegments(noticeBody)}
+            </p>
           </InfoBlock>
 
           <div className="mt-12 space-y-8">
@@ -89,8 +92,8 @@ export default function Registration() {
               <h2 className="text-3xl font-bold text-primary mb-6">
                 {introHeading}
               </h2>
-              <p className="text-lg text-foreground/80 mb-4 leading-relaxed text-justify">
-                {introBody}
+              <p className="text-lg text-foreground/80 mb-4 leading-relaxed text-justify whitespace-pre-line">
+                {renderTextWithStrikethroughSegments(introBody)}
               </p>
             </div>
 
