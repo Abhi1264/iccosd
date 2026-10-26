@@ -60,6 +60,10 @@ const EXTRA_LINKS = [
     label: "Registration",
   },
   {
+    href: "/submission",
+    label: "Submission",
+  },
+  {
     href: "/keynote-speakers",
     label: "Keynote Speakers",
   },

@@ -174,6 +174,21 @@ const SEARCH_PAGES: Array<{ href: string; label: string; text: string }> = [
     ].join("\n"),
   },
   {
+    href: "/submission",
+    label: "Paper Submission",
+    text: [
+      siteConfig.submission.description,
+      siteConfig.submission.paperSize,
+      siteConfig.submission.templateBody,
+      siteConfig.submission.templates.map((template) => template.label).join(" "),
+      siteConfig.submission.steps.join(" "),
+      siteConfig.submission.cmtLead,
+      siteConfig.submission.policyBody,
+      siteConfig.submission.plagiarismBody,
+      siteConfig.submission.plagiarismCheck,
+    ].join("\n"),
+  },
+  {
     href: "/keynote-speakers",
     label: "Keynote Speakers",
     text: "Keynote invited talks speakers plenary",

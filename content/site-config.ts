@@ -155,6 +155,7 @@ At least one author of each accepted paper must register to present. Participati
     quickLinks: [
       { title: "Call for Papers", href: "/call-for-papers", icon: "FileText" },
       { title: "Registration", href: "/registration", icon: "ClipboardList" },
+      { title: "Submission", href: "/submission", icon: "FileText" },
       { title: "Keynote Speakers", href: "/keynote-speakers", icon: "Users" },
       { title: "Directions", href: "/directions", icon: "MapPin" },
       { title: "Committee", href: "/committee/organizing", icon: "Building2" },
@@ -636,6 +637,48 @@ Those with accepted papers are encouraged to register under the **Authors** cate
       phoneLabel: "Phone",
       phone: "+91-9471503579",
     },
+  },
+  submission: {
+    title: "Paper Submission | ICCoSD-26",
+    description:
+      "Submit your paper to ICCoSD-26 through Microsoft CMT. IEEE format, 4-6 pages, plagiarism under 15%, no AI-generated content.",
+    heroTitle: "Paper Submission",
+    heroSubtitle: "Submit your manuscript for ICCoSD-2026",
+    heroImage: "/hero-conference.png",
+    heroImageUrlMobile: "/hero-conference-mobile.png",
+    paperSizeTitle: "Paper Size",
+    paperSize:
+      "Please ensure the manuscript adheres to the specified length requirement of **4-6 pages** with an abstract word count of **150-250 words**, following the IEEE Conference format guidelines.",
+    templateTitle: "Paper Template",
+    templateBody: "You can download the template from the provided links.",
+    templates: [
+      { href: "/doc/ms_word_template.docx", label: "MS Word Template" },
+      { href: "/doc/latex_template.zip", label: "LaTeX Template" },
+      {
+        href: "https://www.ieee.org/conferences/publishing/templates.html",
+        label: "IEEE Manuscript Templates",
+      },
+    ],
+    stepsTitle: "Instructions for Paper Submission",
+    steps: [
+      "Upload papers in IEEE format only.",
+      "Remove the author details from the manuscript for double blind review.",
+      "Select the track as per the suitable theme of the conference as mentioned in the Call for Papers.",
+    ],
+    cmtLead:
+      "Click the button below to open the Microsoft CMT submission portal for ICCoSD-2026. Make sure your paper follows IEEE format before submitting.",
+    cmtButton: "Submit via CMT",
+    cmtHelp: "Having issues? Contact us",
+    qrTitle: "Scan to Submit",
+    qrCaption: "Microsoft CMT Portal",
+    policyTitle: "IEEE Policies",
+    policyBody:
+      "Papers are reviewed on the basis that they do not contain plagiarized material and have not been submitted to any other conference at the same time (double submission).",
+    plagiarismTitle: "Plagiarism",
+    plagiarismBody:
+      "Learn how to avoid plagiarism. IEEE defines plagiarism as the use of another's ideas, processes, results, or words without explicitly acknowledging the original author and source. Plagiarism in any form is unacceptable and is considered a serious breach of professional conduct, with potentially severe ethical and legal consequences (IEEE Publication Services and Products Board Operations Manual, Section 8.2.1.B.7).",
+    plagiarismCheck:
+      "Follow proper citation practices noted above to avoid plagiarism. All papers are checked for plagiarism before the review process and the **plagiarism should not exceed 15% (including references). AI plagiarism should not exceed 0%**.",
   },
   // Student Volunteers page
   studentVolunteers: {

@@ -114,7 +114,7 @@ export function Footer() {
               Quick Links
             </h4>
             <ul className="space-y-2">
-              {footerData.quickLinks.slice(0, 4).map((link) => (
+              {footerData.quickLinks.slice(0, 5).map((link) => (
                 <li key={link.href}>
                   <IntentLink
                     href={link.href}
