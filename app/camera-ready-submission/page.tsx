@@ -56,13 +56,7 @@ export default function Submission() {
           </InfoBlock>
 
           <InfoBlock title={content.stepsTitle}>
-            <ol className="list-decimal ml-6 space-y-2 text-foreground/80">
-              {content.steps.map((step) => (
-                <li key={step} className="leading-relaxed">
-                  {step}
-                </li>
-              ))}
-            </ol>
+            <p className="text-justify">{content.step}</p>
             <p className="text-justify">{content.cmtLead}</p>
             <p>
               {content.cmtHelp}{" "}

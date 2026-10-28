@@ -181,7 +181,7 @@ const SEARCH_PAGES: Array<{ href: string; label: string; text: string }> = [
       siteConfig.submission.paperSize,
       siteConfig.submission.templateBody,
       siteConfig.submission.templates.map((template) => template.label).join(" "),
-      siteConfig.submission.steps.join(" "),
+      siteConfig.submission.step,
       siteConfig.submission.cmtLead,
       siteConfig.submission.policyBody,
       siteConfig.submission.plagiarismBody,

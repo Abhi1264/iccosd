@@ -660,11 +660,7 @@ Those with accepted papers are encouraged to register under the **Authors** cate
       },
     ],
     stepsTitle: "Instructions for Paper Submission",
-    steps: [
-      "Upload papers in IEEE format only.",
-      "Remove the author details from the manuscript for double blind review.",
-      "Select the track as per the suitable theme of the conference as mentioned in the Call for Papers.",
-    ],
+    step: "Select the track as per the suitable theme of the conference as mentioned in the Call for Papers.",
     cmtLead:
       "Click the button below to open the Microsoft CMT submission portal for ICCoSD-2026. Make sure your paper follows IEEE format before submitting.",
     cmtButton: "Submit via CMT",
