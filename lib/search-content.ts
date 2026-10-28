@@ -174,8 +174,8 @@ const SEARCH_PAGES: Array<{ href: string; label: string; text: string }> = [
     ].join("\n"),
   },
   {
-    href: "/submission",
-    label: "Paper Submission",
+    href: "/camera-ready-submission",
+    label: "Camera Ready Submission",
     text: [
       siteConfig.submission.description,
       siteConfig.submission.paperSize,

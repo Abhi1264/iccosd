@@ -155,7 +155,7 @@ At least one author of each accepted paper must register to present. Participati
     quickLinks: [
       { title: "Call for Papers", href: "/call-for-papers", icon: "FileText" },
       { title: "Registration", href: "/registration", icon: "ClipboardList" },
-      { title: "Submission", href: "/submission", icon: "FileText" },
+      { title: "Camera Ready Submission", href: "/camera-ready-submission", icon: "FileText" },
       { title: "Keynote Speakers", href: "/keynote-speakers", icon: "Users" },
       { title: "Directions", href: "/directions", icon: "MapPin" },
       { title: "Committee", href: "/committee/organizing", icon: "Building2" },
@@ -678,7 +678,7 @@ Those with accepted papers are encouraged to register under the **Authors** cate
     plagiarismBody:
       "Learn how to avoid plagiarism. IEEE defines plagiarism as the use of another's ideas, processes, results, or words without explicitly acknowledging the original author and source. Plagiarism in any form is unacceptable and is considered a serious breach of professional conduct, with potentially severe ethical and legal consequences (IEEE Publication Services and Products Board Operations Manual, Section 8.2.1.B.7).",
     plagiarismCheck:
-      "Follow proper citation practices noted above to avoid plagiarism. All papers are checked for plagiarism before the review process and the **plagiarism should not exceed 15% (including references). AI plagiarism should not exceed 0%**.",
+      "Follow proper citation practices noted above to avoid plagiarism. All papers are checked for plagiarism before the review process and the **plagiarism should not exceed 15% (including references). There should be no AI plagiarism**.",
   },
   // Student Volunteers page
   studentVolunteers: {
