@@ -11,7 +11,11 @@ function ProcessText({
 }) {
   return parts.map((part, index) => {
     if (!part.href) {
-      return <span key={`${part.text}-${index}`}>{part.text}</span>;
+      return (
+        <span key={`${part.text}-${index}`}>
+          {renderTextWithStrikethroughSegments(part.text)}
+        </span>
+      );
     }
 
     const className =

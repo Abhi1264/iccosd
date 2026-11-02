@@ -11,6 +11,7 @@ export const acceptanceNotificationDate =
   "~~30 September 2026~~ 9 October 2026";
 export const cameraReadyManuscriptDate =
   "~~15 October 2026~~ 15 November 2026";
+export const registrationDeadlineDate = "~~01 November 2026~~ 8 November 2026";
 
 const registrationPortalUrl =
   "https://cmt3.research.microsoft.com/ICCoSD2026/Submission/Index";
@@ -69,7 +70,7 @@ export const siteConfig = {
       { label: "Camera-Ready Manuscript", date: cameraReadyManuscriptDate },
       {
         label: "Registration Deadline",
-        date: "01 November 2026",
+        date: registrationDeadlineDate,
         href: "/registration#registration-process",
       },
     ],
@@ -168,7 +169,7 @@ At least one author of each accepted paper must register to present. Participati
       { label: "Camera-Ready Manuscript", value: cameraReadyManuscriptDate },
       {
         label: "Registration Deadline",
-        value: "01 November 2026",
+        value: registrationDeadlineDate,
         href: "/registration#registration-process",
       },
     ],
@@ -316,7 +317,7 @@ Important: At least one author of each accepted paper must register under the "A
       { label: "Camera-Ready Manuscript", date: cameraReadyManuscriptDate },
       {
         label: "Registration Deadline",
-        date: "01 November 2026",
+        date: registrationDeadlineDate,
         href: "/registration#registration-process",
       },
       { label: "Conference Dates", date: "17th - 18th December, 2026" },
@@ -525,7 +526,7 @@ Important: At least one author of each accepted paper must register under the "A
     noticeTitle: "Registration Open",
     noticeBody: `Registration for ICCoSD-26 is currently **open**.
 The conference will be held on **December 17-18, 2026** at BIT Mesra, Ranchi.
-Registration deadline: 01 November 2026.
+Registration deadline: ${registrationDeadlineDate}.
 Secure your spot now to be part of this prestigious event.`,
     introHeading: "Registration Details",
     introBody: `Registration for ICCoSD-26 is open to authors, academicians, industry professionals, and attendees.
@@ -585,7 +586,7 @@ Those with accepted papers are encouraged to register under the **Authors** cate
       ],
       [
         {
-          text: "The registration link will be available from 10 October to 1 November 2026.",
+          text: `The registration link will be available from 10 October to ${registrationDeadlineDate}.`,
         },
       ],
     ],
